@@ -39,21 +39,54 @@
                 width: calc(100% / 5);
                 float: left;
                 position: relative;
+                /* background: linear-gradient(rgb(237, 240, 202), rgb(228, 236, 155)); */
             }
             .section:nth-child(1) {
-                background: #f64747;
+                background-image: url(image/2000-open.png), url(image/4207299.jpg);
+                /* background: linear-gradient(rgb(197, 51, 51), #000); */
+                background-size: inherit;
+                background-repeat: no-repeat;
+                background-position: bottom;
+            }
+
+            section.section div#sun {
+                border: 1px solid;
+                width: 360px;
+                height: 360px;
+                background-image: url(image/sun.png);
+                background-position: top;
+                z-index: 11;
             }
             .section:nth-child(2) {
-                background: #22a7f0;
+                /* background: #22a7f0; */
+                background-image: url(image/1860-open.png);
+                background: gradient(#76c5f2, rgb(229, 234, 238));
+                background-size: inherit;
+                background-repeat: no-repeat;
+                background-position: bottom;
             }
             .section:nth-child(3) {
-                background: #f9690e;
+                /* background: #f9690e; */
+                background-image: url(image/1960-loop.png);
+                background: gradient(#76c5f2, rgb(229, 234, 238));
+                background-size: inherit;
+                background-repeat: no-repeat;
+                background-position: bottom;
             }
             .section:nth-child(4) {
-                background: #9b59b6;
+                /* background: #9b59b6; */
+                background-image: url(image/park.png);
+                background: gradient(#76c5f2, rgb(229, 234, 238));
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom;
             }
             .section:nth-child(5) {
-                background: #03c9a9;
+                /* background: #03c9a9; */
+                background-image: url(image/bg_grass.png), url(image/bg_mountains02.png), url(image/nightsky.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom;
             }
             .sections {
                 width: 500%;
@@ -76,6 +109,7 @@
                 <section class="section">
                     <span class="section__title" id="title1">Section One</span>
                     <span id="trigger--title1"></span>
+                    <div id="sun"></div>
                 </section>
                 <section class="section">
                     <span class="section__title" id="title2">Section Two</span>
