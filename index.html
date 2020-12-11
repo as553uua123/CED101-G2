@@ -42,7 +42,7 @@
                 /* background: linear-gradient(rgb(237, 240, 202), rgb(228, 236, 155)); */
             }
             .section:nth-child(1) {
-                background-image: url(image/2000-open.png), url(image/4207299.jpg);
+                background-image: url(images/index/2000-open.png), url(images/index/4207299.jpg);
                 /* background: linear-gradient(rgb(197, 51, 51), #000); */
                 background-size: inherit;
                 background-repeat: no-repeat;
@@ -53,37 +53,45 @@
                 border: 1px solid;
                 width: 360px;
                 height: 360px;
-                background-image: url(image/sun.png);
+                background-image: url(images/index/sun.png);
                 background-position: top;
-                z-index: 11;
             }
             .section:nth-child(2) {
-                /* background: #22a7f0; */
-                background-image: url(image/1860-open.png);
-                background: gradient(#76c5f2, rgb(229, 234, 238));
+                background: linear-gradient(to right, #76c5f2d7, rgb(220, 236, 162));
+            }
+            section.section span#trigger--title2 div#2canva {
+                border: 1px solid;
+                background-image: url(images/index/1860-open.png);
                 background-size: inherit;
                 background-repeat: no-repeat;
                 background-position: bottom;
+                z-index: 10;
             }
             .section:nth-child(3) {
-                /* background: #f9690e; */
-                background-image: url(image/1960-loop.png);
-                background: gradient(#76c5f2, rgb(229, 234, 238));
+                background: linear-gradient(to right, rgb(220, 236, 162), rgb(226, 226, 88));
+                /* background-image: url(images/index/1960-loop.png); */
                 background-size: inherit;
                 background-repeat: no-repeat;
                 background-position: bottom;
             }
             .section:nth-child(4) {
-                /* background: #9b59b6; */
-                background-image: url(image/park.png);
-                background: gradient(#76c5f2, rgb(229, 234, 238));
+                /* background-image: url(images/index/park.png); */
+                background: linear-gradient(
+                    to right,
+                    rgb(226, 226, 88),
+                    rgba(240, 196, 116, 0.856),
+                    rgba(185, 135, 77, 0.856),
+                    #1552c6,
+                    #2a2c97
+                );
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: bottom;
             }
             .section:nth-child(5) {
-                /* background: #03c9a9; */
-                background-image: url(image/bg_grass.png), url(image/bg_mountains02.png), url(image/nightsky.jpg);
+                background: linear-gradient(to right, #2a2c97, #200b5a, #000);
+                /* background-image: url(images/index/bg_grass.png), url(images/index/bg_mountains02.png),
+                    url(images/index/nightsky.jpg); */
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: bottom;
@@ -114,6 +122,7 @@
                 <section class="section">
                     <span class="section__title" id="title2">Section Two</span>
                     <span id="trigger--title2"></span>
+                    <div id="2canva"></div>
                 </section>
                 <section class="section">
                     <span class="section__title" id="title3">Section Three</span>
