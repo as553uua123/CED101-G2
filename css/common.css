@@ -10,6 +10,10 @@ a {
   list-style: none;
 }
 
+nav.nav {
+  visibility: hidden;
+}
+
 .nav:before {
   display: block;
   position: fixed;
@@ -41,7 +45,7 @@ a {
   text-align: center;
 }
 
-.nav-tgl > span {
+.nav-tgl>span {
   display: inline-block;
   position: relative;
   height: 1px;
@@ -51,7 +55,7 @@ a {
   vertical-align: middle;
 }
 
-.nav-tgl > span:before {
+.nav-tgl>span:before {
   display: inline-block;
   position: absolute;
   content: '';
@@ -64,7 +68,7 @@ a {
   width: 28px;
 }
 
-.nav-tgl > span:after {
+.nav-tgl>span:after {
   display: inline-block;
   position: absolute;
   content: '';
@@ -81,12 +85,12 @@ a {
   outline: none;
 }
 
-.nav-tgl:hover > span:after {
+.nav-tgl:hover>span:after {
   width: 34px;
   left: 0;
 }
 
-.nav-tgl:hover > span:before {
+.nav-tgl:hover>span:before {
   width: 34px;
   left: 0;
 }
@@ -102,21 +106,22 @@ a {
   display: block;
 }
 
-.menu.active .nav-tgl > span {
+.menu.active .nav-tgl>span {
   height: 0;
 }
 
-.menu.active .nav-tgl > span:after {
+.menu.active .nav-tgl>span:after {
   top: 0px;
   left: 0;
   width: 34px;
   transform: rotate(-45deg);
 }
 
-.menu.active .nav-tgl > span:before {
+.menu.active .nav-tgl>span:before {
   top: 0px;
   left: 0;
   width: 34px;
   transform: rotate(45deg);
 }
+
 /*# sourceMappingURL=common.css.map */
