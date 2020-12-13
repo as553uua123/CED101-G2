@@ -13,8 +13,138 @@
 
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
-            @import './css/common.css';
-            @import './css/ting/index.css';
+            /* @import './css/common.css'; */
+            @import './css/index.css';
+        </style>
+
+        <style>
+            a {
+                text-decoration: none;
+            }
+
+            .nav ul li {
+                display: block;
+                font-size: 28px;
+                font-family: 'Noto Serif TC';
+                z-index: 100;
+                list-style: none;
+            }
+
+            nav.nav {
+                visibility: hidden;
+            }
+
+            .nav:before {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 100vw;
+                height: 100vh;
+                background: #8bc34a78;
+                transition: all 500ms ease-in-out;
+                clip-path: circle(30px at calc(100% - 65px) 65px);
+                visibility: hidden;
+            }
+
+            .nav-tgl {
+                display: inline-block;
+                cursor: pointer;
+                position: fixed;
+                z-index: 100;
+                right: 30px;
+                top: 30px;
+                width: 70px;
+                height: 70px;
+                border: none;
+                border-radius: 50%;
+                padding: 0;
+                background: #a7c957;
+                line-height: 0.6;
+                text-align: center;
+            }
+
+            .nav-tgl > span {
+                display: inline-block;
+                position: relative;
+                height: 1px;
+                width: 34px;
+                border-radius: 1px;
+                background: #293335;
+                vertical-align: middle;
+            }
+
+            .nav-tgl > span:before {
+                display: inline-block;
+                position: absolute;
+                content: '';
+                height: 1.7px;
+                border-radius: 1px;
+                background: #293335;
+                transition: all 200ms;
+                top: -11px;
+                left: 3px;
+                width: 28px;
+            }
+
+            .nav-tgl > span:after {
+                display: inline-block;
+                position: absolute;
+                content: '';
+                height: 1.7px;
+                border-radius: 1px;
+                background: #293335;
+                transition: all 200ms;
+                top: 11px;
+                left: 6px;
+                width: 22px;
+            }
+
+            .nav-tgl:focus {
+                outline: none;
+            }
+
+            .nav-tgl:hover > span:after {
+                width: 34px;
+                left: 0;
+            }
+
+            .nav-tgl:hover > span:before {
+                width: 34px;
+                left: 0;
+            }
+
+            .menu.active .nav:before {
+                visibility: visible;
+                clip-path: circle(100%);
+            }
+
+            .menu.active nav.nav ul li {
+                visibility: visible;
+                clip-path: circle(100%);
+                display: block;
+            }
+
+            .menu.active .nav-tgl > span {
+                height: 0;
+            }
+
+            .menu.active .nav-tgl > span:after {
+                top: 0px;
+                left: 0;
+                width: 34px;
+                transform: rotate(-45deg);
+            }
+
+            .menu.active .nav-tgl > span:before {
+                top: 0px;
+                left: 0;
+                width: 34px;
+                transform: rotate(45deg);
+            }
+
+            /*# sourceMappingURL=common.css.map */
         </style>
     </head>
     <body>
