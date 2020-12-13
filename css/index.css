@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'NOTO Serif TC';
+}
+
+body,
+html {
+  margin: 0;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  perspective: 1000;
+}
+
+.section {
+  height: 100%;
+  width: calc(100% / 5);
+  float: left;
+  position: relative;
+}
+
+.section:nth-child(1) {
+  background: #f64747;
+}
+
+.section:nth-child(2) {
+  background: #22a7f0;
+}
+
+.section:nth-child(3) {
+  background: #f9690e;
+}
+
+.section:nth-child(4) {
+  background: #9b59b6;
+}
+
+.section:nth-child(5) {
+  background: #03c9a9;
+}
+
+.sections {
+  width: 500%;
+  height: 100%;
+}
+
+.section__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: #fff;
+}
+/*# sourceMappingURL=index.css.map */
