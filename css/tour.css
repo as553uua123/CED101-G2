@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+
+.choice_block {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.choice_block .choice_nav {
+  display: inline-block;
+  width: 500px;
+  vertical-align: top;
+}
+
+.choice_block .twMap {
+  display: inline-block;
+  width: 500px;
+}
+
+.choice_block .twMap img {
+  width: 100%;
+}
+
+.choice_list {
+  text-align: center;
+}
+
+.choice_list ul li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  position: relative;
+}
+
+.choice_list ul li ul li {
+  display: block;
+}
+
+.tour_browse_block .tour_block {
+  border: 1px solid black;
+  width: 350px;
+}
+
+.tour_browse_block .tour_block img {
+  width: 300px;
+}
+/*# sourceMappingURL=tour.css.map */
