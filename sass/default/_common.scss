@@ -3,12 +3,12 @@ $font-family: Noto Serif TC;
 $font-weight: bold;
 $bg-color: #cadf9a;
 $btn-color: #a7c957;
-$h1-color: #386641;
-$h2-color: #386641;
-$h3-color: #386641;
-$h4-color: #386641;
-$h5-color: #386641;
-$h6-color: #386641;
+$primary-typo-color: #386641;
+$secondary-typo-color: #69994e;
+$success-sign: #a7c957;
+$info-sign: #386641;
+$warning-sign: #fa7b53;
+$filter-bar-bgColor: #f2e8cf;
 $para: 16px;
 $h1: 48px;
 $h2: 36px;
@@ -17,10 +17,42 @@ $h4: 24px;
 $h5: 18px;
 $h6: 14px;
 $para: 16px;
+$hover-color: #fff;
+$a-text-decoration: none;
+$img-max-width: 100%;
+$body-margin: 0;
+$body-padding: 0;
+$ul-list-style: none;
+
+img {
+    max-width: $img-max-width;
+}
+
+body,
+html {
+    margin: $body-margin;
+    padding: $body-padding;
+}
 
 a {
-    text-decoration: none;
+    text-decoration: $a-text-decoration;
 }
+
+ul {
+    list-style: $ul-list-style;
+}
+
+.menu {
+    #imgLogo {
+        width: 200px;
+        cursor: pointer;
+        position: fixed;
+        left: 70px;
+        top: 20px;
+        padding: $body-padding;
+    }
+}
+
 .nav {
     ul {
         li {
@@ -29,6 +61,13 @@ a {
             font-family: 'Noto Serif TC';
             z-index: 100;
             list-style: none;
+            a {
+                text-decoration: none;
+                color: $h3-color;
+            }
+            a:hover {
+                color: $hover-color;
+            }
         }
     }
     &:before {
@@ -53,8 +92,8 @@ nav.nav {
     cursor: pointer;
     position: fixed;
     z-index: 100;
-    right: 30px;
-    top: 30px;
+    right: 70px;
+    top: 50px;
     width: 70px;
     height: 70px;
     border: none;
@@ -62,7 +101,6 @@ nav.nav {
     padding: 0;
     background: #a7c957;
     line-height: 0.6;
-    text-align: center;
     > span {
         display: inline-block;
         position: relative;
@@ -125,6 +163,13 @@ nav.nav {
                 visibility: visible;
                 clip-path: circle(100%);
                 display: block;
+                border: 1px solid blue;
+                display: inline-flex;
+                position: relative;
+                top: 160px;
+                left: 200px;
+                padding: 20px;
+                margin: 20px;
             }
         }
     }
