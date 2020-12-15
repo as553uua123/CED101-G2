@@ -131,4 +131,30 @@ nav.nav {
 body {
   color: #cadf9a;
 }
-/*# sourceMappingURL=member_base.css.map */
+
+main {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  width: 80%;
+}
+
+main #side {
+  width: 25%;
+}
+
+main #side #avatar {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+main #tour {
+  border: 1px solid black;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+/*# sourceMappingURL=member.css.map */
