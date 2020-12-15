@@ -123,4 +123,12 @@ nav.nav {
   width: 34px;
   transform: rotate(45deg);
 }
-/*# sourceMappingURL=common.css.map */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #cadf9a;
+}
+/*# sourceMappingURL=member_base.css.map */
