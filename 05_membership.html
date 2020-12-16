@@ -15,26 +15,71 @@
         <main>
             <div id="side">
                 <img src="./images/member/new_member.jpg" id="avatar" />
-                <h3>user nickname</h3>
-                <h4>user ID</h4>
+                <h3>user ID</h3>
             </div>
-            <div id="tour">
-                <div id="mine_tour">
-                    <h2>我主揪</h2>
-                    <div class="on_going"></div>
-                    <div class="out_of_date"></div>
+            <div id="sub_menu">
+                <div id="sub_menu_bar">
+                    <h2>揪團管理</h2>
+                    <h2>我的收藏</h2>
+                    <h2>訂單查詢</h2>
+                    <h2>我的文章</h2>
+                    <h2>個人資料</h2>
                 </div>
-                <div id="i_join">
-                    <h2>我參加</h2>
-                    <div class="on_going"></div>
-                    <div class="out_of_date"></div>
+                <div id="tour">
+                    <div id="mine_tour">
+                        <h2>我主揪</h2>
+                        <div id="mine_on_going"></div>
+                        <div id="mine_out_of_date"></div>
+                    </div>
+                    <div id="i_join">
+                        <h2>我參加</h2>
+                        <div id="join_on_going"></div>
+                        <div id="join_out_of_date"></div>
+                    </div>
+                </div>
+                <div id="mine_fav">
+                    <div id="fav_tour"></div>
+                    <div id="fav_article"></div>
+                    <div id="fav_product"></div>
+                </div>
+                <div id="mine_order">
+                    <div id="list">
+                        <div id="order_no"></div>
+                        <div id="order_status"></div>
+                        <div id="order_payment"></div>
+                        <div id="order_total"></div>
+                        <div id="order_date"></div>
+                    </div>
+                </div>
+                <div id="mine_article">
+                    <div class="article_brief"></div>
+                </div>
+                <div id="mine_profile">
+                    <form action="" id="profile">
+                        <label for="email">電子信箱</label>
+                        <input type="text" name="email" class="email" />
+                        <label for="my_id">帳號</label>
+                        <input type="text" name="my_id" class="my_id" />
+                        <label for="my_pw">舊密碼</label>
+                        <input type="text" name="my_pw" class="my_pw" />
+                        <label for="my_new_pw">新密碼</label>
+                        <input type="text" name="my_new_pw" class="my_new_pw" />
+                        <label for="confirm_new_pw">確認新密碼</label>
+                        <input type="text" name="confirm_new_pw" class="confirm_new_pw" />
+                        <label for="my_name">收件人</label>
+                        <input type="text" name="my_name" class="my_name" />
+                        <label for="add">地址</label>
+                        <div role="tw-city-selector" class="add"></div>
+                        <input type="text" name="add" class="add" />
+                        <label for="tel">電話</label>
+                        <input type="text" name="tel" class="tel" />
+                        <input type="submit" name="submit" class="submit" />
+                    </form>
                 </div>
             </div>
-            <div id="fav"></div>
-            <div id="order"></div>
-            <div id="article"></div>
-            <div id="profile"></div>
         </main>
         <footer></footer>
+        <script src="./vendors/tw-city-selector-master/dist/tw-city-selector.js"></script>
+        <script src="./js/sandra/membership.js"></script>
     </body>
 </html>
