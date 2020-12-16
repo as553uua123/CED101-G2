@@ -2,13 +2,8 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'NOTO Serif TC';
-}
-
 body,
 html {
-  margin: 0;
   height: 100%;
 }
 
@@ -27,28 +22,116 @@ html {
 }
 
 .section:nth-child(1) {
-  background: #f64747;
+  width: calc(100% / 5);
+  float: left;
+  position: relative;
+  background-image: url(./images/index/house1.png);
+  background-position: bottom;
+  background-position-x: left;
+  background-size: 40%;
+  background-repeat: no-repeat;
+}
+
+.section .Sun img#img_Sun {
+  width: 15%;
+  position: absolute;
+  top: 30px;
+  left: 150px;
+}
+
+.section .Car img#img_Car {
+  width: 20%;
+  bottom: 0;
+  position: absolute;
+  left: 580px;
+}
+
+.section .Lady img#img_Lady {
+  height: 20%;
+  bottom: 0;
+  position: absolute;
+  left: 380px;
 }
 
 .section:nth-child(2) {
-  background: #22a7f0;
+  border: 5px solid yellow;
+}
+
+.section2 .Barbecue img#img_Barbecue {
+  width: 20%;
+  bottom: 0;
+  position: absolute;
+  left: 0px;
+}
+
+.section2 .House2 img#img_House2 {
+  height: 60%;
+  bottom: 0;
+  position: absolute;
+  left: 800px;
 }
 
 .section:nth-child(3) {
-  background: #f9690e;
+  border: 5px solid greenyellow;
+}
+
+.section3 .Flag img#img_Flag {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 40vh;
+}
+
+.section3 .Discuss img#img_Discuss {
+  position: absolute;
+  left: 800px;
+  bottom: -12px;
+  height: 40vh;
 }
 
 .section:nth-child(4) {
-  background: #9b59b6;
+  border: 5px solid pink;
+}
+
+.section4 .VoteSign img#img_VoteSign {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 40vh;
+}
+
+.section4 .Vote img#img_Vote {
+  position: absolute;
+  left: 600px;
+  bottom: 0;
+  height: 60vh;
 }
 
 .section:nth-child(5) {
-  background: #03c9a9;
+  border: 5px solid blue;
+}
+
+.section5 .ShoppingGate img#img_ShoppingGate {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50vh;
+}
+
+.section5 .Shopping img#img_Shopping {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  width: 70vw;
 }
 
 .sections {
+  background-image: url(./images/index/bgforall.png);
+  background-repeat: repeat-x;
+  background-size: contain;
   width: 500%;
   height: 100%;
+  border: 10px solid;
 }
 
 .section__title {

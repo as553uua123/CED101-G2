@@ -57,7 +57,7 @@ ul {
 }
 
 nav.nav {
-    display: none;
+    visibility: hidden;
 }
 
 .nav-tgl {

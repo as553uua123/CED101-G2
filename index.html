@@ -14,7 +14,141 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
             @import './css/common.css';
-            @import './css/index.css';
+            /* @import './css/index.css'; */
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body,
+            html {
+                height: 100%;
+            }
+
+            .wrapper {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                -webkit-perspective: 1000;
+                perspective: 1000;
+            }
+
+            .section {
+                height: 100%;
+                width: calc(100% / 5);
+                float: left;
+                position: relative;
+            }
+            .section:nth-child(1) {
+                width: calc(100% / 5);
+                float: left;
+                position: relative;
+                background-image: url(./images/index/house1.png);
+                background-position: bottom;
+                background-position-x: left;
+                background-size: 40%;
+                background-repeat: no-repeat;
+            }
+            .section .Sun img#img_Sun {
+                width: 15%;
+                position: absolute;
+                top: 30px;
+                left: 150px;
+            }
+
+            .section .Car img#img_Car {
+                width: 20%;
+                bottom: 0;
+                position: absolute;
+                left: 580px;
+            }
+            .section .Lady img#img_Lady {
+                height: 20%;
+                bottom: 0;
+                position: absolute;
+                left: 380px;
+            }
+            .section:nth-child(2) {
+                border: 5px solid yellow;
+            }
+            .section2 .Barbecue img#img_Barbecue {
+                width: 20%;
+                bottom: 0;
+                position: absolute;
+                left: 0px;
+            }
+            .section2 .House2 img#img_House2 {
+                height: 60%;
+                bottom: 0;
+                position: absolute;
+                left: 800px;
+            }
+
+            .section:nth-child(3) {
+                border: 5px solid greenyellow;
+            }
+            .section3 .Flag img#img_Flag {
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                height: 40vh;
+            }
+            .section3 .Discuss img#img_Discuss {
+                position: absolute;
+                left: 800px;
+                bottom: -12px;
+                height: 40vh;
+            }
+            .section:nth-child(4) {
+                border: 5px solid pink;
+            }
+
+            .section4 .VoteSign img#img_VoteSign {
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                height: 40vh;
+            }
+
+            .section4 .Vote img#img_Vote {
+                position: absolute;
+                left: 600px;
+                bottom: 0;
+                height: 60vh;
+            }
+            .section:nth-child(5) {
+                border: 5px solid yelbluelow;
+            }
+
+            .section5 .ShoppingGate img#img_ShoppingGate {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 50vh;
+            }
+
+            .section5 .Shopping img#img_Shopping {
+                position: absolute;
+                right: 0;
+                bottom: 20px;
+                width: 70vw;
+            }
+            .sections {
+                background-image: url(./images/index/bgforall.png);
+                background-repeat: repeat-x;
+                background-size: contain;
+                width: 500%;
+                height: 100%;
+            }
+            .section__title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                font-size: 30px;
+                color: #fff;
+            }
         </style>
     </head>
     <body>
@@ -25,7 +159,6 @@
                         <img src="./images/index/logo.png" alt="logo" />
                     </div>
                 </a>
-                <div class="img_holder"><img src="./images/index/wakingup.png" alt="" /></div>
                 <button class="nav-tgl" type="button" aria-label="toggle menu">
                     <span aria-hidden="true"></span>
                 </button>
@@ -53,29 +186,61 @@
         </header>
 
         <!-- 第一屏 -->
+        <div class="img_holder"><img src="./images/index/wakingup.png" alt="" /></div>
         <div class="wrapper" id="js-wrapper">
             <div class="sections" id="js-slideContainer">
                 <section class="section">
-                    <span class="section__title" id="title1">Section One</span>
+                    <span class="section__title" id="title1">Intro</span>
                     <span id="trigger--title1"></span>
-                    <div id="sun"></div>
+                    <div class="Sun">
+                        <img id="img_Sun" src="./images/index/sun.png" alt="" />
+                    </div>
+                    <div class="Car">
+                        <img id="img_Car" src="./images/index/car.png" alt="" />
+                    </div>
+                    <div class="Lady">
+                        <img id="img_Lady" src="./images/index/lady.png" alt="" />
+                    </div>
                 </section>
-                <section class="section">
-                    <span class="section__title" id="title2">Section Two</span>
+                <section class="section section2">
+                    <span class="section__title" id="title2">揪團喝查</span>
                     <span id="trigger--title2"></span>
-                    <div id="2canva"></div>
+                    <div class="Barbecue">
+                        <img id="img_Barbecue" src="./images/index/Barbecue.png" alt="" />
+                    </div>
+                    <div class="House2">
+                        <img id="img_House2" src="./images/index/House2.png" alt="" />
+                    </div>
                 </section>
-                <section class="section">
-                    <span class="section__title" id="title3">Section Three</span>
+                <section class="section section3">
+                    <span class="section__title" id="title3">討論區</span>
                     <span id="trigger--title3"></span>
+                    <div class="Flag">
+                        <img id="img_Flag" src="./images/index/flag.png" alt="" />
+                    </div>
+                    <div class="Discuss">
+                        <img id="img_Discuss" src="./images/index/Discuss.png" alt="" />
+                    </div>
                 </section>
-                <section class="section">
-                    <span class="section__title" id="title4">Section Four</span>
+                <section class="section section4">
+                    <span class="section__title" id="title4">投票</span>
                     <span id="trigger--title4"></span>
+                    <div class="VoteSign">
+                        <img id="img_VoteSign" src="./images/index/voteSign.png" alt="" />
+                    </div>
+                    <div class="Vote">
+                        <img id="img_Vote" src="./images/index/vote.png" alt="" />
+                    </div>
                 </section>
-                <section class="section">
-                    <span class="section__title" id="title5">Section Five</span>
+                <section class="section section5">
+                    <span class="section__title" id="title5">商城</span>
                     <span id="trigger--title5"></span>
+                    <div class="ShoppingGate">
+                        <img id="img_ShoppingGate" src="./images/index/shoppingGate.png" alt="" />
+                    </div>
+                    <div class="Shopping">
+                        <img id="img_Shopping" src="./images/index/shopping.png" alt="" />
+                    </div>
                 </section>
             </div>
         </div>
