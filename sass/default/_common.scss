@@ -1,3 +1,5 @@
+@import 'css/variables';
+
 img {
     max-width: $img-max-width;
 }
@@ -59,7 +61,7 @@ ul {
     }
 }
 nav.nav {
-    visibility: hidden;
+    display: none;
 }
 .nav-tgl {
     display: inline-block;
