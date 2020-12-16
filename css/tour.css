@@ -1,49 +1,267 @@
+a {
+  text-decoration: none;
+}
+
+.nav ul li {
+  display: block;
+  font-size: 28px;
+  font-family: 'Noto Serif TC';
+  z-index: 100;
+  list-style: none;
+}
+
+.nav:before {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background: #8bc34a78;
+  transition: all 500ms ease-in-out;
+  clip-path: circle(30px at calc(100% - 65px) 65px);
+  visibility: hidden;
+}
+
+nav.nav {
+  visibility: hidden;
+}
+
+.nav-tgl {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  right: 30px;
+  top: 30px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background: #a7c957;
+  line-height: 0.6;
+  text-align: center;
+}
+
+.nav-tgl > span {
+  display: inline-block;
+  position: relative;
+  height: 1px;
+  width: 34px;
+  border-radius: 1px;
+  background: #293335;
+  vertical-align: middle;
+}
+
+.nav-tgl > span:before {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  height: 1.7px;
+  border-radius: 1px;
+  background: #293335;
+  transition: all 200ms;
+  top: -11px;
+  left: 3px;
+  width: 28px;
+}
+
+.nav-tgl > span:after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  height: 1.7px;
+  border-radius: 1px;
+  background: #293335;
+  transition: all 200ms;
+  top: 11px;
+  left: 6px;
+  width: 22px;
+}
+
+.nav-tgl:focus {
+  outline: none;
+}
+
+.nav-tgl:hover > span:after {
+  width: 34px;
+  left: 0;
+}
+
+.nav-tgl:hover > span:before {
+  width: 34px;
+  left: 0;
+}
+
+.menu.active .nav:before {
+  visibility: visible;
+  clip-path: circle(100%);
+}
+
+.menu.active nav.nav ul li {
+  visibility: visible;
+  clip-path: circle(100%);
+  display: block;
+}
+
+.menu.active .nav-tgl > span {
+  height: 0;
+}
+
+.menu.active .nav-tgl > span:after {
+  top: 0px;
+  left: 0;
+  width: 34px;
+  transform: rotate(-45deg);
+}
+
+.menu.active .nav-tgl > span:before {
+  top: 0px;
+  left: 0;
+  width: 34px;
+  transform: rotate(45deg);
+}
+
 body {
-    margin: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
 }
 
 .choice_block {
-    width: 1200px;
-    margin: 0 auto;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.choice_block .flex {
+  display: flex;
+  align-content: center;
 }
 
 .choice_block .choice_nav {
-    display: inline-block;
-    width: 500px;
-    vertical-align: top;
+  display: flex;
+  align-self: center;
+  width: 500px;
+  vertical-align: top;
+  border: 1px solid black;
 }
 
 .choice_block .twMap {
-    display: inline-block;
-    width: 500px;
+  display: inline-block;
+  width: 500px;
+  position: relative;
+  border: 1px solid black;
 }
 
 .choice_block .twMap img {
-    width: 100%;
+  width: 100%;
+}
+
+.location1 {
+  position: absolute;
+  top: 10%;
+  right: 30%;
+  width: 80px;
+}
+
+.location2 {
+  position: absolute;
+  top: 40%;
+  right: 30%;
+  width: 80px;
+}
+
+.location3 {
+  position: absolute;
+  top: 70%;
+  right: 50%;
+  width: 80px;
 }
 
 .choice_list {
-    text-align: center;
+  text-align: center;
 }
 
 .choice_list ul li {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  position: relative;
 }
 
 .choice_list ul li ul li {
-    display: block;
+  display: block;
+}
+
+.tour_browse {
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.tour_browse h1 {
+  text-align: center;
+}
+
+.tour_browse_block {
+  text-align: center;
 }
 
 .tour_browse_block .tour_block {
-    border: 1px solid black;
-    width: 350px;
+  border: 1px solid black;
+  width: 350px;
+  display: inline-block;
+  margin: 20px;
 }
 
-.tour_browse_block .tour_block img {
-    width: 300px;
+.tour_browse_block .tour_block .tour_img {
+  padding: 10px;
 }
 
+.tour_browse_block .tour_block .love_share {
+  text-align: right;
+  padding-right: 30px;
+  border: 1px solid black;
+}
+
+.tour_browse_block .tour_block .love_share .love {
+  display: inline-block;
+  width: 30px;
+}
+
+.tour_browse_block .tour_block .love_share .share {
+  display: inline-block;
+  width: 30px;
+}
+
+.tour_browse_block .tour_block .tour_text {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.tour_browse_block .tour_block .tour_text h3 {
+  margin: 0;
+  width: 130px;
+  padding: 5px;
+  color: #386641;
+}
+
+.tour_browse_block .tour_block .tour_text p {
+  margin: 0;
+  padding: 5px;
+  width: 130px;
+}
+
+.tour_browse_block .tour_block .tourBtn {
+  text-align: center;
+}
+
+.tour_browse_block .tour_block .tourBtn button {
+  padding: 5px 10px;
+  margin: 10px;
+}
 /*# sourceMappingURL=tour.css.map */
