@@ -1,28 +1,4 @@
-$box-sizing: border-box;
-$font-family: Noto Serif TC;
-$font-weight: bold;
-$bg-color: #cadf9a;
-$btn-color: #a7c957;
-$primary-typo-color: #386641;
-$secondary-typo-color: #69994e;
-$success-sign: #a7c957;
-$info-sign: #386641;
-$warning-sign: #fa7b53;
-$filter-bar-bgColor: #f2e8cf;
-$para: 16px;
-$h1: 48px;
-$h2: 36px;
-$h3: 28px;
-$h4: 24px;
-$h5: 18px;
-$h6: 14px;
-$para: 16px;
-$hover-color: #fff;
-$a-text-decoration: none;
-$img-max-width: 100%;
-$body-margin: 0;
-$body-padding: 0;
-$ul-list-style: none;
+@import 'css/variables';
 
 img {
     max-width: $img-max-width;
@@ -85,7 +61,7 @@ ul {
     }
 }
 nav.nav {
-    visibility: hidden;
+    display: none;
 }
 .nav-tgl {
     display: inline-block;
