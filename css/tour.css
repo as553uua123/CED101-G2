@@ -163,7 +163,7 @@ nav.nav {
 }
 
 body {
-  margin: 0;
+  background-color: #f2e8cf;
 }
 
 img {
@@ -171,20 +171,32 @@ img {
 }
 
 .choice_block {
-  width: 1200px;
+  width: 1100px;
   margin: 0 auto;
 }
 
 .choice_block .flex {
   display: flex;
-  align-content: center;
 }
 
 .choice_block .choice_nav {
   align-self: center;
-  width: 500px;
-  vertical-align: top;
-  border: 1px solid black;
+  width: 600px;
+}
+
+.choice_block .choice_nav h1 {
+  text-align: center;
+  color: #386641;
+  font-size: 48px;
+}
+
+.choice_block .choice_nav ul {
+  padding: 0;
+}
+
+.choice_block .choice_nav ul li {
+  text-align: center;
+  font-size: 36px;
 }
 
 .choice_block .twMap {
@@ -202,36 +214,104 @@ img {
   position: absolute;
   top: 10%;
   right: 30%;
-  width: 80px;
+  width: 60px;
 }
 
 .location2 {
   position: absolute;
   top: 40%;
   right: 30%;
-  width: 80px;
+  width: 60px;
 }
 
 .location3 {
   position: absolute;
   top: 70%;
   right: 50%;
-  width: 80px;
+  width: 60px;
+}
+
+.location4 {
+  position: absolute;
+  top: 60%;
+  right: 40%;
+  width: 60px;
+}
+
+.location5 {
+  position: absolute;
+  top: 30%;
+  right: 30%;
+  width: 60px;
+}
+
+.location6 {
+  position: absolute;
+  top: 30%;
+  right: 70%;
+  width: 60px;
+}
+
+.location7 {
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  width: 60px;
+}
+
+.location8 {
+  position: absolute;
+  top: 80%;
+  right: 50%;
+  width: 60px;
+}
+
+.location9 {
+  position: absolute;
+  top: 40%;
+  right: 65%;
+  width: 60px;
+}
+
+.location10 {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 60px;
 }
 
 .choice_list {
   text-align: center;
+  margin: 50px 0;
+}
+
+.choice_list ul {
+  padding: 0;
 }
 
 .choice_list ul li {
   display: inline-block;
   vertical-align: top;
-  text-align: left;
+  text-align: center;
   position: relative;
+  margin: 0px 30px;
+  color: #386641;
+}
+
+.choice_list ul li h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.choice_list ul li ul {
+  padding: 0px;
 }
 
 .choice_list ul li ul li {
   display: block;
+  font-size: 24px;
+  color: #69994e;
+  text-align: center;
 }
 
 .tour_browse {
@@ -242,10 +322,8 @@ img {
 
 .tour_browse h1 {
   text-align: center;
-}
-
-.tour_browse_block {
-  text-align: center;
+  color: #386641;
+  font-size: 24px;
 }
 
 .tour_browse_block .tour_block {
@@ -300,5 +378,6 @@ img {
 .tour_browse_block .tour_block .tourBtn button {
   padding: 5px 10px;
   margin: 10px;
+  background-color: #a7c957;
 }
 /*# sourceMappingURL=tour.css.map */
