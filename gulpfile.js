@@ -38,16 +38,17 @@ exports.ugjs = ugjs;
 
 
 
-//sass
+//sass轉css
 const sass = require("gulp-sass");
 function sassStyle() {
-    return src("./sass/*.scss").pipe(sass().on("error", sass.logError)).pipe(dest("./app/css"));
+    return src("./sass/*.scss").pipe(sass().on("error", sass.logError)).pipe(dest("./css"));
 }
 exports.sass = sassStyle;
 
 
 
 //壓縮圖片
+const imagemin = require("gulp-imagemin");
 function img(){
     return src('./images/*.*') //
     .pipe(imagemin())
@@ -59,3 +60,34 @@ function img(){
     .pipe(dest('app/images')) 
 }
 exports.imagemin = img
+
+
+//clean
+const clean = require("gulp-clean");
+function clearCss() {
+    return src("app/css/*.css", {
+        read: false,
+        force: true, //force to delete
+    }).pipe(clean());
+}
+exports.del = clearCss;
+
+
+
+//watch
+
+
+
+
+//babel (es6->es5)
+const babel = require("gulp-babel");
+function babels() {
+    return src("js/*.js")
+        .pipe(
+            babel({
+                presets: ["@babel/env"],
+            })
+        )
+        .pipe(dest("app/js"));
+}
+exports.jsbabel = babels;
