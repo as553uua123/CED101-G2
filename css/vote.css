@@ -51,10 +51,8 @@ ul {
   width: 100vw;
   height: 100vh;
   background: #8bc34a78;
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
-  -webkit-clip-path: circle(30px at calc(100% - 65px) 65px);
-          clip-path: circle(30px at calc(100% - 65px) 65px);
+  clip-path: circle(30px at calc(100% - 65px) 65px);
   visibility: hidden;
 }
 
@@ -95,7 +93,6 @@ nav.nav {
   height: 1.7px;
   border-radius: 1px;
   background: #293335;
-  -webkit-transition: all 200ms;
   transition: all 200ms;
   top: -11px;
   left: 3px;
@@ -109,7 +106,6 @@ nav.nav {
   height: 1.7px;
   border-radius: 1px;
   background: #293335;
-  -webkit-transition: all 200ms;
   transition: all 200ms;
   top: 11px;
   left: 6px;
@@ -132,18 +128,14 @@ nav.nav {
 
 .menu.active .nav:before {
   visibility: visible;
-  -webkit-clip-path: circle(100%);
-          clip-path: circle(100%);
+  clip-path: circle(100%);
 }
 
 .menu.active nav.nav ul li {
   visibility: visible;
-  -webkit-clip-path: circle(100%);
-          clip-path: circle(100%);
+  clip-path: circle(100%);
   display: block;
   border: 1px solid blue;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
   top: 160px;
@@ -160,16 +152,14 @@ nav.nav {
   top: 0px;
   left: 0;
   width: 34px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .menu.active .nav-tgl > span:before {
   top: 0px;
   left: 0;
   width: 34px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /* HTML5 display-role reset for older browsers */
