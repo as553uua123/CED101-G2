@@ -1,1 +1,3 @@
-new TwCitySelector();
+$(document).ready(function () {
+    new TwCitySelector();
+});
