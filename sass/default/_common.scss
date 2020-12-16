@@ -58,7 +58,7 @@ ul {
         li {
             display: block;
             font-size: 28px;
-            font-family: 'Noto Serif TC';
+            font-family: "Noto Serif TC";
             z-index: 100;
             list-style: none;
             a {
@@ -75,7 +75,7 @@ ul {
         position: fixed;
         top: 0;
         left: 0;
-        content: '';
+        content: "";
         width: 100vw;
         height: 100vh;
         background: #8bc34a78;
@@ -112,7 +112,7 @@ nav.nav {
         &:before {
             display: inline-block;
             position: absolute;
-            content: '';
+            content: "";
             height: 1.7px;
             border-radius: 1px;
             background: #293335;
@@ -124,7 +124,7 @@ nav.nav {
         &:after {
             display: inline-block;
             position: absolute;
-            content: '';
+            content: "";
             height: 1.7px;
             border-radius: 1px;
             background: #293335;
