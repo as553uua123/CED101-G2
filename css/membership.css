@@ -1,4 +1,5 @@
 /* HTML5 display-role reset for older browsers */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap");
 html {
   margin: 0;
   padding: 0;
@@ -924,7 +925,32 @@ nav.nav {
 }
 
 body {
-  color: #cadf9a;
+  background-color: #cadf9a;
+  font-family: Noto Serif TC;
+}
+
+body h1 {
+  font-size: 48px;
+}
+
+body h2 {
+  font-size: 36px;
+}
+
+body h3 {
+  font-size: 28px;
+}
+
+body h4 {
+  font-size: 24px;
+}
+
+body h5 {
+  font-size: 18px;
+}
+
+body h6 {
+  font-size: 14px;
 }
 
 main {
@@ -942,48 +968,59 @@ main #side {
 }
 
 main #side #avatar {
-  border: 1px solid black;
   border-radius: 50%;
   width: 200px;
   height: 200px;
 }
 
-main #sub_menu {
+main #main_container {
   border: 1px solid green;
   width: 75%;
   display: flex;
   flex-direction: column;
 }
 
-main #sub_menu #sub_menu_bar {
+main #main_container #sub_menu {
   display: flex;
+  width: 80%;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
-main #sub_menu #tour {
-  border: 1px solid black;
+main #main_container #tour {
   width: 75%;
   display: flex;
   flex-direction: column;
 }
 
-main #sub_menu #mine_fav {
+main #main_container #mine_fav {
+  display: none;
+  position: relative;
+}
+
+main #main_container #mine_fav #mine_fav_bar {
+  border: 1px solid black;
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  position: absolute;
+  left: 5%;
+}
+
+main #main_container #mine_order {
   display: none;
 }
 
-main #sub_menu #mine_order {
+main #main_container #mine_article {
   display: none;
 }
 
-main #sub_menu #mine_article {
-  display: none;
-}
-
-main #sub_menu #mine_profile {
+main #main_container #mine_profile {
   display: none;
   flex-direction: row;
 }
 
-main #sub_menu #mine_profile #profile {
+main #main_container #mine_profile #profile {
   display: flex;
   flex-direction: column;
 }
