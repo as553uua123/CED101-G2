@@ -919,7 +919,6 @@ main #main_container #mine_profile #profile .field-wrap label {
   transform: translateY(75%);
   left: 5%;
   transition: all 0.25s ease;
-  -webkit-backface-visibility: hidden;
   pointer-events: none;
 }
 
