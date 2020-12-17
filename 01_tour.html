@@ -10,47 +10,81 @@
 
 <body>
     <div class="choice_block">
-        <div class="choice_nav">
-            <h1>揪團地區</h1>
-            <ul>
-                <li>北部</li>
-                <li>中部</li>
-                <li>南部</li>
-                <li>東部</li>
-            </ul>
-        </div>
-        <div class="twMap">
-            <div class="twMap_img">
-                <img src="./images/tour/twMap.png" alt="">
+        <div class="flex">
+            <div class="choice_nav">
+                <h1>揪團地區</h1>
+                <ul>
+                    <li>北部</li>
+                    <li>中部</li>
+                    <li>南部</li>
+
+                </ul>
             </div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="twMap">
+                <div class="twMap_img">
+                    <img src="./images/tour/twMap.png" alt="">
+                </div>
+                <div class="location1">
+                    <img src="./images/common/location.png" alt="">
+                </div>
+                <div class="location2">
+                    <img src="./images/common/location.png" alt="">
+                </div>
+                <div class="location3">
+                    <img src="./images/common/location.png" alt="">
+                </div>
+                <div class="location4">
+                    <img src="./images/common/location.png" alt="">
+                </div>
+                <div class="location5">
+                    <img src="./images/common/location.png" alt="">
+                </div>
+                <div class="location6">
+                    <img src="./images/common/location.png" alt="">
+                </div>
+                <div class="location7">
+                    <img src="./images/common/location.png" alt="">
+                </div>
+                <div class="location8">
+                    <img src="./images/common/location.png" alt="">
+                </div>
+                <div class="location9">
+                    <img src="./images/common/location.png" alt="">
+                </div>
+                <div class="location10">
+                    <img src="./images/common/location.png" alt="">
+                </div>
+
+            </div>
         </div>
+
         <div class="choice_list">
             <ul>
-                <li>茶園類型
+                <li>
+                    <h2>茶園類型</h2>
                     <ul>
                         <li>觀光型</li>
                         <li>體驗型</li>
                     </ul>
                 </li>
-                <li>茶種
+                <li>
+                    <h2>茶園茶種</h2>
                     <ul>
                         <li>綠茶</li>
                         <li>紅茶</li>
                         <li>烏龍茶</li>
                     </ul>
                 </li>
-                <li>預估費用
+                <li>
+                    <h2>交通方式</h2>
+                    <ul>
+                        <li>大眾運輸</li>
+                        <li>租遊覽車</li>
+                        <li>自行前往</li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>預估費用</h2>
                     <ul>
                         <li>5000以下</li>
                         <li>5000 - 10000</li>
@@ -62,31 +96,71 @@
     </div>
     <div class="tour_browse">
         <h1>瀏覽揪團</h1>
-        <div class="tour_browse_block">
-            <div class="tour_block">
-                <div class="tour_img">
-                    <img src="./images/tour/tour1.jpg" alt="">
-                </div>
-                <div class="love_share">
-                    <div class="love">收藏</div>
-                    <div class="share">分享</div>
-                </div>
-                <h3>活動名稱</h3>
-                <p>123</p>
-                <h3>活動日期</h3>
-                <p>123</p>
-                <h3>目前剩餘名額</h3>
-                <p>123</p>
-                <h3>截止日期</h3>
-                <p>123</p>
-                <h3>預估費用</h3>
-                <p>123</p>
-                <button type="button"> 立即報名</button>
-            </div>
-
-
-        </div>
+        <div class="tour_browse_block" id="tourBrowseBlock"> </div>
     </div>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        let html = `
+        <div class="tour_block">
+                    <div class="tour_img">
+                        <img src="./images/tour/tour1.jpg" alt="">
+                </div>
+                        <div class="love_share">
+                            <div class="love">
+                                <img class="like" src="./images/common/heart.png" title="加入收藏" alt="">
+                    </div>
+                                <div class="share">
+                                    <img src="./images/common/shareBlue.png" alt="">
+                    </div>
+                                </div>
+                                <div class="tour_text">
+                                    <h3>活動名稱</h3>
+                                    <p>一定打斷你鼻樑</p>
+                                    <h3>活動日期</h3>
+                                    <p>2020/12/30</p>
+                                    <h3>截止揪團日期</h3>
+                                    <p>2020/12/25</p>
+                                    <h3>目前剩餘名額</h3>
+                                    <p>14/16</p>
+                                    <h3>預估費用</h3>
+                                    <p>$7800NT</p>
+                                </div>
+                                <div class="tourBtn">
+                                    <button type="button"> 立即報名</button>
+                                </div>
+                            </div>`;
+        for (var i = 0; i < 9; i++) {
+            $("#tourBrowseBlock").append(html);
+        }
+
+
+    </script>
+    <script>
+
+        let like = document.getElementsByClassName('like');
+
+        for (var i = 0; i < like.length; i++) {
+            like[i].addEventListener("click", changeHeart)
+        }
+        function changeHeart() {
+            if (this.title == "加入收藏") {
+                this.title = "取消收藏";
+                this.src = "./images/common/like.png";
+            } else {
+                this.title = "加入收藏";
+                this.src = "./images/common/heart.png";
+
+            }
+        }
+
+
+
+    </script>
 </body>
 
 </html>

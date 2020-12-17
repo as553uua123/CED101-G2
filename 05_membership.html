@@ -4,7 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="./images/index/webIcon.png" type="image/x-icon" />
-        <link rel="stylesheet" href="./css/member.css" />
+        <link rel="stylesheet" href="./css/membership.css" />
+        <script src="./node_modules/jquery/dist/jquery.js"></script>
+        <script src="./node_modules/tw-city-selector/dist/tw-city-selector.js"></script>
+        <script src="./js/membership.js"></script>
         <title>會員系統</title>
     </head>
     <body>
@@ -17,38 +20,60 @@
                 <img src="./images/member/new_member.jpg" id="avatar" />
                 <h3>user ID</h3>
             </div>
-            <div id="sub_menu">
-                <div id="sub_menu_bar">
-                    <h2>揪團管理</h2>
-                    <h2>我的收藏</h2>
-                    <h2>訂單查詢</h2>
-                    <h2>我的文章</h2>
-                    <h2>個人資料</h2>
+            <div id="main_container">
+                <div id="sub_menu">
+                    <h2 class="tour">揪團管理</h2>
+                    <h2 class="mine_fav">我的收藏</h2>
+                    <h2 class="mine_order">訂單查詢</h2>
+                    <h2 class="mine_article">我的文章</h2>
+                    <h2 class="mine_profile">個人資料</h2>
                 </div>
                 <div id="tour">
                     <div id="mine_tour">
                         <h2>我主揪</h2>
-                        <div id="mine_on_going"></div>
-                        <div id="mine_out_of_date"></div>
+                        <div id="mine_on_going">
+                            <h3>揪團中</h3>
+                        </div>
+                        <div id="mine_out_of_date">
+                            <h3>過往揪團</h3>
+                        </div>
                     </div>
                     <div id="i_join">
                         <h2>我參加</h2>
-                        <div id="join_on_going"></div>
-                        <div id="join_out_of_date"></div>
+                        <div id="join_on_going">
+                            <h3>揪團中</h3>
+                        </div>
+                        <div id="join_out_of_date">
+                            <h3>過往揪團</h3>
+                        </div>
                     </div>
                 </div>
                 <div id="mine_fav">
+                    <div id="mine_fav_bar">
+                        <h3 class="fav_tour">揪團</h3>
+                        <h3 class="fav_article">文章</h3>
+                        <h3 class="fav_product">商品</h3>
+                    </div>
                     <div id="fav_tour"></div>
                     <div id="fav_article"></div>
                     <div id="fav_product"></div>
                 </div>
                 <div id="mine_order">
                     <div id="list">
-                        <div id="order_no"></div>
-                        <div id="order_status"></div>
-                        <div id="order_payment"></div>
-                        <div id="order_total"></div>
-                        <div id="order_date"></div>
+                        <div id="list_title">
+                            <h4 id="order_no">訂單編號</h4>
+                            <h4 id="order_status">訂單狀態</h4>
+                            <h4 id="order_payment">付款方式</h4>
+                            <h4 id="order_total">訂單金額</h4>
+                            <h4 id="order_date">下單時間</h4>
+                        </div>
+                        <div id="order">
+                            <h4 id="order_no">20201122028</h4>
+                            <h4 id="order_status">處理中</h4>
+                            <h4 id="order_payment">線上刷卡</h4>
+                            <h4 id="order_total">$4,000</h4>
+                            <h4 id="order_date">2020/11/22 02:28:28</h4>
+                        </div>
                     </div>
                 </div>
                 <div id="mine_article">
@@ -56,30 +81,44 @@
                 </div>
                 <div id="mine_profile">
                     <form action="" id="profile">
-                        <label for="email">電子信箱</label>
-                        <input type="text" name="email" class="email" />
-                        <label for="my_id">帳號</label>
-                        <input type="text" name="my_id" class="my_id" />
-                        <label for="my_pw">舊密碼</label>
-                        <input type="text" name="my_pw" class="my_pw" />
-                        <label for="my_new_pw">新密碼</label>
-                        <input type="text" name="my_new_pw" class="my_new_pw" />
-                        <label for="confirm_new_pw">確認新密碼</label>
-                        <input type="text" name="confirm_new_pw" class="confirm_new_pw" />
-                        <label for="my_name">收件人</label>
-                        <input type="text" name="my_name" class="my_name" />
-                        <label for="add">地址</label>
-                        <div role="tw-city-selector" class="add"></div>
-                        <input type="text" name="add" class="add" />
-                        <label for="tel">電話</label>
-                        <input type="text" name="tel" class="tel" />
-                        <input type="submit" name="submit" class="submit" />
+                        <div class="field-wrap">
+                            <label for="email">電子信箱</label>
+                            <input type="text" name="email" class="email" />
+                        </div>
+                        <div class="field-wrap">
+                            <label for="my_id">帳號</label>
+                            <input type="text" name="my_id" class="my_id" />
+                        </div>
+                        <div class="field-wrap">
+                            <label for="pass_password">舊密碼</label>
+                            <input type="text" name="pass_password" class="pass_password" />
+                        </div>
+                        <div class="field-wrap">
+                            <label for="new_password">新密碼</label>
+                            <input type="text" name="new_password" class="new_password" />
+                        </div>
+                        <div class="field-wrap">
+                            <label for="confirm_new_password">確認新密碼</label>
+                            <input type="text" name="confirm_new_pw" class="confirm_new_pw" />
+                        </div>
+                        <div class="field-wrap">
+                            <label for="my_name">收件人</label>
+                            <input type="text" name="my_name" class="my_name" />
+                        </div>
+                        <div class="field-wrap address">
+                            <div role="tw-city-selector" class="add"></div>
+                            <label for="add">地址</label>
+                            <input type="text" name="add" class="add" />
+                        </div>
+                        <div class="field-wrap">
+                            <label for="tel">電話</label>
+                            <input type="text" name="add" class="add" />
+                        </div>
+                        <button type="submit" class="button button-block"/>送出</button>
                     </form>
                 </div>
             </div>
         </main>
         <footer></footer>
-        <script src="./vendors/tw-city-selector-master/dist/tw-city-selector.js"></script>
-        <script src="./js/sandra/membership.js"></script>
     </body>
 </html>

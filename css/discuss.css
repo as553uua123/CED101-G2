@@ -14,6 +14,8 @@ a {
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .menu #imgLogo {
@@ -57,7 +59,7 @@ ul {
 }
 
 nav.nav {
-  visibility: hidden;
+  display: none;
 }
 
 .nav-tgl {
@@ -188,12 +190,12 @@ main #articles #cates .cate {
   margin-right: 30px;
 }
 
-main #articles .article {
-  border: solid pink 5px;
-}
-
 main #hot_groups {
   border: solid black 5px;
   width: 30%;
+}
+
+.article {
+  border: solid black 5px;
 }
 /*# sourceMappingURL=discuss.css.map */
