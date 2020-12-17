@@ -4,7 +4,7 @@
     "sources": [
         "../sass/sandra/membership.scss",
         "../sass/default/_reset.scss",
-        "../sass/default/variables.scss"
+        "../sass/default/_variables.scss"
     ],
     "names": [],
     "file": "membership.css"
