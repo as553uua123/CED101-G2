@@ -99,47 +99,51 @@
         <div class="tour_browse_block" id="tourBrowseBlock"> </div>
     </div>
 
-
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <div class="createTour">
+        <p>我要開團</p>
+        <img src="./images/tour/createTourCar.png" alt="">
+    </div>
     <script>
-        let html = `
-        <div class="tour_block">
-                    <div class="tour_img">
-                        <img src="./images/tour/tour1.jpg" alt="">
-                </div>
-                        <div class="love_share">
-                            <div class="love">
-                                <img class="like" src="./images/common/heart.png" title="加入收藏" alt="">
+        window.addEventListener("load", function () {
+            let tourNum = 9;
+            let tourBlock = document.getElementById("tourBrowseBlock");
+            for (let i = 0; i < tourNum; i++) {
+                let newTour = document.createElement('div');
+                tourBlock.appendChild(newTour);
+                newTour.setAttribute('class', 'tour_block');
+                newTour.innerHTML = `
+                <div class="tour_img">
+                            <img src="./images/tour/tour1.jpg" alt="">
                     </div>
-                                <div class="share">
-                                    <img src="./images/common/shareBlue.png" alt="">
-                    </div>
-                                </div>
-                                <div class="tour_text">
-                                    <h3>活動名稱</h3>
-                                    <p>一定打斷你鼻樑</p>
-                                    <h3>活動日期</h3>
-                                    <p>2020/12/30</p>
-                                    <h3>截止揪團日期</h3>
-                                    <p>2020/12/25</p>
-                                    <h3>目前剩餘名額</h3>
-                                    <p>14/16</p>
-                                    <h3>預估費用</h3>
-                                    <p>$7800NT</p>
-                                </div>
-                                <div class="tourBtn">
-                                    <button type="button"> 立即報名</button>
-                                </div>
-                            </div>`;
-        for (var i = 0; i < 9; i++) {
-            $("#tourBrowseBlock").append(html);
-        }
+                            <div class="love_share">
+                                <div class="love">
+                                    <img class="like" src="./images/common/heart.png" title="加入收藏" alt="">
+                        </div>
+                                    <div class="share">
+                                        <img src="./images/common/shareBlue.png" alt="">
+                        </div>
+                                    </div>
+                                    <div class="tour_text">
+                                        <h3>活動名稱</h3>
+                                        <p>一定打斷你鼻樑</p>
+                                        <h3>活動日期</h3>
+                                        <p>2020/12/30</p>
+                                        <h3>截止揪團日期</h3>
+                                        <p>2020/12/25</p>
+                                        <h3>目前剩餘名額</h3>
+                                        <p>14/16</p>
+                                        <h3>預估費用</h3>
+                                        <p>$7800NT</p>
+                                    </div>
+                                    <div class="tourBtn">
+                                        <button type="button"> 立即報名</button>
+                                    </div>
+                `;
 
-
+            }
+        })
     </script>
+
     <script>
 
         let like = document.getElementsByClassName('like');
