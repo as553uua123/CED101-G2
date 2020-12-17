@@ -454,8 +454,6 @@ ul {
   font: inherit;
   vertical-align: baseline;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 li {
@@ -584,13 +582,6 @@ article {
   font-size: 100%;
   font: inherit;
   display: block;
-<<<<<<< HEAD
-  font-size: 28px;
-  font-family: 'Noto Serif TC';
-  z-index: 100;
-  list-style: none;
-=======
->>>>>>> tour
 }
 
 aside {
@@ -618,24 +609,6 @@ details {
   font-size: 100%;
   font: inherit;
   display: block;
-<<<<<<< HEAD
-  position: fixed;
-  top: 0;
-  left: 0;
-  content: '';
-  width: 100vw;
-  height: 100vh;
-  background: #8bc34a78;
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-  -webkit-clip-path: circle(30px at calc(100% - 65px) 65px);
-          clip-path: circle(30px at calc(100% - 65px) 65px);
-  visibility: hidden;
-}
-
-nav.nav {
-  display: none;
-=======
 }
 
 embed {
@@ -645,7 +618,6 @@ embed {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
->>>>>>> tour
 }
 
 figure {
@@ -666,34 +638,6 @@ figcaption {
   display: block;
 }
 
-<<<<<<< HEAD
-.nav-tgl > span:before {
-  display: inline-block;
-  position: absolute;
-  content: '';
-  height: 1.7px;
-  border-radius: 1px;
-  background: #293335;
-  -webkit-transition: all 200ms;
-  transition: all 200ms;
-  top: -11px;
-  left: 3px;
-  width: 28px;
-}
-
-.nav-tgl > span:after {
-  display: inline-block;
-  position: absolute;
-  content: '';
-  height: 1.7px;
-  border-radius: 1px;
-  background: #293335;
-  -webkit-transition: all 200ms;
-  transition: all 200ms;
-  top: 11px;
-  left: 6px;
-  width: 22px;
-=======
 footer {
   margin: 0;
   padding: 0;
@@ -710,7 +654,6 @@ header {
   font-size: 100%;
   font: inherit;
   display: block;
->>>>>>> tour
 }
 
 hgroup {
@@ -740,28 +683,6 @@ nav {
   display: block;
 }
 
-<<<<<<< HEAD
-.menu.active .nav:before {
-  visibility: visible;
-  -webkit-clip-path: circle(100%);
-          clip-path: circle(100%);
-}
-
-.menu.active nav.nav ul li {
-  visibility: visible;
-  -webkit-clip-path: circle(100%);
-          clip-path: circle(100%);
-  display: block;
-  border: 1px solid blue;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  top: 160px;
-  left: 200px;
-  padding: 20px;
-  margin: 20px;
-=======
 output {
   margin: 0;
   padding: 0;
@@ -787,7 +708,6 @@ section {
   font-size: 100%;
   font: inherit;
   display: block;
->>>>>>> tour
 }
 
 summary {
@@ -799,22 +719,6 @@ summary {
   vertical-align: baseline;
 }
 
-<<<<<<< HEAD
-.menu.active .nav-tgl > span:after {
-  top: 0px;
-  left: 0;
-  width: 34px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.menu.active .nav-tgl > span:before {
-  top: 0px;
-  left: 0;
-  width: 34px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-=======
 time {
   margin: 0;
   padding: 0;
@@ -849,11 +753,10 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
->>>>>>> tour
 }
 
 body {
-  background-color: #dfe6cf;
+  background-color: #f2e8cf;
 }
 
 img {
@@ -866,15 +769,11 @@ img {
 }
 
 .choice_block .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .choice_block .choice_nav {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   width: 600px;
 }
 
