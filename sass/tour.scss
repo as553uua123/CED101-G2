@@ -1,8 +1,11 @@
-@import "../default/_common.scss";
+@import "./default/reset";
+@import "./default/variables";
+// @import"../default/common";
+
 
 
 body {
-    background-color: $filter-bar-bgColor;
+    background-color: $bg-color;
 }
 
 img {
