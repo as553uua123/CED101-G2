@@ -60,11 +60,20 @@
                 </div>
                 <div id="mine_order">
                     <div id="list">
-                        <div id="order_no"></div>
-                        <div id="order_status"></div>
-                        <div id="order_payment"></div>
-                        <div id="order_total"></div>
-                        <div id="order_date"></div>
+                        <div id="list_title">
+                            <h4 id="order_no">訂單編號</h4>
+                            <h4 id="order_status">訂單狀態</h4>
+                            <h4 id="order_payment">付款方式</h4>
+                            <h4 id="order_total">訂單金額</h4>
+                            <h4 id="order_date">下單時間</h4>
+                        </div>
+                        <div id="order">
+                            <h4 id="order_no">20201122028</h4>
+                            <h4 id="order_status">處理中</h4>
+                            <h4 id="order_payment">線上刷卡</h4>
+                            <h4 id="order_total">$4,000</h4>
+                            <h4 id="order_date">2020/11/22 02:28:28</h4>
+                        </div>
                     </div>
                 </div>
                 <div id="mine_article">
@@ -72,24 +81,42 @@
                 </div>
                 <div id="mine_profile">
                     <form action="" id="profile">
-                        <label for="email">電子信箱</label>
-                        <input type="text" name="email" class="email" />
-                        <label for="my_id">帳號</label>
-                        <input type="text" name="my_id" class="my_id" />
-                        <label for="my_pw">舊密碼</label>
-                        <input type="text" name="my_pw" class="my_pw" />
-                        <label for="my_new_pw">新密碼</label>
-                        <input type="text" name="my_new_pw" class="my_new_pw" />
-                        <label for="confirm_new_pw">確認新密碼</label>
-                        <input type="text" name="confirm_new_pw" class="confirm_new_pw" />
-                        <label for="my_name">收件人</label>
-                        <input type="text" name="my_name" class="my_name" />
-                        <label for="add">地址</label>
-                        <div role="tw-city-selector" class="add"></div>
-                        <input type="text" name="add" class="add" />
-                        <label for="tel">電話</label>
-                        <input type="text" name="tel" class="tel" />
-                        <input type="submit" name="submit" class="submit" />
+                        <div class="field-wrap">
+                            <label for="email">電子信箱</label>
+                            <input type="text" name="email" class="email" />
+                        </div>
+                        <div class="field-wrap">
+                            <label for="my_id">帳號</label>
+                            <input type="text" name="my_id" class="my_id" />
+                        </div>
+                        <div class="field-wrap">
+                            <label for="pass_password">舊密碼</label>
+                            <input type="text" name="pass_password" class="pass_password" />
+                        </div>
+                        <div class="field-wrap">
+                            <label for="new_password">新密碼</label>
+                            <input type="text" name="new_password" class="new_password" />
+                        </div>
+                        <div class="field-wrap">
+                            <label for="confirm_new_password">確認新密碼</label>
+                            <input type="text" name="confirm_new_pw" class="confirm_new_pw" />
+                        </div>
+                        <div class="field-wrap">
+                            <label for="my_name">收件人</label>
+                            <input type="text" name="my_name" class="my_name" />
+                        </div>
+                        <div class="field-wrap">
+                            <div role="tw-city-selector" class="add"></div>
+                            <label for="add">地址</label>
+                            <input type="text" name="add" class="add" />
+                        </div>
+                        <div class="field-wrap">
+                            <label for="tel">電話</label>
+                            <input type="text" name="add" class="add" />
+                        </div>
+                        <div class="field-wrap">
+                            <input type="submit" name="submit" class="submit" />
+                        </div>
                     </form>
                 </div>
             </div>

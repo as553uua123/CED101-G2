@@ -1,7 +1,7 @@
 @import "../default/reset";
-@import "../default/common.scss";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap");
+@import "../default/variable\ ";
 //============= var ============//
+$bgc: lighten($bg-color, 10%);
 //==============================//
 $side: 25%;
 $main: 100% - $side;
@@ -11,6 +11,7 @@ $main: 100% - $side;
 }
 
 body {
+    // background-color: $bgc;
     background-color: $bg-color;
     font-family: $font-family;
     h1 {
@@ -83,6 +84,22 @@ main {
         }
         #mine_order {
             display: none;
+            #list {
+                display: flex;
+                flex-direction: column;
+                #list_title,
+                #order {
+                    display: flex;
+                    #order_no,
+                    #order_status,
+                    #order_payment,
+                    #order_total,
+                    #order_date {
+                        border: 1px solid black;
+                        width: 20%;
+                    }
+                }
+            }
         }
         #mine_article {
             display: none;
@@ -92,8 +109,51 @@ main {
             // display: flex;
             flex-direction: row;
             #profile {
+                border: 1px solid black;
                 display: flex;
                 flex-direction: column;
+                position: relative;
+                .field-wrap {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    margin: 20px 0;
+                    input,
+                    textarea {
+                        font-size: 22px;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        padding: 5px 10px;
+                        background: none;
+                        background-image: none;
+                        border: 1px solid graylight;
+                        color: rgb(0, 0, 0);
+                        border-radius: 0;
+                        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+                        &:focus {
+                            outline: 0;
+                            border-color: $btn-color;
+                        }
+                    }
+                    label {
+                        position: absolute;
+                        transform: translateY(70%);
+                        left: 5px;
+                        transition: all 0.25s ease;
+                        -webkit-backface-visibility: hidden;
+                        pointer-events: none;
+                        // font-size: 22px;
+                    }
+                    label.active {
+                        transform: translateY(-25px);
+                        left: 2px;
+                        font-size: 14px;
+                    }
+                    label.highlight {
+                        color: white;
+                    }
+                }
             }
         }
     }
