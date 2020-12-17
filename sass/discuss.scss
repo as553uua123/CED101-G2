@@ -1,20 +1,24 @@
-@import "../default/common";
-@import "../default/variables";
-
+@import "./default/common";
 
 * {
     box-sizing: box-sizing;
 }
 
+body {
+    background-color: #F7EBCF;
+}
+
 main {
     display: flex;
+    width: 90%;
+    margin: 0 auto;
 
     #articles {
-        border: solid red 5px;
         width: 70%;
 
         h2 {
             text-align: center;
+            font-size: $h2;
         }
 
         #cates {
@@ -35,5 +39,84 @@ main {
 }
 
 .article {
-    border: solid black 5px;
+    border: solid rgb(26, 129, 34) 3px;
+    margin-top: 10px;
+}
+
+#content {
+    display: flex;
+}
+
+
+.contenttext {
+    padding: 50px;
+
+    h3 {
+        // background-color: $secondary-typo-color;
+        color: white;
+    }
+
+    img {
+        width: 20px;
+    }
+
+    p {
+        text-align: right;
+    }
+
+    div {
+        img {
+            margin-left: 15px;
+        }
+    }
+}
+
+
+
+#hot_groups {
+    h2 {
+        text-align: center;
+    }
+}
+
+
+.hot_group {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h4 {
+        background-color: green;
+        padding: 5px;
+        width: 240px;
+        margin: 0 auto;
+        color: white;
+    }
+
+    h5 {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+#loco {
+    width: 40px;
+    margin-top: 10px;
+}
+
+
+main {
+    position: relative;
+
+    .addtour {
+        position: fixed;
+        right: 10%;
+        bottom: 10%;
+        background-color: green;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        color: white;
+        font-weight: bolder;
+        font-size: $h5;
+    }
 }

@@ -1,0 +1,119 @@
+@import "./default/reset";
+@import "./default/variables";
+
+body {
+    background-color: $bg-color;
+}
+
+h1 {
+    text-align: center;
+    font-size: $h1;
+    margin: 20px;
+}
+
+
+.tourCreate_header {
+    display: flex;
+    justify-content: space-evenly;
+    width: 1200px;
+    margin: 50px auto;
+    border: 1px solid black;
+
+
+    .step_block {
+        border: 1px solid black;
+
+        .step {
+            font-size: $h2;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: $h3;
+            text-align: center;
+            padding: 30px;
+        }
+    }
+
+    .right {
+        border: 1px solid black;
+        margin: auto;
+    }
+}
+
+.tourCreate_main {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+
+    .tourCreate_leftside {
+        border: 1px solid black;
+        padding: 30px;
+
+        .tourCreate_choice {
+            margin-bottom: 30px;
+
+            button {
+                background-color: $btn-color;
+                width: 100px;
+                margin-right: 20px;
+                padding: 10px;
+
+            }
+        }
+
+        .tourCreate_item_block {
+            display: flex;
+            flex-wrap: wrap;
+
+            .tourCreate_item {
+                padding: 5px;
+
+                p {
+                    text-align: center;
+
+                    padding: 10px;
+                }
+            }
+        }
+
+        .tourCreate_item_img {
+            width: 200px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .page {
+            text-align: center;
+            margin-top: 50px;
+
+            span {
+                padding: 10px;
+                font-size: $h4;
+            }
+        }
+
+
+    }
+
+    .tourCreate_rightside {
+        border: 1px solid black;
+        padding: 50px;
+
+        .tourCreate_rightside_img {
+            width: 400px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
