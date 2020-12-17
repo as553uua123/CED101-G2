@@ -40,15 +40,18 @@ ul {
             font-family: 'Noto Serif TC';
             z-index: 100;
             list-style: none;
+
             a {
                 text-decoration: none;
                 color: $primary-typo-color;
             }
+
             a:hover {
                 color: $hover-color;
             }
         }
     }
+
     &:before {
         display: block;
         position: fixed;
@@ -63,9 +66,11 @@ ul {
         visibility: hidden;
     }
 }
+
 nav.nav {
     visibility: hidden;
 }
+
 .nav-tgl {
     display: inline-block;
     cursor: pointer;
@@ -80,7 +85,8 @@ nav.nav {
     padding: 0;
     background: #a7c957;
     line-height: 0.6;
-    > span {
+
+    >span {
         display: inline-block;
         position: relative;
         height: 1px;
@@ -88,6 +94,7 @@ nav.nav {
         border-radius: 1px;
         background: #293335;
         vertical-align: middle;
+
         &:before {
             display: inline-block;
             position: absolute;
@@ -100,6 +107,7 @@ nav.nav {
             left: 3px;
             width: 28px;
         }
+
         &:after {
             display: inline-block;
             position: absolute;
@@ -113,15 +121,18 @@ nav.nav {
             width: 22px;
         }
     }
+
     &:focus {
         outline: none;
     }
+
     &:hover {
-        > span {
+        >span {
             &:after {
                 width: 34px;
                 left: 0;
             }
+
             &:before {
                 width: 34px;
                 left: 0;
@@ -129,6 +140,7 @@ nav.nav {
         }
     }
 }
+
 .menu.active {
     .nav {
         &:before {
@@ -136,6 +148,7 @@ nav.nav {
             clip-path: circle(100%);
         }
     }
+
     nav.nav {
         ul {
             li {
@@ -152,15 +165,18 @@ nav.nav {
             }
         }
     }
+
     .nav-tgl {
-        > span {
+        >span {
             height: 0;
+
             &:after {
                 top: 0px;
                 left: 0;
                 width: 34px;
                 transform: rotate(-45deg);
             }
+
             &:before {
                 top: 0px;
                 left: 0;

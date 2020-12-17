@@ -1,4 +1,5 @@
 @import "../default/common";
+@import "../default/variables";
 
 
 * {
@@ -24,10 +25,6 @@ main {
                 margin-right: 30px;
             }
         }
-
-        .article {
-            border: solid pink 5px;
-        }
     }
 
     #hot_groups {
@@ -35,4 +32,8 @@ main {
         width: 30%;
     }
 
+}
+
+.article {
+    border: solid black 5px;
 }
