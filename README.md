@@ -11,7 +11,7 @@ https://github.com/a123789226/ED103-G1/tree/dev
 2.images放圖片，裡面有再分每個頁面的資料夾      
 3.js放大家的js    
 4.php放共用的php  
-5.sass裡面default放共用的sass，其他的放在外面
+5.sass裡面default放共用的sass，其他的放在外面  
 6.vendors放框架跟套件  
 
 因為github好像不能上傳空資料夾，所以裡面都有放一個佔位筆記本ㄎㄎ  
