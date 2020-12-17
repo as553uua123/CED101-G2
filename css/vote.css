@@ -51,10 +51,8 @@ ul {
   width: 100vw;
   height: 100vh;
   background: #8bc34a78;
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
-  -webkit-clip-path: circle(30px at calc(100% - 65px) 65px);
-          clip-path: circle(30px at calc(100% - 65px) 65px);
+  clip-path: circle(30px at calc(100% - 65px) 65px);
   visibility: hidden;
 }
 
@@ -95,7 +93,6 @@ nav.nav {
   height: 1.7px;
   border-radius: 1px;
   background: #293335;
-  -webkit-transition: all 200ms;
   transition: all 200ms;
   top: -11px;
   left: 3px;
@@ -109,7 +106,6 @@ nav.nav {
   height: 1.7px;
   border-radius: 1px;
   background: #293335;
-  -webkit-transition: all 200ms;
   transition: all 200ms;
   top: 11px;
   left: 6px;
@@ -132,18 +128,14 @@ nav.nav {
 
 .menu.active .nav:before {
   visibility: visible;
-  -webkit-clip-path: circle(100%);
-          clip-path: circle(100%);
+  clip-path: circle(100%);
 }
 
 .menu.active nav.nav ul li {
   visibility: visible;
-  -webkit-clip-path: circle(100%);
-          clip-path: circle(100%);
+  clip-path: circle(100%);
   display: block;
   border: 1px solid blue;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
   top: 160px;
@@ -160,16 +152,14 @@ nav.nav {
   top: 0px;
   left: 0;
   width: 34px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .menu.active .nav-tgl > span:before {
   top: 0px;
   left: 0;
   width: 34px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -931,19 +921,78 @@ video {
 
 main {
   text-align: center;
+  border: 1px solid black;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main h2 {
+  font-size: 36px;
+  margin: 50px 0;
 }
 
 main .block1 {
-  border: 1px solid red;
-  display: inline-block;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px 0;
+  display: flex;
+  margin: 60px 20px;
+  justify-content: center;
 }
 
-main .block1 .tea {
-  width: 500px;
+main .block1 .pic {
+  width: 460px;
+  font-size: 0;
+}
+
+main .block1 .pic .tea {
+  width: 100%;
 }
 
 main .block1 .info {
-  border: 1px solid black;
+  width: 600px;
+  text-align: left;
+  padding: 10px;
+  position: relative;
+}
+
+main .block1 .info .p1 {
+  font-size: 25px;
+  margin-top: 1%;
+}
+
+main .block1 .info .p2 {
+  font-size: 18px;
+  padding: 3.1% 0;
+}
+
+main .block1 .info .p3 {
+  line-height: 24px;
+}
+
+main .block1 .info .btn {
+  border: 1px solid blue;
   display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 960px) {
+  main .block1 .pic {
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main .block1 {
+    flex-wrap: wrap;
+  }
+  main .block1 .pic {
+    width: 100%;
+  }
+  main .block1 .info {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=vote.css.map */
