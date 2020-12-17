@@ -14,6 +14,7 @@ $btn-dark: darken($btn-color, 5%);
 body {
     // background-color: $bgc;
     background-color: $bg-color;
+    color: $primary-typo-color;
     font-family: $font-family;
     h1 {
         font-size: $h1;
@@ -36,7 +37,7 @@ body {
 }
 
 main {
-    border: 1px solid red;
+    // border: 1px solid red;
     display: flex;
     justify-content: center;
     justify-self: center;
@@ -66,7 +67,8 @@ main {
             cursor: pointer;
         }
         #tour {
-            border: 1px solid red;
+            // border: 1px solid red;
+            background-color: $success-sign;
             width: 80%;
             display: flex;
             flex-direction: column;
