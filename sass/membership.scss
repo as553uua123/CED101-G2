@@ -1,10 +1,11 @@
-@import "../default/reset";
-@import "../default/variables";
+@import "./default/reset";
+@import "./default/variables";
 //============= var ============//
 $bgc: lighten($bg-color, 10%);
-//==============================//
 $side: 25%;
 $main: 100% - $side;
+$btn-dark: darken($btn-color, 5%);
+//==============================//
 
 * {
     box-sizing: $box-sizing;
@@ -109,7 +110,7 @@ main {
             // display: flex;
             flex-direction: row;
             #profile {
-                border: 1px solid black;
+                // border: 1px solid black;
                 display: flex;
                 flex-direction: column;
                 position: relative;
@@ -118,6 +119,7 @@ main {
                     flex-direction: column;
                     position: relative;
                     margin: 20px 0;
+                    color: $primary-typo-color;
                     input,
                     textarea {
                         font-size: 22px;
@@ -127,8 +129,8 @@ main {
                         padding: 5px 10px;
                         background: none;
                         background-image: none;
-                        border: 1px solid graylight;
-                        color: rgb(0, 0, 0);
+                        border: 1px solid $primary-typo-color;
+                        color: $primary-typo-color;
                         border-radius: 0;
                         transition: border-color 0.25s ease, box-shadow 0.25s ease;
                         &:focus {
@@ -138,20 +140,43 @@ main {
                     }
                     label {
                         position: absolute;
-                        transform: translateY(70%);
-                        left: 5px;
+                        transform: translateY(75%);
+                        left: 5%;
                         transition: all 0.25s ease;
                         -webkit-backface-visibility: hidden;
                         pointer-events: none;
                         // font-size: 22px;
                     }
                     label.active {
-                        transform: translateY(-25px);
+                        transform: translateY(-15px);
                         left: 2px;
                         font-size: 14px;
                     }
                     label.highlight {
                         color: $btn-color;
+                    }
+                }
+                .address {
+                    label {
+                        transform: translateY(190%);
+                    }
+                }
+                .button {
+                    border: 0;
+                    outline: none;
+                    border-radius: 0;
+                    padding: 5px 0;
+                    font-size: $h3;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                    background: $main;
+                    color: $btn-color;
+                    transition: all.5s ease;
+                    -webkit-appearance: none;
+                    &:hover,
+                    &:focus {
+                        background: $btn-dark;
                     }
                 }
             }
