@@ -880,7 +880,6 @@ main #main_container #mine_profile {
 }
 
 main #main_container #mine_profile #profile {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -891,6 +890,7 @@ main #main_container #mine_profile #profile .field-wrap {
   flex-direction: column;
   position: relative;
   margin: 20px 0;
+  color: #386641;
 }
 
 main #main_container #mine_profile #profile .field-wrap input,
@@ -902,8 +902,8 @@ main #main_container #mine_profile #profile .field-wrap textarea {
   padding: 5px 10px;
   background: none;
   background-image: none;
-  border: 1px solid graylight;
-  color: black;
+  border: 1px solid #386641;
+  color: #386641;
   border-radius: 0;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -916,20 +916,43 @@ main #main_container #mine_profile #profile .field-wrap textarea:focus {
 
 main #main_container #mine_profile #profile .field-wrap label {
   position: absolute;
-  transform: translateY(70%);
-  left: 5px;
+  transform: translateY(75%);
+  left: 5%;
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
 }
 
 main #main_container #mine_profile #profile .field-wrap label.active {
-  transform: translateY(-25px);
+  transform: translateY(-15px);
   left: 2px;
   font-size: 14px;
 }
 
 main #main_container #mine_profile #profile .field-wrap label.highlight {
   color: #a7c957;
+}
+
+main #main_container #mine_profile #profile .address label {
+  transform: translateY(190%);
+}
+
+main #main_container #mine_profile #profile .button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 5px 0;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: 75%;
+  color: #a7c957;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+
+main #main_container #mine_profile #profile .button:hover, main #main_container #mine_profile #profile .button:focus {
+  background: #9dc344;
 }
 /*# sourceMappingURL=membership.css.map */
