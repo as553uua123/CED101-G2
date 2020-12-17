@@ -6,9 +6,9 @@ https://github.com/a123789226/ED103-G1/tree/dev
 
 簡介一下每個資料夾要幹嘛用的: 未來都有可能再變動---------------------------------------------------  
 
-0.根目錄放html跟php (共用的php有專用資料夾)
-1.admin放後台的html跟php 
-2.images放圖片，裡面有再分每個頁面的資料夾    
+0.根目錄放html跟php (共用的php有專用資料夾)  
+1.admin放後台的html跟php   
+2.images放圖片，裡面有再分每個頁面的資料夾      
 3.js放大家的js    
 4.php放共用的php  
 5.sass裡面default放共用的sass，其他的放在外面
