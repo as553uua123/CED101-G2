@@ -1,3 +1,4 @@
+@import './default/common';
 * {
     box-sizing: border-box;
 }
@@ -25,7 +26,7 @@ html {
         width: calc(100% / 5);
         float: left;
         position: relative;
-        background-image: url(./images/index/house1.png);
+        background-image: url(../images/index/house1.png);
         background-position: bottom;
         background-position-x: left;
         background-size: 40%;
@@ -129,13 +130,13 @@ html {
     .Shopping img#img_Shopping {
         position: absolute;
         right: 0;
-        bottom: 20px;
+        bottom: 0;
         width: 70vw;
     }
 }
 
 .sections {
-    background-image: url(./images/index/bgforall.png);
+    background-image: url(../images/index/bgforall.png);
     background-repeat: repeat-x;
     background-size: contain;
     width: 500%;
@@ -151,4 +152,5 @@ html {
     transform: translate(-50%, -50%);
     font-size: 30px;
     color: #fff;
+    font-family: $font-family;
 }

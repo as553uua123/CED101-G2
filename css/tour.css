@@ -495,14 +495,10 @@ label {
 legend {
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
-  z-index: 1000;
-=======
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
->>>>>>> 0ac8b0ba6d7c9305c0ea0ece32ceddbff1f5c911
 }
 
 table {
