@@ -33,6 +33,7 @@ img {
             text-align: center;
             color: $primary-typo-color;
             font-size: $h1;
+            padding: 10px;
         }
 
         ul {
@@ -152,6 +153,7 @@ img {
             h2 {
                 margin: 0;
                 font-size: $h3;
+                padding: 10px;
             }
 
             ul {
@@ -256,8 +258,18 @@ img {
 
             }
         }
+    }
+}
 
+.createTour {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 350px;
 
+    p {}
 
+    img {
+        width: 100%;
     }
 }
