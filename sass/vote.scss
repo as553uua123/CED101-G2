@@ -2,17 +2,104 @@
 @import "../default/_reset.scss";
 
 
+
 main{
     text-align: center;
+    border: 1px solid black;
+    max-width: 1200px;
+    margin: 0 auto;
+    h2{
+        font-size: $h2;
+        margin: 50px 0;
+    }
     .block1{
-        border: 1px solid red;
-        display: inline-block;
-        .tea{
-            width: 500px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding: 10px 0;
+        display: flex;
+        margin: 60px 20px;
+        justify-content: center;
+        // width: 80%;
+    
+        .pic{
+            width: 460px;
+            font-size: 0;
+            .tea{
+                width: 100%;
+            }
         }
+        
         .info{
-            border: 1px solid black;
-            display: inline-block;
+           
+            width:600px;
+            text-align: left;
+            padding:10px;
+            position: relative;
+           
+            
+            .p1{
+                font-size: 25px;
+                margin-top: 1%;
+            }
+
+            .p2{
+                font-size: 18px;
+                padding: 3.1% 0;
+            }
+
+            .p3{
+                line-height: 24px;
+            }
+
+            .btn{
+                border: 1px solid blue;
+                display: inline-block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin-top: 20px;
+
+                .bt{
+                   
+                }
+            }
+            
+        }
+    }
+
+    table{
+        border: 1px solid black;
+        margin: auto;
+        font-size:20px;
+
+        td{
+            padding: 10px;
+        }
+    }
+}
+
+@media screen  and (max-width:960px){
+    main{
+        .block1{
+            .pic{
+                width:550px;
+            }
+        }
+        
+    }
+}
+
+@media screen  and (max-width:768px){
+    main{
+        .block1{
+            flex-wrap: wrap;
+
+            .pic{
+                width: 100%;
+            }
+
+            .info{
+                width: 100%;
+            }
         }
     }
 }
