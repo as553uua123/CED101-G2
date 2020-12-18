@@ -1,0 +1,41 @@
+.nameall {
+
+    width: 90%;
+    margin: 0 auto;
+
+    .man {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: black;
+    }
+
+}
+
+
+
+.heart {
+    width: 20px;
+}
+
+
+
+main {
+    position: relative;
+
+    .addtour {
+        position: fixed;
+        right: 10%;
+        bottom: 10%;
+        background-color: green;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        color: white;
+        font-weight: bolder;
+        // font-size: $h5;
+        outline: none;
+    }
+}
+
+#article_image {}
