@@ -1,18 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="./images/index/webIcon.png" type="image/x-icon" />
-        <script src="./node_modules/jquery/dist/jquery.js"></script>
-        <title>會員登入</title>
-    </head>
-    <body>
-        <header>
-            <h1></h1>
-            <nav></nav>
-        </header>
-        <main></main>
-        <footer></footer>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/index/webIcon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/member_login_register.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./js/member_login_register.js"></script>
+    <title>登入／註冊</title>
+</head>
+<body>
+    <div class="form">
+        <ul class="tab-group">
+          <li class="tab"><a href="#login">登入</a></li>
+          <li class="tab active"><a href="#signup">註冊</a></li>
+        </ul>
+        
+        <div class="tab-content">
+          <div id="login">   
+            <h1>歡迎回來！</h1>
+            
+            <form action="/" method="post">
+            
+              <div class="field-wrap">
+              <label>
+                帳號<span class="req">*</span>
+              </label>
+              <input type="email"required autocomplete="off"/>
+            </div>
+            
+            <div class="field-wrap">
+              <label>
+                密碼<span class="req">*</span>
+              </label>
+              <input type="password"required autocomplete="off"/>
+            </div>
+            
+            <p class="forgot"><a href="#">忘記密碼？</a></p>
+            
+            <button class="button button-block"/>登入</button>
+            
+            </form>
+  
+          </div>
+          <div id="signup">   
+            <h1>註冊會員</h1>
+            
+            <form action="/" method="post">
+            
+              <div class="top-row">
+                <div class="field-wrap">
+                  <label>
+                    姓<span class="req">*</span>
+                  </label>
+                  <input type="text" required autocomplete="off" />
+                </div>
+            
+                <div class="field-wrap">
+                  <label>
+                    名<span class="req">*</span>
+                  </label>
+                  <input type="text"required autocomplete="off"/>
+                </div>
+              </div>
+  
+              <div class="field-wrap">
+                <label>
+                  信箱<span class="req">*</span>
+                </label>
+                <input type="email"required autocomplete="off"/>
+              </div>
+            
+              <div class="field-wrap">
+                <label>
+                  密碼<span class="req">*</span>
+                </label>
+                <input type="password"required autocomplete="off"/>
+              </div>
+
+              <div class="field-wrap">
+                <label>
+                  重複輸入密碼<span class="req">*</span>
+                </label>
+                <input type="password"required autocomplete="off"/>
+              </div>
+            
+              <button type="submit" class="button button-block"/>註冊</button>
+            
+            </form>
+  
+          </div>          
+        </div><!-- tab-content -->
+        
+  </div> <!-- /form -->
+</body>
 </html>
