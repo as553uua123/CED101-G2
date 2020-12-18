@@ -12,22 +12,93 @@ img {
     width: 100%;
 }
 
+@keyframes cloud {
+    0% {
+        top: 20%;
+    }
+
+    50% {
+        top: 5%;
+    }
+
+    100% {
+        top: 20%;
+    }
+}
+
 .choice_block {
-    width: 1100px;
-    margin: 0 auto;
+    position: relative;
+    // border: 2px solid blue;
+
+    .tour_center_img {
+        // border: 1px solid black;
+        position: absolute;
+        bottom: -40%;
+
+    }
+
+    .tour_cloud_img {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 200px;
+        animation-name: cloud;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+
+    }
+
+    .tour_cloud1_img {
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        width: 300px;
+        animation-name: cloud;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+    }
+
+    .tour_cloud2_img {
+        position: absolute;
+        top: 5%;
+        left: 30%;
+        // animation-name: cloud;
+        // animation-duration: 2s;
+        // animation-iteration-count: infinite;
+    }
+
+    .tour_cloud3_img {
+        position: absolute;
+        top: 10%;
+        left: 40%;
+        width: 250px;
+        // animation-name: cloud;
+        // animation-duration: 5s;
+        // animation-iteration-count: infinite;
+    }
+
+    .tour_cloud4_img {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        animation-name: cloud;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+    }
 
     .flex {
         display: flex;
-        // align-content: center;
+
+
+        width: 1100px;
+        margin: 0 auto;
     }
 
     .choice_nav {
-        // display: inline-block;
-        // display: flex;
+
         align-self: center;
-        width: 600px;
-
-
+        width: 700px;
+        // border: 1px solid black;
 
         h1 {
             text-align: center;
@@ -47,13 +118,14 @@ img {
         }
 
 
+
     }
 
     .twMap {
         display: inline-block;
         width: 500px;
         position: relative;
-        border: 1px solid black;
+        // border: 1px solid black;
 
         img {
             width: 100%;
@@ -131,14 +203,15 @@ img {
     width: 60px;
 }
 
+
+
 .choice_list {
     text-align: center;
-
     margin: 50px 0;
+    margin-top: 350px;
 
     ul {
         padding: 0;
-
 
         li {
             display: inline-block;
@@ -178,7 +251,7 @@ img {
 .tour_browse {
     width: 1200px;
     margin: 0 auto;
-    border: 1px solid black;
+    // border: 1px solid black;
 
     h1 {
         text-align: center;
@@ -210,7 +283,7 @@ img {
         .love_share {
             text-align: right;
             padding-right: 30px;
-            border: 1px solid black;
+            // border: 1px solid black;
 
 
 
@@ -261,15 +334,38 @@ img {
     }
 }
 
+@keyframes move {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
 .createTour {
     position: fixed;
     bottom: 0;
     right: 0;
     width: 350px;
+    animation-name: move;
+    animation-duration: 5s;
 
-    p {}
+    p {
+        cursor: pointer;
+        text-align: center;
+        // border: 1px solid black;
+        position: absolute;
+        right: 5%;
+        padding: 30px;
+        border-radius: 50%;
+        font-size: $h5;
+        background-color: #ffffff;
+    }
 
     img {
         width: 100%;
+        cursor: pointer;
     }
 }
