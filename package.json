@@ -29,7 +29,10 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
+    "gsap": "^3.5.1",
     "jquery": "^3.5.1",
+    "scrollmagic": "^2.0.8",
+    "scrollmagic-plugin-gsap": "^1.0.4",
     "tw-city-selector": "^2.1.1",
     "vue": "^2.6.12"
   }

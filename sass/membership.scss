@@ -5,6 +5,8 @@ $bgc: lighten($bg-color, 10%);
 $side: 25%;
 $main: 100% - $side;
 $btn-dark: darken($btn-color, 5%);
+$lighter: lighten($success-sign, 15%);
+$main-width: 80%;
 //==============================//
 
 * {
@@ -12,8 +14,8 @@ $btn-dark: darken($btn-color, 5%);
 }
 
 body {
-    // background-color: $bgc;
     background-color: $bg-color;
+    color: $primary-typo-color;
     font-family: $font-family;
     h1 {
         font-size: $h1;
@@ -35,8 +37,13 @@ body {
     }
 }
 
+//============= toggle ============//
+.bg-color {
+    background-color: $lighter;
+}
+//==============================//
 main {
-    border: 1px solid red;
+    // border: 1px solid red;
     display: flex;
     justify-content: center;
     justify-self: center;
@@ -44,7 +51,7 @@ main {
     // width: 80%;
 
     #side {
-        border: 1px solid blue;
+        // border: 1px solid blue;
         width: $side;
         text-align: center;
         #avatar {
@@ -55,36 +62,92 @@ main {
         }
     }
     #main_container {
-        border: 1px solid green;
+        // border: 1px solid green;
         width: $main;
         display: flex;
         flex-direction: column;
         #sub_menu {
+            // border: 1px solid black;
             display: flex;
-            width: 80%;
+            width: $main-width;
             justify-content: space-between;
             cursor: pointer;
+            h2 {
+                // border: 1px solid red;
+                padding: 10px;
+            }
+            .bg-color {
+                background-color: $lighter;
+                border-radius: 5px 5px 0 0;
+            }
         }
         #tour {
-            // border: 1px solid black;
-            width: 75%;
+            // border: 1px solid red;
+            background-color: $lighter;
+            width: $main-width;
             display: flex;
             flex-direction: column;
+            // margin: 10px;
+            border-radius: 0 5px 5px;
+            #mine_tour,
+            #i_join {
+                // border: 1px solid black;
+                width: 100%;
+                padding: 20px 0;
+                h2 {
+                    padding: 10px;
+                }
+                #mine_on_going,
+                #mine_out_of_date,
+                #join_on_going,
+                #join_out_of_date {
+                    // border: 1px solid purple;
+                    h3 {
+                        font-size: $h3;
+                        padding: 10px;
+                    }
+                    .tour_detail {
+                        margin: 10px;
+                        border: 1px solid $primary-typo-color;
+                        border-radius: 10px;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10px;
+                        &:hover {
+                            color: $btn-color;
+                            background-color: $primary-typo-color;
+                        }
+                        .tour_title,
+                        .tour_date,
+                        .tour_attendency {
+                            width: 20%;
+                        }
+                        .tour_status_bar {
+                            width: 20%;
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
         }
         #mine_fav {
+            border: 1px solid red;
+            width: $main-width;
             display: none;
             position: relative;
             #mine_fav_bar {
                 border: 1px solid black;
                 display: flex;
-                width: 35%;
+                width: 25%;
                 justify-content: space-between;
                 position: absolute;
-                left: 5%;
+                left: 17%;
             }
         }
         #mine_order {
             display: none;
+            width: $main-width;
             #list {
                 display: flex;
                 flex-direction: column;
@@ -96,7 +159,7 @@ main {
                     #order_payment,
                     #order_total,
                     #order_date {
-                        border: 1px solid black;
+                        // border: 1px solid black;
                         width: 20%;
                     }
                 }
@@ -104,9 +167,11 @@ main {
         }
         #mine_article {
             display: none;
+            width: $main-width;
         }
         #mine_profile {
             display: none;
+            width: $main-width;
             // display: flex;
             flex-direction: row;
             #profile {
@@ -122,7 +187,7 @@ main {
                     color: $primary-typo-color;
                     input,
                     textarea {
-                        font-size: 22px;
+                        font-size: $h4;
                         display: block;
                         width: 100%;
                         height: 100%;
@@ -150,7 +215,7 @@ main {
                     label.active {
                         transform: translateY(-15px);
                         left: 2px;
-                        font-size: 14px;
+                        font-size: $h6;
                     }
                     label.highlight {
                         color: $btn-color;
@@ -158,7 +223,7 @@ main {
                 }
                 .address {
                     label {
-                        transform: translateY(190%);
+                        transform: translateY(200%);
                     }
                 }
                 .button {

@@ -1,15 +1,15 @@
-@import "../default/_common.scss";
-@import "../default/_reset.scss";
+@import "default/_common.scss";
+@import "default/_reset.scss";
+@import "default/_variables.scss";
 
 
 
 main{
     text-align: center;
-    border: 1px solid black;
     max-width: 1200px;
     margin: 0 auto;
     h2{
-        font-size: $h2;
+        font-size: $h3;
         margin: 50px 0;
     }
     .block1{
@@ -51,25 +51,35 @@ main{
             }
 
             .btn{
-                border: 1px solid blue;
                 display: inline-block;
                 position: absolute;
                 bottom: 0;
                 right: 0;
-                margin-top: 20px;
-
+                margin-top: 20px; 
+                
                 .bt{
-                   
+                    border: none;
+                    color:$btn-color;
+                    outline: none;
+                    cursor: pointer;
                 }
             }
             
         }
     }
 
+    .ht{
+        margin-top: 72px;
+    }
+
     table{
-        border: 1px solid black;
-        margin: auto;
-        font-size:20px;
+        // border: 1px solid black;
+        margin: 0 auto 30px;
+        width: 80%;
+        
+        .title{
+            font-size: 20px;
+        }
 
         td{
             padding: 10px;
