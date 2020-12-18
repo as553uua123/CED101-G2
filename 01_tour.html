@@ -14,10 +14,9 @@
             <div class="choice_nav">
                 <h1>揪團地區</h1>
                 <ul>
-                    <li>北部</li>
-                    <li>中部</li>
-                    <li>南部</li>
-
+                    <li>北 部</li>
+                    <li>中 部</li>
+                    <li>南 部</li>
                 </ul>
             </div>
             <div class="twMap">
@@ -54,46 +53,65 @@
                 <div class="location10">
                     <img src="./images/common/location.png" alt="">
                 </div>
-
             </div>
+            <!-- <img src="../images/index/notuse/8355.png" alt=""> -->
         </div>
-
-        <div class="choice_list">
-            <ul>
-                <li>
-                    <h2>茶園類型</h2>
-                    <ul>
-                        <li>觀光型</li>
-                        <li>體驗型</li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>茶園茶種</h2>
-                    <ul>
-                        <li>綠茶</li>
-                        <li>紅茶</li>
-                        <li>烏龍茶</li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>交通方式</h2>
-                    <ul>
-                        <li>大眾運輸</li>
-                        <li>租遊覽車</li>
-                        <li>自行前往</li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>預估費用</h2>
-                    <ul>
-                        <li>5000以下</li>
-                        <li>5000 - 10000</li>
-                        <li>10000以上</li>
-                    </ul>
-                </li>
-            </ul>
+        <div class="tour_center_img">
+            <img src="./images/index/notuse/8355.png" alt="">
+        </div>
+        <div class="tour_cloud_img">
+            <img src="./images/tour/clouds.png" alt="">
+        </div>
+        <div class="tour_cloud1_img">
+            <img src="./images/tour/clouds.png" alt="">
+        </div>
+        <div class="tour_cloud2_img">
+            <img src="./images/tour/clouds.png" alt="">
+        </div>
+        <div class="tour_cloud3_img">
+            <img src="./images/tour/clouds.png" alt="">
+        </div>
+        <div class="tour_cloud4_img">
+            <img src="./images/tour/clouds.png" alt="">
         </div>
     </div>
+
+    <div class="choice_list">
+        <ul>
+            <li>
+                <h2>茶園類型</h2>
+                <ul>
+                    <li>觀光型</li>
+                    <li>體驗型</li>
+                </ul>
+            </li>
+            <li>
+                <h2>茶園茶種</h2>
+                <ul>
+                    <li>綠茶</li>
+                    <li>紅茶</li>
+                    <li>烏龍茶</li>
+                </ul>
+            </li>
+            <li>
+                <h2>交通方式</h2>
+                <ul>
+                    <li>大眾運輸</li>
+                    <li>租遊覽車</li>
+                    <li>自行前往</li>
+                </ul>
+            </li>
+            <li>
+                <h2>預估費用</h2>
+                <ul>
+                    <li>5000以下</li>
+                    <li>5000 - 10000</li>
+                    <li>10000以上</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
     <div class="tour_browse">
         <h1>瀏覽揪團</h1>
         <div class="tour_browse_block" id="tourBrowseBlock"> </div>
@@ -107,7 +125,7 @@
         window.addEventListener("load", function () {
             let tourNum = 9;
             let tourBlock = document.getElementById("tourBrowseBlock");
-            for (let i = 0; i < tourNum; i++) {
+            for (var i = 0; i < tourNum; i++) {
                 let newTour = document.createElement('div');
                 tourBlock.appendChild(newTour);
                 newTour.setAttribute('class', 'tour_block');
@@ -141,26 +159,25 @@
                 `;
 
             }
-        })
-    </script>
 
-    <script>
-
-        let like = document.getElementsByClassName('like');
-
-        for (var i = 0; i < like.length; i++) {
-            like[i].addEventListener("click", changeHeart)
-        }
-        function changeHeart() {
-            if (this.title == "加入收藏") {
-                this.title = "取消收藏";
-                this.src = "./images/common/like.png";
-            } else {
-                this.title = "加入收藏";
-                this.src = "./images/common/heart.png";
+            let like = document.getElementsByClassName('like');
+            for (var i = 0; i < like.length; i++) {
+                like[i].addEventListener("click", changeHeart)
 
             }
-        }
+            function changeHeart() {
+                if (this.title == "加入收藏") {
+                    this.title = "取消收藏";
+                    this.src = "./images/common/like.png";
+                } else {
+                    this.title = "加入收藏";
+                    this.src = "./images/common/heart.png";
+
+                }
+            }
+
+
+        })
 
 
 

@@ -72,8 +72,34 @@ h1 {
             display: flex;
             flex-wrap: wrap;
 
+            .tourCreate_hotel {
+                padding: 5px;
+
+                .tourCreate_item_img {
+                    width: 600px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                p {
+                    text-align: center;
+
+                    padding: 10px;
+                }
+            }
+
             .tourCreate_item {
                 padding: 5px;
+
+                .tourCreate_item_img {
+                    width: 200px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
 
                 p {
                     text-align: center;
@@ -83,13 +109,7 @@ h1 {
             }
         }
 
-        .tourCreate_item_img {
-            width: 200px;
 
-            img {
-                width: 100%;
-            }
-        }
 
         .page {
             text-align: center;

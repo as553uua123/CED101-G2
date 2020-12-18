@@ -32,10 +32,10 @@
 
         <div class="tourCreate_leftside">
             <div class="tourCreate_choice">
-                <button>地點</button>
-                <button>住宿</button>
-                <button>餐廳</button>
-                <button>其他</button>
+                <button id="local">地點</button>
+                <button id="hotel">住宿</button>
+                <button id="restaurant">餐廳</button>
+                <button id="other">其他</button>
             </div>
             <div class="tourCreate_item_block">
 
@@ -58,10 +58,11 @@
 
 
     <script>
+        let tourBlock = document.getElementsByClassName("tourCreate_item_block")[0];
+        let page = document.getElementsByClassName('page')[0];
         window.addEventListener("load", function () {
-            let itemNum = 9;
-            let tourBlock = document.getElementsByClassName("tourCreate_item_block")[0];
-            for (let i = 0; i < itemNum; i++) {
+            let localNum = 9;
+            for (let i = 0; i < localNum; i++) {
                 let newitem = document.createElement('div');
                 tourBlock.appendChild(newitem);
                 newitem.setAttribute('class', 'tourCreate_item');
@@ -74,6 +75,65 @@
 
             }
         })
+        // ==================================localBtn=============================================
+        let local = document.getElementById('local');
+        local.addEventListener('click', showLocal);
+        function showLocal() {
+            tourBlock.innerHTML = "";
+            let localNum = 8;
+            page.setAttribute('style', 'display:biock');
+            for (let i = 0; i < localNum; i++) {
+                let newitem = document.createElement('div');
+                tourBlock.appendChild(newitem);
+                newitem.setAttribute('class', 'tourCreate_item');
+                newitem.innerHTML = `
+                <div class="tourCreate_item_img">
+                        <img src="./images/vote/tea.jpg" alt="">
+                    </div>
+                    <p>八卦山茶園</p>
+                `;
+            }
+        };
+
+        // =================================hotelBtn============================================
+        let hotel = document.getElementById('hotel');
+        hotel.addEventListener('click', showHotel);
+        function showHotel() {
+            tourBlock.innerHTML = "";
+            let hotelNum = 2;
+            page.setAttribute('style', 'display:none');
+            for (let i = 0; i < hotelNum; i++) {
+                let newitem = document.createElement('div');
+                tourBlock.appendChild(newitem);
+                newitem.setAttribute('class', 'tourCreate_hotel');
+                newitem.innerHTML = `
+                <div class="tourCreate_item_img">
+                        <img src="./images/tour/hotel1.jpg" alt="">
+                    </div>
+                    <p>伊豆溫泉旅館</p>
+                `;
+            }
+        };
+        // =================================restaurantBtn========================================
+        let rest = document.getElementById('restaurant');
+        rest.addEventListener('click', showRest);
+        function showRest() {
+            tourBlock.innerHTML = "";
+            let restNum = 6;
+            page.setAttribute('style', 'display:none');
+            for (let i = 0; i < restNum; i++) {
+                let newitem = document.createElement('div');
+                tourBlock.appendChild(newitem);
+                newitem.setAttribute('class', 'tourCreate_item');
+                newitem.innerHTML = `
+                <div class="tourCreate_item_img">
+                        <img src="./images/tour/restaurant1.jpg" alt="">
+                    </div>
+                    <p>好吃餐廳</p>
+                `;
+            }
+        };
+
     </script>
 
 
