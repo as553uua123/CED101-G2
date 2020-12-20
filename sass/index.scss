@@ -8,6 +8,14 @@ html {
     height: 100%;
 }
 
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
 .container-main * {
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s;
@@ -179,4 +187,13 @@ html {
 
 .about-list li + li {
     margin-left: 20px;
+}
+
+.about-list li .img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
