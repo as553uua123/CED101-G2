@@ -8,149 +8,108 @@ html {
     height: 100%;
 }
 
-.wrapper {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    -webkit-perspective: 1000;
-    perspective: 1000;
+.container-main * {
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
 }
 
-.section {
-    height: 100%;
-    width: calc(100% / 5);
-    float: left;
+.hdg-bottom {
     position: relative;
-
-    &:nth-child(1) {
-        width: calc(100% / 5);
-        float: left;
-        position: relative;
-        background-image: url(../images/index/house1.png);
-        background-position: bottom;
-        background-position-x: left;
-        background-size: 40%;
-        background-repeat: no-repeat;
-    }
-
-    .Sun img#img_Sun {
-        width: 15%;
-        position: absolute;
-        top: 30px;
-        left: 150px;
-    }
-
-    .Car img#img_Car {
-        width: 20%;
-        bottom: 0;
-        position: absolute;
-        left: 580px;
-    }
-
-    .Lady img#img_Lady {
-        height: 20%;
-        bottom: 0;
-        position: absolute;
-        left: 380px;
-    }
-
-    &:nth-child(2) {
-        border: 5px solid yellow;
-    }
+    padding: 70px 0 140px;
+    text-align: center;
+    background-image: url(/images/index/img_bg_yg_pc.jpg);
+    background-size: 100% auto;
+    z-index: 1;
 }
 
-.section2 {
-    .Barbecue img#img_Barbecue {
-        width: 20%;
-        bottom: 0;
-        position: absolute;
-        left: 0px;
-    }
-
-    .House2 img#img_House2 {
-        height: 60%;
-        bottom: 0;
-        position: absolute;
-        left: 800px;
-    }
+.hdg-bottom .hdg-bottom__hdg {
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+    text-align: center;
 }
 
-.section:nth-child(3) {
-    border: 5px solid greenyellow;
+.about-list li .hdg span {
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.section3 {
-    .Flag img#img_Flag {
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-        height: 40vh;
-    }
-
-    .Discuss img#img_Discuss {
-        position: absolute;
-        left: 800px;
-        bottom: -12px;
-        height: 40vh;
-    }
+.about-list li .hdg {
+    margin-bottom: 15px;
+    color: #7d9a1a;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
 }
 
-.section:nth-child(4) {
-    border: 5px solid pink;
+.hdg-bottom .hdg-bottom__txt {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.125rem;
+    letter-spacing: 0.1rem;
+    line-height: 2.5;
+    text-align: left;
 }
 
-.section4 {
-    .VoteSign img#img_VoteSign {
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        height: 40vh;
-    }
-
-    .Vote img#img_Vote {
-        position: absolute;
-        left: 600px;
-        bottom: 0;
-        height: 60vh;
-    }
-}
-
-.section:nth-child(5) {
-    border: 5px solid blue;
-}
-
-.section5 {
-    .ShoppingGate img#img_ShoppingGate {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 50vh;
-    }
-
-    .Shopping img#img_Shopping {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 70vw;
-    }
-}
-
-.sections {
-    background-image: url(../images/index/bgforall.png);
-    background-repeat: repeat-x;
-    background-size: contain;
-    width: 500%;
+.common-btn .common-btn__blobs {
     height: 100%;
-    border: 10px solid;
+    -webkit-filter: url(#goo);
+    filter: url(#goo);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -3px;
+    right: -1px;
+    border-radius: 25px;
 }
 
-.section__title {
+.common-btn .common-btn__txt {
+    position: relative;
+    color: #90a30b;
+    z-index: 1;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.common-btn {
+    position: relative;
+    display: inline-block;
+    padding: 14px;
+    width: 260px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 25px;
+}
+.common-btn:after {
+    content: '>>';
     position: absolute;
     top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-size: 30px;
+    right: 20px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #90a30b;
+    font-size: 1.125rem;
+    font-family: 'FontAwesome';
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+.common-btn:hover:after {
     color: #fff;
-    font-family: $font-family;
+}
+
+.about-list {
+    position: relative;
+    margin-top: 190px;
 }
