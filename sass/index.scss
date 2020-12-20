@@ -113,3 +113,70 @@ html {
     position: relative;
     margin-top: 190px;
 }
+
+.about-list li:before {
+    content: '';
+    display: block;
+    width: 144px;
+    height: 144px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #dfe0c2;
+    border-radius: 72px;
+}
+
+.about-list ul {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.about-list .list-illust-front {
+    top: 174px;
+}
+.about-list .list-illust-back,
+.about-list .list-illust-front {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-46%);
+    -ms-transform: translateX(-46%);
+    transform: translateX(-46%);
+    display: block;
+}
+
+.about-list li {
+    position: relative;
+    padding: 80px 30px 0;
+    display: inline-block;
+    width: calc(33.3333% - 13.33333px);
+    min-height: 270px;
+    background-color: #dfe0c2;
+    border-radius: 10px;
+    vertical-align: top;
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-list li .hdg span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.about-list li .txt {
+    color: #000;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.about-list .list-illust-back {
+    top: 25px;
+}
+
+.about-list li + li {
+    margin-left: 20px;
+}
