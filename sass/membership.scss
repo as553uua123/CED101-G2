@@ -45,20 +45,37 @@ body {
 main {
     // border: 1px solid red;
     display: flex;
-    justify-content: center;
-    justify-self: center;
-    justify-items: center;
-    // width: 80%;
-
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     #side {
         // border: 1px solid blue;
         width: $side;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        @media only screen and (max-width: 992px) {
+            width: 250px;
+        }
+        @media only screen and (max-width: 768px) {
+            width: $main-width;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
         #avatar {
-            // border: 1px solid black;
+            border: 1px solid black;
+            align-self: center;
             border-radius: 50%;
             width: 200px;
             height: 200px;
+            margin: 5px;
+            @media only screen and (max-width: 768px) {
+                width: 150px;
+                height: 150px;
+            }
         }
     }
     #main_container {
@@ -71,11 +88,26 @@ main {
             display: flex;
             width: $main-width;
             justify-content: space-between;
+            text-align: center;
             cursor: pointer;
+            @media only screen and (max-width: 767px) {
+                width: 100%;
+            }
+            .mine_profile {
+                @media only screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
             h3 {
                 // border: 1px solid red;
                 font-size: $h3;
                 padding: 10px;
+                @media only screen and (min-width: 993px) and (max-width: 1200px) {
+                    font-size: $h4;
+                }
+                @media only screen and (min-width: 769px) and (max-width: 992px) {
+                    font-size: $h3;
+                }
             }
             .bg-color {
                 background-color: $lighter;
@@ -88,8 +120,12 @@ main {
             width: $main-width;
             display: flex;
             flex-direction: column;
-            // margin: 10px;
             border-radius: 0 5px 5px;
+            @media only screen and (min-width: 769px) and (max-width: 1200px) {
+            }
+            @media only screen and (max-width: 768px) {
+                width: 100%;
+            }
             #mine_tour,
             #i_join {
                 // border: 1px solid black;
@@ -118,11 +154,19 @@ main {
                         &:hover {
                             color: $btn-color;
                             background-color: $primary-typo-color;
+                            .down {
+                                border-top: 10px solid $lighter;
+                            }
                         }
                         .tour_title,
-                        .tour_date,
+                        .tour_date {
+                            width: 20%;
+                        }
                         .tour_attendency {
                             width: 20%;
+                            @media only screen and (max-width: 992px) {
+                                display: none;
+                            }
                         }
                         .tour_status_bar {
                             width: 20%;
@@ -131,6 +175,43 @@ main {
                             .tour_join,
                             .tour_check {
                                 cursor: pointer;
+                                @media only screen and (max-width: 576px) {
+                                    display: none;
+                                }
+                            }
+                            .tour_status {
+                                @media only screen and (max-width: 1200px) {
+                                    display: none;
+                                }
+                            }
+                            .arrow {
+                                border: 1px solid red;
+                                display: none;
+                                @media only screen and (max-width: 576px) {
+                                    display: block;
+                                }
+                            }
+                            .down {
+                                border: 1px solid blue;
+                                width: 0;
+                                height: 0;
+                                border-left: 10px solid transparent;
+                                border-right: 10px solid transparent;
+                                border-top: 10px solid $primary-typo-color;
+                                cursor: pointer;
+                                &:hover {
+                                    border-top: 10px solid $lighter;
+                                }
+                                @media only screen and (max-width: 576px) {
+                                    display: block;
+                                }
+                            }
+                            .up {
+                                width: 0;
+                                height: 0;
+                                border-left: 5px solid transparent;
+                                border-right: 5px solid transparent;
+                                border-bottom: 5px solid black;
                             }
                         }
                     }
@@ -142,16 +223,28 @@ main {
             width: $main-width;
             display: none;
             position: relative;
+            @media only screen and (max-width: 768px) {
+                width: 100%;
+            }
             #mine_fav_bar {
                 // border: 1px solid black;
                 display: flex;
                 width: 25%;
                 justify-content: space-between;
+                justify-self: center;
                 position: absolute;
-                left: 17%;
-                padding: 5px;
+                // left: 50%;
+                padding: 5px 5px 5px 15px;
+                @media only screen and (min-width: 993px) and (max-width: 1200px) {
+                    width: 30%;
+                }
+                @media only screen and (min-width: 577px) and (max-width: 992px) {
+                    width: 40%;
+                }
+                @media only screen and (max-width: 576px) {
+                    width: 50%;
+                }
                 h4 {
-                    // padding: 5px;
                     font-size: $h4;
                 }
                 .fav_tour {
@@ -195,6 +288,9 @@ main {
         #mine_order {
             display: none;
             width: $main-width;
+            @media only screen and (max-width: 768px) {
+                width: 100%;
+            }
             #list {
                 display: flex;
                 flex-direction: column;
@@ -205,14 +301,37 @@ main {
                     display: flex;
                     width: 100%;
                     padding: 10px 0px;
+                    justify-content: space-between;
                     #order_no,
                     #order_status,
-                    #order_payment,
-                    #order_total,
+                    #order_total {
+                        // border: 1px solid black;
+                        width: 20%;
+                        text-align: center;
+                        @media only screen and (max-width: 992px) {
+                            width: 25%;
+                        }
+                        @media only screen and (max-width: 576px) {
+                            width: 33%;
+                        }
+                    }
+                    #order_payment {
+                        width: 20%;
+                        text-align: center;
+                        @media only screen and (max-width: 992px) {
+                            width: 25%;
+                        }
+                        @media only screen and (max-width: 576px) {
+                            display: none;
+                        }
+                    }
                     #order_date {
                         // border: 1px solid black;
                         width: 20%;
                         text-align: center;
+                        @media only screen and (max-width: 992px) {
+                            display: none;
+                        }
                     }
                 }
                 #order {
@@ -227,11 +346,14 @@ main {
         #mine_article {
             display: none;
             width: $main-width;
+            @media only screen and (max-width: 768px) {
+                width: 100%;
+            }
             .article_brief {
                 background-color: $lighter;
                 border-radius: 5px;
                 padding: 10px 0px;
-                .tour_detail {
+                .article_detail {
                     margin: 10px;
                     border: 1px solid $primary-typo-color;
                     border-radius: 10px;
@@ -242,16 +364,21 @@ main {
                         color: $btn-color;
                         background-color: $primary-typo-color;
                     }
-                    .tour_title,
-                    .tour_date,
-                    .tour_attendency {
-                        width: 20%;
-                    }
-                    .tour_status_bar {
+                    .article_title,
+                    .article_date {
                         // border: 1px solid black;
-                        width: 20%;
+                        width: calc(100% / 3);
+                    }
+                    .article_status_bar {
+                        // border: 1px solid black;
+                        width: calc(100% / 3);
                         display: flex;
                         justify-content: space-between;
+                        .article_status,
+                        .article_join,
+                        .article_check {
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -259,8 +386,10 @@ main {
         #mine_profile {
             display: none;
             width: $main-width;
-            // display: flex;
             flex-direction: row;
+            @media only screen and (max-width: 768px) {
+                width: 100%;
+            }
             #profile {
                 // border: 1px solid $primary-typo-color;
                 background-color: $lighter;
@@ -307,7 +436,7 @@ main {
                     }
                     label.active {
                         transform: translateY(-15px);
-                        left: 2px;
+                        left: 10px;
                         font-size: $h6;
                     }
                     label.highlight {
@@ -354,6 +483,9 @@ main {
     &:hover {
         color: $btn-color;
         background-color: $primary-typo-color;
+    }
+    @media only screen and (max-width: 992px) {
+        width: 50%;
     }
     img {
         width: 100%;
