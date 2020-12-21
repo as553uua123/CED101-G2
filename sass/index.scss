@@ -1193,16 +1193,29 @@ video {
 }
 
 @media only screen and (max-width: 768px) {
+    .hdg-bottom {
+        padding: 70px 0 10px;
+    }
+    .about-list {
+        margin-top: 100px;
+    }
+
     .about-list .list-illust-back,
     .about-list .list-illust-front {
         display: none;
     }
     .about-list li {
-        padding: 55px 30px 30px;
+        padding: 75px 30px 30px;
         display: block;
         width: 100%;
         min-height: 0;
         box-shadow: none;
+        margin-bottom: 13%;
+        margin-top: 22%;
+    }
+
+    .about-list li .txt {
+        text-align: center;
     }
 
     .about-list li + li {
@@ -1222,6 +1235,75 @@ video {
 
     .common-btn:after {
         right: 10px;
+    }
+
+    .illust-shop-next {
+        position: absolute;
+        top: -10%;
+        right: 0;
+        width: 40%;
+    }
+
+    .project {
+        padding: 100px 0 80px;
+    }
+
+    .project .pickup .wrap-txt {
+        top: 15px;
+    }
+
+    .hdg-4 {
+        margin-top: 60px;
+    }
+
+    .project-list li {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .info .box-info {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .info .box-info .txt-area {
+        padding: 20px;
+        min-height: 0;
+    }
+
+    .info .box-info .txt-area .hdg {
+        font-size: 0.9375rem;
+    }
+
+    .info .box-info .txt-area .txt {
+        font-size: 0.875rem;
+    }
+    .illust-discuss-btm {
+        width: 20%;
+        top: 0%;
+    }
+
+    .illust-discuss-next {
+        top: 4.2%;
+    }
+
+    .info .box-info {
+        display: block;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .illust-shop-next {
+        z-index: -1;
+    }
+
+    .action {
+        padding-bottom: 0;
+    }
+
+    .illust-discuss {
+        top: -10%;
     }
 }
 
