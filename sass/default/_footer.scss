@@ -1,0 +1,29 @@
+footer {
+    padding: 10px 10px 0px;
+    background-color: #fff;
+    color: #70d6bf;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+//有空再加
+// .pagetop.is-hidden {
+//     opacity: 0;
+//     pointer-events: none;
+// }
+
+.pagetop:after {
+    content: '∧';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: -1px;
+    color: #70d6bf;
+    font-size: 1.75rem;
+    font-family: 'FontAwesome';
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}

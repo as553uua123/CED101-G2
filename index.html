@@ -2,435 +2,376 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./node_modules/jquery/dist/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/animation.gsap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
-    <title>偵茶者 | TEA SEARCHER | 帶你找茶 喝茶 買茶</title>
-    <link rel="shortcut icon" href="./images/index/webIcon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/index.css" />
-</head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="./node_modules/jquery/dist/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/animation.gsap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
+	<title>偵茶者 | TEA SEARCHER | 帶你找茶 喝茶 買茶</title>
+	<link rel="shortcut icon" href="./images/index/webIcon.png" type="image/x-icon" />
+	<link rel="stylesheet" href="./css/index.css" /> </head>
 
 <body>
-    <header>
-        <nav>
-            <!-- logo放置區 -->
-            <a href="./index.html">
-                <h1 id="logo"><img src="images/index/webIcon.png" alt="logo_pic"></h1>
-            </a>
-            <!-- 導覽漢堡 -->
-            <div class="menu-wrap">
-                <input type="checkbox" class="toggler">
-                <div class="hamburger">
+	<header>
+		<nav>
+			<!-- logo放置區 -->
+			<a href="./index.html">
+				<h1 id="logo"><img src="images/index/webIcon.png" alt="logo_pic" /></h1> </a>
+			<!-- 導覽漢堡 -->
+			<div class="menu-wrap">
+				<input type="checkbox" class="toggler" />
+				<div class="hamburger">
+					<div></div>
+				</div>
+				<div class="menu">
+					<div>
+						<div>
+							<ul>
+								<li><a href="">茶園揪團</a></li>
+								<li><a href="">茶園票選</a></li>
+								<li><a href="">討論區</a></li>
+								<li><a href="">茶商城</a></li>
+								<li><a href="">會員中心</a></li>
+								<li><a href="">小遊戲?</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- 第一屏 -->
+	<!-- 第二屏 -->
+	<div class="hdg-bottom">
+		<div class="wrap-step">
+			<!-- 腳印 -->
+			<!-- <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
+                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
+                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
+                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
+                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
+                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
+                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
+                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
+                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
+                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
+                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span> --></div> <span class="illust__1 hdg-bottom__splite"></span> <span class="illust__2 hdg-bottom__splite"></span> <span class="illust__3 hdg-bottom__splite"></span> <span class="illust__4 hdg-bottom__splite"></span> <span class="illust__5 hdg-bottom__splite"></span> <span class="illust__6 hdg-bottom__splite"></span> <span class="illust__7 hdg-bottom__splite"></span> <span class="illust__10 hdg-bottom__splite"></span> <span class="illust__11 hdg-bottom__splite"></span> <img class="hdg-bottom__illust events-none u-pc" src="images/index/img-hdg-illust.png" alt="" /> <img class="hdg-bottom__illust events-none u-sp" src="images/index/img-hdg-illust-sp-01.png" alt="" />
+		<div class="scroll">SCROLL</div>
+		<h2 class="hdg-bottom__hdg is-not-scrolled">
+                跟著偵茶者 <br class="u-sp" /><span class="strong">讓台灣茶的美好 重新回到你妳的⽣活中</span>こと。
+            </h2>
+		<p class="hdg-bottom__txt is-not-scrolled"> 您知道台灣的烏⿓茶在世界居有領導地位嗎
+			<br />跟著我們喝遍全台茶園，帶您認識世界上最好的茶 </p> <a class="common-btn is-not-scrolled" href="#"><span class="common-btn__txt">馬上參加揪團</span>
+                <div class="common-btn__blobs">
+                    <div></div>
+                    <div></div>
                     <div></div>
                 </div>
-                <div class="menu">
-                    <div>
-                        <div>
-                            <ul>
-                                <li><a href="">茶園揪團</a></li>
-                                <li><a href="">茶園票選</a></li>
-                                <li><a href="">討論區</a></li>
-                                <li><a href="">茶商城</a></li>
-                                <li><a href="">會員中心</a></li>
-                                <li><a href="">小遊戲?</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- 第一屏 -->
-
-    <div class="hdg-bottom">
-        <!-- 第二屏 -->
-        <div class="wrap-step">
-            <!-- 腳印 -->
-            <!-- <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span> -->
-        </div>
-        <span class="illust__1 hdg-bottom__splite"></span>
-        <span class="illust__2 hdg-bottom__splite"></span>
-        <span class="illust__3 hdg-bottom__splite"></span>
-        <span class="illust__4 hdg-bottom__splite"></span>
-        <span class="illust__5 hdg-bottom__splite"></span>
-        <span class="illust__6 hdg-bottom__splite"></span>
-        <span class="illust__7 hdg-bottom__splite"></span>
-        <span class="illust__10 hdg-bottom__splite"></span>
-        <span class="illust__11 hdg-bottom__splite"></span>
-
-        <img class="hdg-bottom__illust events-none u-pc" src="images/index/img-hdg-illust.png" alt="">
-        <img class="hdg-bottom__illust events-none u-sp" src="images/index/img-hdg-illust-sp-01.png" alt="">
-        <div class="scroll">SCROLL</div>
-        <h2 class="hdg-bottom__hdg is-not-scrolled">跟著偵茶者 <br class="u-sp"><span class="strong">讓台灣茶的美好
-                重新回到你妳的⽣活中</span>こと。</h2>
-        <p class="hdg-bottom__txt is-not-scrolled">您知道台灣的烏⿓茶在世界居有領導地位嗎<br>跟著我們喝遍全台茶園，帶您認識世界上最好的茶</p>
-        <a class="common-btn is-not-scrolled" href="#"><span class="common-btn__txt">馬上參加揪團</span>
-            <div class="common-btn__blobs">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </a>
-        <!-- <img class="hdg-bottom__illust is-bottom events-none u-sp" src="/images/img-hdg-illust-sp-02.png" alt=""> -->
-        <div class="about-list">
-            <img class="list-illust-back" src="/images/index/img-about-list-illust-back.png" alt="">
-            <ul>
-                <li class="is-not-scrolled">
-                    <img class="about-list__illust is-top events-none u-sp"
-                        src="/images/index/img-about-list-illust-sp-01.png" alt="">
-                    <p class="img"><img src="images/index/tea1.png" alt=""></p>
-                    <p class="hdg"><span>舞鶴茶園一日遊</span><span class="small">で</span><span class="strong">つなぐ</span></p>
-                    <p class="txt">仲間を増やして活動していきます</p>
-                    <img class="about-list__illust is-bottom events-none u-sp" src="/images/index/tea1.png" alt="">
-                </li>
-                <li class="is-not-scrolled delay150">
-                    <img class="about-list__illust is-top events-none u-sp" src="/images/index/tea2.png" alt="">
-                    <p class="img"><img src="images/index/tea2.png" alt=""></p>
-                    <p class="hdg"><span>坪林茶園兩天一夜</span><span class="small">で</span><span class="strong">つなぐ</span></p>
-                    <p class="txt">いろいろなエリアで活動をつないでいきます</p>
-                    <img class="about-list__illust is-bottom events-none u-sp" src="/images/index/tea3.png" alt="">
-                </li>
-                <li class="is-not-scrolled delay300">
-                    <img class="about-list__illust is-top events-none u-sp"
-                        src="/images/img-about-list-illust-sp-01.png" alt="">
-                    <p class="img"><img src="images/index/tea3.png" alt=""></p>
-                    <p class="hdg"><span>三峽鐵觀音體驗</span><span class="small">で</span><span class="strong">つなぐ</span></p>
-                    <p class="txt">同じ保全活動を一緒に協働していきます</p>
-                    <img class="about-list__illust is-bottom events-none u-sp"
-                        src="/images/index/img-about-list-illust-sp-05.png" alt="">
-                </li>
-            </ul>
-            <img class="list-illust-front events-none" src="/images/index/img-about-list-illust-front.png" alt="">
-        </div>
-    </div>
-    </div>
-
-    <!-- 第三屏 -->
-    <div class="action">
-        <div class="wrap-step is-01">
-            <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-            <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-            <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-            <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt=""></span></span>
-            <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt=""></span></span>
-            <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt=""></span></span>
-            <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt=""></span></span>
-            <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt=""></span></span>
-            <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt=""></span></span>
-            <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt=""></span></span>
-            <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt=""></span></span>
-            <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt=""></span></span>
-        </div>
-        <img class="illust-action events-none" src="/images/img-action-illust.png" alt="">
-        <div class="container js-report-anim">
-            <h3 class="hdg-3 is-not-scrolled">茶園排行榜<span class="year">2020</span></h3>
-            <ul class="action-list">
-                <li class="is-01">
-                    <a href="/project/#list" data-category="植樹・工場の森づくり">
-                        <div class="circle">
-                            <div class="bg"></div>
-                            <p class="img"><img src="images/index/notuse/vespa.png" alt=""></p>
-                        </div>
-                        <p class="txt">植樹・<br class="u-sp">工場の森づくり</p>
-                    </a>
-                </li>
-                <li class="is-02">
-                    <a href="/project/#list" data-category="森林保全・里山整備">
-                        <div class="circle">
-                            <div class="bg"></div>
-                            <p class="img"><img src="images/index/notuse/vespa.png  " alt=""></p>
-                        </div>
-                        <p class="txt">森林保全・<br class="u-sp">里山整備</p>
-                    </a>
-                </li>
-                <li class="is-03">
-                    <a href="/project/#list" data-category="ビオトープ・水域保全">
-                        <div class="circle">
-                            <div class="bg"></div>
-                            <p class="img"><img src="images/index/notuse/vespa.png  " alt=""></p>
-                        </div>
-                        <p class="txt">ビオトープ・<br class="u-sp">水域保全</p>
-                    </a>
-                </li>
-                <li class="is-04">
-                    <a href="/project/#list" data-category="生態系保全">
-                        <div class="circle">
-                            <div class="bg"></div>
-                            <p class="img"><img src="images/index/notuse/vespa.png  " alt=""></p>
-                        </div>
-                        <p class="txt">生態系保全</p>
-                    </a>
-                </li>
-                <li class="is-05">
-                    <a href="/project/#list" data-category="環境学習">
-                        <div class="circle">
-                            <div class="bg"></div>
-                            <p class="img"><img src="images/index/notuse/vespa.png  " alt=""></p>
-                        </div>
-                        <p class="txt">環境学習</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <!-- 第四屏 -->
-        <div class="project">
-            <div class="container">
-                <img class="illust-project events-none" src="/images/index/img-project-illust.png" alt="">
-                <div class="wrap-hdg">
-                    <h3 class="hdg-3">偵茶商城</h3>
-                    <img class="illust-pickup-back events-none u-pc" src="/images/index/img-project-illust-back.png">
-                    <img class="illust-pickup-back events-none u-sp" src="/images/index/img-project-illust-back-sp.png"
-                        alt="">
-                    <a class="pickup is-category-04 is-not-scrolled" href="/project/feature/ft001.html">
-                        <p class="img"><img src="https://source.unsplash.com/838x367/?tea" alt=""></p>
-                        <!-- <p class="label"><span class="num">1200<span class="small">人</span></span><span class="ribon"></span></p> -->
-                        <div class="wrap-txt">
-                            <p class="category-name">想得到更多購物優惠?</p>
-                            <p class="txt">馬上參加遊戲!</p>
-                        </div>
-                    </a>
-                    <img class="illust-pickup-front events-none u-pc" src="/images/index/img-project-illust-front.png"
-                        alt="">
-                    <img class="illust-pickup-front events-none u-sp" src="/images/img-project-illust-front-sp.png"
-                        alt="">
-                </div>
-                <div class="wrap-step is-01">
-                    <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                </div>
-                <div class="project-list">
-                    <h4 class="hdg-4 is-not-scrolled">最新上架商品</h4>
-                    <div id="project-articlelists"></div>
-                    <div>
-                        <ul>
-                            <li class="is-category-02"><a href="#" style="height: 352.875px;">
-                                    <p class="img"><img src="https://source.unsplash.com/283x170/?product" alt=""></p>
-                                    <div class="txt-area">
-                                        <p class="label"><span class="num">600<span class="small">元</span></span><span
-                                                class="ribon"></span></p>
-                                        <p class="category-name">茶葉</p>
-                                        <div class="wrap-company">
-                                            <p class="company"><span>三峽碧螺春茶園</span></p>
-                                        </div>
-                                        <p class="txt">來自最純淨高山的冠軍茶葉</p>
-                                    </div>
-                                </a></li>
-                            <li class="is-category-01"><a href="#" style="height: 352.875px;">
-                                    <p class="img"><img src="https://source.unsplash.com/283x170/?product" alt=""></p>
-                                    <div class="txt-area">
-                                        <p class="label"><span class="num">1500<span class="small">元</span></span><span
-                                                class="ribon"></span></p>
-                                        <p class="category-name">茶托</p>
-                                        <div class="wrap-company">
-                                            <p class="company"><span>三峽碧螺春茶園</span></p>
-                                        </div>
-                                        <p class="txt">來自最純淨高山的冠軍茶葉</p>
-                                    </div>
-                                </a></li>
-                            <li class="is-category-05"><a href="#" style="height: 352.875px;">
-                                    <p class="img"><img src="https://source.unsplash.com/283x170/?product" alt=""></p>
-                                    <div class="txt-area">
-                                        <p class="label"><span class="num">700<span class="small">元</span></span><span
-                                                class="ribon"></span></p>
-                                        <p class="category-name">查模</p>
-                                        <div class="wrap-company">
-                                            <p class="company"><span>三峽碧螺春茶園</span></p>
-                                        </div>
-                                        <p class="txt">來自最純淨高山的冠軍茶葉</p>
-                                    </div>
-                                </a></li>
-                            <li class="is-category-02"><a href="#" style="height: 397.675px;">
-                                    <p class="img"><img src="https://source.unsplash.com/283x170/?product" alt=""></p>
-                                    <div class="txt-area">
-                                        <p class="label"><span class="num">210<span class="small">元</span></span><span
-                                                class="ribon"></span></p>
-                                        <p class="category-name">茶具</p>
-                                        <div class="wrap-company">
-                                            <p class="company"><span>三峽碧螺春茶園</span></p>
-                                        </div>
-                                        <p class="txt">來自最純淨高山的冠軍茶葉</p>
-                                    </div>
-                                </a></li>
-                            <li class="is-category-05"><a href="#" style="height: 397.675px;">
-                                    <p class="img"><img src="https://source.unsplash.com/283x170/?product" alt=""></p>
-                                    <div class="txt-area">
-                                        <p class="label"><span class="num">800<span class="small">元</span></span><span
-                                                class="ribon"></span></p>
-                                        <p class="category-name">茶杯</p>
-                                        <div class="wrap-company">
-                                            <p class="company"><span>三峽碧螺春茶園</span></p>
-                                        </div>
-                                        <p class="txt">來自最純淨高山的冠軍茶葉</p>
-                                    </div>
-                                </a></li>
-                            <li class="is-category-02"><a href="#" style="height: 397.675px;">
-                                    <p class="img"><img src="https://source.unsplash.com/283x170/?product" alt=""></p>
-                                    <div class="txt-area">
-                                        <p class="label"><span class="num">300<span class="small">元</span></span><span
-                                                class="ribon"></span></p>
-                                        <p class="category-name">茶組</p>
-                                        <div class="wrap-company">
-                                            <p class="company"><span>三峽碧螺春茶園</span></p>
-                                        </div>
-                                        <p class="txt">來自最純淨高山的冠軍茶葉</p>
-                                    </div>
-                                </a></li>
-                        </ul>
-                    </div>
-                    <a class="common-btn is-not-scrolled" href="/project/#list"><span
-                            class="common-btn__txt">帶我逛商城</span>
+            </a>
+		<!-- <img class="hdg-bottom__illust is-bottom events-none u-sp" src="/images/img-hdg-illust-sp-02.png" alt=""> -->
+		<div class="about-list"> <img class="list-illust-back" src="/images/index/img-about-list-illust-back.png" alt="" />
+			<ul>
+				<li class="is-not-scrolled"> <img class="about-list__illust is-top events-none u-sp" src="#" alt="" />
+					<p class="img"><img src="images/index/tea1.png" alt="" /></p>
+					<p class="hdg"> <span>舞鶴茶園一日遊</span><span class="small">で</span><span class="strong">つなぐ</span> </p>
+					<p class="txt">仲間を増やして活動していきます</p> <img class="about-list__illust is-bottom events-none u-sp" src="#" alt="" /> </li>
+				<li class="is-not-scrolled delay150"> <img class="about-list__illust is-top events-none u-sp" src="#" alt="" />
+					<p class="img"><img src="images/index/tea2.png" alt="" /></p>
+					<p class="hdg"> <span>坪林茶園兩天一夜</span><span class="small">で</span><span class="strong">つなぐ</span> </p>
+					<p class="txt">いろいろなエリアで活動をつないでいきます</p>
+					<!-- <img
+                            class="about-list__illust is-bottom events-none u-sp"
+                            src="/images/index/tea3.png"
+                            alt=""
+                        /> --></li>
+				<li class="is-not-scrolled delay300"> <img class="about-list__illust is-top events-none u-sp" src="#" alt="" />
+					<p class="img"><img src="images/index/tea3.png" alt="" /></p>
+					<p class="hdg"> <span>三峽鐵觀音體驗</span><span class="small">で</span><span class="strong">つなぐ</span> </p>
+					<p class="txt">同じ保全活動を一緒に協働していきます</p> <img class="about-list__illust is-bottom events-none u-sp" src="#" alt="" /> </li>
+			</ul> <img class="list-illust-front events-none" src="/images/index/img-about-list-illust-front.png" alt="" /> </div>
+	</div>
+	<!-- 第三屏 -->
+	<div class="action">
+		<div class="wrap-step is-01"> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> </div> <img class="illust-action events-none" src="/images/img-action-illust.png" alt="" />
+		<div class="container js-report-anim">
+			<h3 class="hdg-3 is-not-scrolled">茶園排行榜<span class="year">2020</span></h3>
+			<ul class="action-list">
+				<li class="is-01">
+					<a href="/project/#list" data-category="植樹・工場の森づくり">
+						<div class="circle">
+							<div class="bg"></div>
+							<p class="img"><img src="images/index/notuse/vespa.png" alt="" /></p>
+						</div>
+						<p class="txt">植樹・
+							<br class="u-sp" />工場の森づくり</p>
+					</a>
+				</li>
+				<li class="is-02">
+					<a href="/project/#list" data-category="森林保全・里山整備">
+						<div class="circle">
+							<div class="bg"></div>
+							<p class="img"><img src="images/index/notuse/vespa.png  " alt="" /></p>
+						</div>
+						<p class="txt">森林保全・
+							<br class="u-sp" />里山整備</p>
+					</a>
+				</li>
+				<li class="is-03">
+					<a href="/project/#list" data-category="ビオトープ・水域保全">
+						<div class="circle">
+							<div class="bg"></div>
+							<p class="img"><img src="images/index/notuse/vespa.png  " alt="" /></p>
+						</div>
+						<p class="txt">ビオトープ・
+							<br class="u-sp" />水域保全</p>
+					</a>
+				</li>
+				<li class="is-04">
+					<a href="/project/#list" data-category="生態系保全">
+						<div class="circle">
+							<div class="bg"></div>
+							<p class="img"><img src="images/index/notuse/vespa.png  " alt="" /></p>
+						</div>
+						<p class="txt">生態系保全</p>
+					</a>
+				</li>
+				<li class="is-05">
+					<a href="/project/#list" data-category="環境学習">
+						<div class="circle">
+							<div class="bg"></div>
+							<p class="img"><img src="images/index/notuse/vespa.png  " alt="" /></p>
+						</div>
+						<p class="txt">環境学習</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 第四屏 -->
+	<div class="project">
+		<div class="container"> <img class="illust-project events-none" src="/images/index/img-project-illust.png" alt="" />
+			<div class="wrap-hdg">
+				<h3 class="hdg-3">偵茶商城</h3> <img class="illust-pickup-back events-none u-pc" src="/images/index/img-project-illust-back.png" /> <img class="illust-pickup-back events-none u-sp" src="/images/index/img-project-illust-back-sp.png" alt="" />
+				<a class="pickup is-category-04 is-not-scrolled" href="#">
+					<p class="img"><img src="https://source.unsplash.com/636x278/?product" alt="" /></p>
+					<div class="wrap-txt">
+						<p class="category-name">想得到更多購物優惠?</p>
+						<p class="txt">馬上參加遊戲!</p>
+					</div>
+				</a> <img class="illust-pickup-front events-none u-pc" src="/images/index/img-project-illust-front.png" alt="" /> <img class="illust-pickup-front events-none u-sp" src="/images/img-project-illust-front-sp.png" alt="" /> </div>
+			<div class="wrap-step is-01"> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                    ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                    ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                    ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                    ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                    ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                    ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                    ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                    ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                    ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                    ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                    ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                    ></span> </div>
+			<div class="project-list">
+				<h4 class="hdg-4 is-not-scrolled">最新上架商品</h4>
+				<div id="project-articlelists"></div>
+				<div>
+					<ul>
+						<li class="is-category-02">
+							<a href="#" style="height: 352.875px">
+								<p class="img"><img src="https://source.unsplash.com/283x170/?product" alt="" /></p>
+								<div class="txt-area">
+									<p class="label"> <span class="num">600<span class="small">元</span></span><span class="ribon"></span> </p>
+									<p class="category-name">茶葉</p>
+									<div class="wrap-company">
+										<p class="company"><span>三峽碧螺春茶園</span></p>
+									</div>
+									<p class="txt">來自最純淨高山的冠軍茶葉</p>
+								</div>
+							</a>
+						</li>
+						<li class="is-category-01">
+							<a href="#" style="height: 352.875px">
+								<p class="img"><img src="https://source.unsplash.com/283x170/?product" alt="" /></p>
+								<div class="txt-area">
+									<p class="label"> <span class="num">1500<span class="small">元</span></span><span class="ribon"></span> </p>
+									<p class="category-name">茶托</p>
+									<div class="wrap-company">
+										<p class="company"><span>三峽碧螺春茶園</span></p>
+									</div>
+									<p class="txt">來自最純淨高山的冠軍茶葉</p>
+								</div>
+							</a>
+						</li>
+						<li class="is-category-05">
+							<a href="#" style="height: 352.875px">
+								<p class="img"><img src="https://source.unsplash.com/283x170/?product" alt="" /></p>
+								<div class="txt-area">
+									<p class="label"> <span class="num">700<span class="small">元</span></span><span class="ribon"></span> </p>
+									<p class="category-name">查模</p>
+									<div class="wrap-company">
+										<p class="company"><span>三峽碧螺春茶園</span></p>
+									</div>
+									<p class="txt">來自最純淨高山的冠軍茶葉</p>
+								</div>
+							</a>
+						</li>
+						<li class="is-category-02">
+							<a href="#" style="height: 397.675px">
+								<p class="img"><img src="https://source.unsplash.com/283x170/?product" alt="" /></p>
+								<div class="txt-area">
+									<p class="label"> <span class="num">210<span class="small">元</span></span><span class="ribon"></span> </p>
+									<p class="category-name">茶具</p>
+									<div class="wrap-company">
+										<p class="company"><span>三峽碧螺春茶園</span></p>
+									</div>
+									<p class="txt">來自最純淨高山的冠軍茶葉</p>
+								</div>
+							</a>
+						</li>
+						<li class="is-category-05">
+							<a href="#" style="height: 397.675px">
+								<p class="img"><img src="https://source.unsplash.com/283x170/?product" alt="" /></p>
+								<div class="txt-area">
+									<p class="label"> <span class="num">800<span class="small">元</span></span><span class="ribon"></span> </p>
+									<p class="category-name">茶杯</p>
+									<div class="wrap-company">
+										<p class="company"><span>三峽碧螺春茶園</span></p>
+									</div>
+									<p class="txt">來自最純淨高山的冠軍茶葉</p>
+								</div>
+							</a>
+						</li>
+						<li class="is-category-02">
+							<a href="#" style="height: 397.675px">
+								<p class="img"><img src="https://source.unsplash.com/283x170/?product" alt="" /></p>
+								<div class="txt-area">
+									<p class="label"> <span class="num">300<span class="small">元</span></span><span class="ribon"></span> </p>
+									<p class="category-name">茶組</p>
+									<div class="wrap-company">
+										<p class="company"><span>三峽碧螺春茶園</span></p>
+									</div>
+									<p class="txt">來自最純淨高山的冠軍茶葉</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div> <a class="common-btn is-not-scrolled" href="/project/#list"><span class="common-btn__txt">帶我逛商城</span>
                         <div class="common-btn__blobs">
                             <div></div>
                             <div></div>
                             <div></div>
                         </div>
-                    </a>
-                </div>
-            </div>
-            <div class="wrap-step is-02">
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt=""></span></span>
-                <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt=""></span></span>
-            </div>
-
-            <div class="info">
-                <div class="wrap-step">
-                    <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png"
-                                alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png"
-                                alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png"
-                                alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png"
-                                alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png"
-                                alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png"
-                                alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png"
-                                alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png"
-                                alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png"
-                                alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png"
-                                alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png"
-                                alt=""></span></span>
-                    <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png"
-                                alt=""></span></span>
-                </div>
-            </div>
-            <!-- 第五屏 -->
-            <div class="container">
-
-                <div class="box-info is-not-scrolled">
-                    <p class="img"><img src="/images/img-info-01.jpg" alt=""></p>
-                    <div class="txt-area">
-                        <p class="hdg">活動MAP</p>
-                        <p class="txt">オールトヨタの仲間が日本全国で活動しています。​<br>どんな活動をしているか、地図から探してみよう！</p>
-                        <a class="common-btn" href="/project/"><span class="common-btn__txt">詳しく見る</span>
+                    </a> </div>
+		</div>
+		<div class="wrap-step is-02"> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> </div>
+	</div>
+	<!-- 第五屏 -->
+	<div class="info">
+		<div class="wrap-step"> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> <span class="step"><span class="img"><img src="/resource/images/img-step-gray.png" alt="" /></span
+                ></span> </div>
+		<h3 class="hdg-3">討論區</h3>
+		<div class="container">
+			<div class="box-info is-not-scrolled delay150">
+				<p class="img"><img src="/images/index/discuss1.png" alt="" /></p>
+				<div class="txt-area">
+					<p class="hdg">今天當採茶婦</p>
+					<p class="txt"> 茶園是網美好去處
+						<br />教你在茶園拍名模等級網美照!茶園是網美好去處茶園是網美好去處 </p> <a class="common-btn" href="/report/"><span class="common-btn__txt">馬上參加討論</span>
                             <div class="common-btn__blobs">
                                 <div></div>
                                 <div></div>
                                 <div></div>
                             </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="box-info is-not-scrolled delay150">
-                    <p class="img"><img src="/images/img-info-02.jpg" alt=""></p>
-                    <div class="txt-area">
-                        <p class="hdg">活動の記録</p>
-                        <p class="txt">皆の力をあわせれば、きっと何かが変えられるはず。​<br>わたしたちの活動結果の一部をご紹介します。​</p>
-                        <a class="common-btn" href="/report/"><span class="common-btn__txt">詳しく見る</span>
-                            <div class="common-btn__blobs">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="box-pdf is-not-scrolled">
-                    <div class="left">
-                        <p class="hdg">冊子をダウンロードしていただけます</p>
-                        <p class="txt">私たちの取組みを知ってもらうために、冊子をつくりました。​</p>
-                    </div>
-                    <div class="right">
-                        <div class="pdf">
-                            <p class="img"><img src="/images/img-info-pdf-02.jpg" alt=""></p>
-                            <a class="btn"
-                                href="https://www.toyota.co.jp/jpn/sustainability/environment/challenge6/green_wave/pdf/all_toyota_green_wave_project_2016_jp.pdf"
-                                target="_blank">2016年[vol.1]</a>
+                        </a> </div>
+			</div>
+			<div class="box-info is-not-scrolled delay150">
+				<p class="img"><img src="/images/index/discuss2.png" alt="" /></p>
+				<div class="txt-area">
+					<p class="hdg">茶園是網美好去處</p>
+					<p class="txt"> 茶園是網美好去處
+						<br />教你在茶園拍名模等級網美照!教你在茶園拍名模等級網美照教你在茶園拍名模等級網美照 </p> <a class="common-btn" href="/report/"><span class="common-btn__txt">馬上參加討論</span>
+                        <div class="common-btn__blobs">
+                            <div></div>
+                            <div></div>
+                            <div></div>
                         </div>
-                        <div class="pdf">
-                            <p class="img"><img src="/images/img-info-pdf-01.jpg" alt=""></p>
-                            <a class="btn"
-                                href="https://www.toyota.co.jp/jpn/sustainability/environment/challenge6/green_wave/pdf/all_toyota_green_wave_project_2017_jp.pdf"
-                                target="_blank">2017年[vol.2]</a>
-                        </div>
-                        <div class="pdf">
-                            <p class="img"><img src="/images/img-info-pdf-03.jpg" alt=""></p>
-                            <a class="btn"
-                                href="https://www.toyota.co.jp/jpn/sustainability/environment/challenge6/green_wave/pdf/all_toyota_green_wave_project_2018_jp.pdf"
-                                target="_blank">2018年[vol.3]</a>
-                        </div>
+                    </a> </div>
+			</div>
+			<div class="box-info is-not-scrolled delay150">
+				<p class="img"><img src="/images/index/discuss3.png" alt="" /></p>
+				<div class="txt-area">
+					<p class="hdg">去茶園家族旅行</p>
+					<p class="txt"> 去茶園家族旅行去茶園家族旅行
+						<br />老少咸宜!老少咸宜!老少咸宜!老少咸宜!老少咸宜!老少咸宜! </p> <a class="common-btn" href="/report/"><span class="common-btn__txt">馬上參加討論</span>
+                    <div class="common-btn__blobs">
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
-                    <span class="illust__2 hdg-bottom__splite"></span>
-                </div>
-            </div>
-        </div>
-        <!-- 第六屏(小遊戲) -->
-
-        <footer>
-            <footer>
-                <div class="container">
-                    <ul>
-                        <li><a href="https://www.toyota.co.jp/jpn/sustainability/environment/"
-                                target="_blank">トヨタ自動車株式会社（環境への取り組み）</a></li>
-                        <li><a href="/terms.html">サイト利用について</a></li>
-                        <li><a href="https://www.toyota.co.jp/jpn/terms/privacy_statement.html"
-                                target="_blank">個人情報の取り扱い</a></li>
-                    </ul>
-                    <small>&copy; TOYOTA MOTOR CORPORATION. ALL RIGHTS RESERVED.</small>
-                </div>
-            </footer>
-        </footer>
+                </a> </div>
+			</div>
+		</div>
+	</div> <span class="illust__2 hdg-bottom__splite"></span> </div>
+	<!-- 第六屏(小遊戲) -->
+	<!-- <div class="box-game is-not-scrolled">
+        <div class="left">
+            <p class="hdg">玩遊戲得優惠</p>
+            <p class="txt">玩遊戲區得更多點數，每天限額，要玩要快!</p>
+    </div> -->
+	<!-- footer -->
+	<footer> ®偵茶者TEA SEARCHER CORPORATION. ALL RIGHTS RESERVED.2020 </footer>
+	<div class="pagetop"></div>
+	<div class="pagetop is-hidden"></div>
 </body>
+<script>
+// DOM 載入完成後執行
+$(function() {
+	// 點擊按鈕，頁面滑到最上方
+	$(".pagetop").on("click", function(e) {
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: 0
+		}, 750);
+	});
+});
+</script>
 
 </html>
