@@ -299,11 +299,12 @@ video {
 
 .hdg-bottom .hdg-bottom__illust {
     position: absolute;
-    top: 0;
+    top: 100px;
     left: 50%;
     -webkit-transform: translate(-50%, -120px);
     -ms-transform: translate(-50%, -120px);
     transform: translate(-50%, -120px);
+    z-index: -1;
 }
 
 .events-none {
@@ -395,20 +396,6 @@ video {
     -ms-transform: translate(-50%, -120px);
     transform: translate(-50%, -120px);
 }
-.pagetop {
-    position: fixed;
-    bottom: 50px;
-    right: 40px;
-    width: 52px;
-    height: 52px;
-    background-color: #fff;
-    border-radius: 26px;
-    z-index: 10;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    cursor: pointer;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
-}
 
 // 第二屏:揪團結束  =====================
 
@@ -428,18 +415,18 @@ video {
 }
 .action {
     position: relative;
-    padding: 90px 0 440px;
+    padding: 90px 0 100px;
     background-color: #eff2c7;
 }
 
 .illust-action {
     position: absolute;
-    top: -30px;
+    top: 40px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    z-index: 1;
+    // z-index: -1;
 }
 
 .container {
@@ -591,6 +578,12 @@ video {
 // 結束第三屏:茶園票選 =====================
 
 // 第四屏:商城 =====================
+
+.illust-shop-next {
+    position: absolute;
+    top: -20%;
+    right: 0;
+}
 .project:before {
     content: '';
     position: absolute;
@@ -700,7 +693,7 @@ video {
 }
 
 .project .illust-pickup-front {
-    top: 380px;
+    top: 500px;
 }
 
 .project .illust-pickup-back,
@@ -1018,8 +1011,22 @@ video {
 .project-list li.is-category-01 .company > span {
     background-color: #3293cb;
 }
+
 // 結束第四屏:商城 =====================
 // 第五屏:討論區 =====================
+
+.illust-discuss {
+    position: absolute;
+    top: -20%;
+    right: 0;
+}
+
+.illust-discuss-next {
+    position: absolute;
+    top: 10%;
+    right: 0;
+}
+
 .info .box-info {
     display: inline-block;
     max-width: calc(90% / 3 - 20px);
@@ -1109,7 +1116,7 @@ video {
 
 .info {
     position: relative;
-    padding: 120px 0 100px;
+    padding: 70px 0 100px;
     font-size: 0;
     background-color: #eff2c7;
 }
@@ -1151,6 +1158,12 @@ video {
 .delay150 {
     -webkit-transition-delay: 0.15s !important;
     transition-delay: 0.15s !important;
+}
+
+.illust-discuss-btm {
+    position: absolute;
+    top: -20%;
+    left: 0;
 }
 // 結束第五屏:討論區 =====================
 
