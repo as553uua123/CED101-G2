@@ -1116,7 +1116,7 @@ video {
 
 .info {
     position: relative;
-    padding: 70px 0 100px;
+    padding: 70px 0 30px;
     font-size: 0;
     background-color: #eff2c7;
 }
@@ -1184,7 +1184,37 @@ video {
 //   z-index: 1;
 // }
 // 結束第六屏:小遊戲 =====================
+// 第七屏:旋轉=====================
 
+.ending {
+    width: 100%;
+    margin: 0 auto;
+    height: 250px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    overflow: hidden;
+    background-image: url(../images/index/img_bg_yg_pc.jpg);
+}
+
+.spinning {
+    width: 100%;
+    animation-name: spin;
+    animation-duration: 15000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+// 結束第七屏:旋轉 =====================
 // RWD開始  =====================
 @media only screen and (min-width: 769px) {
     .u-sp {
@@ -1304,6 +1334,22 @@ video {
 
     .illust-discuss {
         top: -10%;
+    }
+
+    .ending {
+        height: 125px;
+    }
+
+    .hdg-bottom .hdg-bottom__hdg {
+        padding: 0px 70px 0px;
+    }
+
+    .hdg-bottom .hdg-bottom__txt {
+        font-size: 13.6px;
+    }
+
+    .hdg-bottom .hdg-bottom__illust {
+        top: 220px;
     }
 }
 
