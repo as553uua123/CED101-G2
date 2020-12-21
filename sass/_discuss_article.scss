@@ -8,6 +8,7 @@
 
     width: 10%;
     text-align: center;
+    margin: 5px 30px;
 
     .man {
         width: 100px;
@@ -21,13 +22,6 @@
     }
 
 }
-
-
-
-.heart {
-    width: 20px;
-}
-
 
 
 main {
@@ -52,7 +46,7 @@ main {
     .command {
         display: flex;
         justify-content: center;
-        margin-bottom: 15px;
+        margin: 20px;
 
         .command_text {
             border: 2px solid black;
@@ -70,7 +64,8 @@ main {
 
 
 #article_text {
-    padding: 20px 50px;
+    padding: 30px 50px 50px;
+    border-bottom: 1px solid gray;
 }
 
 .excl {
