@@ -12,15 +12,20 @@ body {
 
 .allthing {
     display: flex;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
+    justify-content: center;
 
     #articles {
-        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         h2 {
             text-align: center;
             font-size: $h2;
+            margin: 0 auto;
         }
 
         #cates {
@@ -33,16 +38,15 @@ body {
         }
     }
 
-    #hot_groups {
-        border: solid black 5px;
-        width: 30%;
-    }
+
 
 }
 
 .article {
-    border: solid rgb(26, 129, 34) 3px;
     margin-top: 10px;
+    background-color: white;
+    border-radius: 30px;
+    overflow: hidden;
 }
 
 #content {
@@ -51,12 +55,7 @@ body {
 
 
 .contenttext {
-    padding: 50px;
-
-    h3 {
-        // background-color: $secondary-typo-color;
-        color: white;
-    }
+    padding: 20px 50px;
 
     img {
         width: 20px;
@@ -67,38 +66,21 @@ body {
     }
 
     div {
+        margin-top: 25px;
+        display: flex;
+
         img {
             margin-left: 15px;
+        }
+
+        .btn {
+            margin-left: auto;
         }
     }
 }
 
 
 
-#hot_groups {
-    h2 {
-        text-align: center;
-    }
-}
-
-
-.hot_group {
-    text-align: center;
-    margin-bottom: 50px;
-
-    h4 {
-        background-color: green;
-        padding: 5px;
-        width: 240px;
-        margin: 0 auto;
-        color: white;
-    }
-
-    h5 {
-        display: inline-block;
-        margin: 5px;
-    }
-}
 
 #loco {
     width: 40px;
@@ -122,4 +104,8 @@ main {
         font-size: $h5;
         outline: none;
     }
+}
+
+.btn {
+    @include btn;
 }

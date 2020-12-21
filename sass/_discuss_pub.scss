@@ -1,11 +1,12 @@
 // @keyframes scrollToUp {
 //     0% {
-//         background-position: 0 0;
+//         transform: translateY(100px);
 //     }
 
 //     100% {
-//         background-position: 500px -258px;
+//         transform: translateY(500px);
 //     }
+
 
 body {
     background-color: $bg-color;
@@ -15,10 +16,9 @@ body {
     width: 100%;
     height: 100%;
     animation: scrollToUp 5s linear infinite;
-
 }
 
-h2 {
+#pub_new {
     background-color: $secondary-typo-color;
     padding: 25px;
     margin: 0;
@@ -64,22 +64,44 @@ input {
     font-weight: 700;
 }
 
+.slt {
+    height: 30px;
+    width: 180px;
+    border-radius: 5px;
+}
+
+
+@mixin btn {
+    width: 200px;
+    border-radius: 20px;
+    font-weight: bolder;
+    font-size: $h6;
+    border: 2px;
+    transition: all 0.5s ease;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $secondary-typo-color;
+    }
+
+    a {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        color: black;
+        padding: 10px 5px;
+
+        &:hover {
+            color: white;
+        }
+    }
+}
+
 .btn_countainer {
     text-align: center;
 
     .btn {
-        width: 100px;
-        padding: 10px;
-        border-radius: 20px;
-        font-weight: bolder;
-        font-size: $h6;
-        border: 2px;
-        transition: all 0.5s ease;
-        outline: none;
-        cursor: pointer;
-
-        &:hover {
-            background-color: $secondary-typo-color;
-        }
+        @include btn
     }
 }

@@ -48,16 +48,39 @@ main {
     }
 }
 
+#commandall {
+    .command {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
 
+        .command_text {
+            border: 2px solid black;
+            border-radius: 20px;
+            width: 70%;
+            padding: 10px;
 
-.command {
-    display: flex;
-
-    .command_text {
-        border: 2px solid black;
-        border-radius: 20px;
-        width: 70%;
-        padding: 10px;
+            .pub_time {
+                text-align: right;
+            }
+        }
     }
+}
 
+
+
+#article_text {
+    padding: 20px 50px;
+}
+
+.excl {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px
+}
+
+#pub_title {
+    margin: 20px 0 0 20px;
 }
