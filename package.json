@@ -29,6 +29,8 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
+    "bootstrap": "^4.5.3",
+    "bootstrap-scss": "^4.5.3",
     "gsap": "^3.5.1",
     "jquery": "^3.5.1",
     "scrollmagic": "^2.0.8",

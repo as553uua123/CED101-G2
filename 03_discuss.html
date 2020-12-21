@@ -6,167 +6,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/index/webIcon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/discuss.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>討論區</title>
 </head>
 
 <body>
     <header>
-        <h1></h1>
-        <nav></nav>
+        <nav>
+            <!-- logo放置區 -->
+            <a href="./index.html">
+                <h1 id="logo"><img src="images/index/webIcon.png" alt="logo_pic"></h1>
+            </a>
+            <!-- 導覽漢堡 -->
+            <div class="menu-wrap">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <div>
+                            <ul>
+                                <li><a href="">茶園揪團</a></li>
+                                <li><a href="">茶園票選</a></li>
+                                <li><a href="./03_discuss.html">討論區</a></li>
+                                <li><a href="">茶商城</a></li>
+                                <li><a href="">會員中心</a></li>
+                                <li><a href="">小遊戲?</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
+        <div id="big_title">
+            <h2>討論專區</h2>
+        </div>
         <div class="allthing">
-            <button class="addtour">我要發文</button>
+            <button class="addtour"><a href="03_discuss_pub.html">我要發文</a></button>
             <section id="articles">
-                <h2>討論專區</h2>
-
-                <ul id="cates">
-                    <h3 class="cate" data-filter="all">全部</h3>
-                    <h3 class="cate" data-filter="心得">揪團心得</h3>
-                    <h3 class="cate" data-filter="討論">茶園討論</h3>
-                    <h3 class="cate" data-filter="茶葉知識">茶葉知識</h3>
-                    <h3 class="cate" data-filter="all">其他</h3>
+                <ul id="filter">
+                    <li class="list fit cate" data-filter="all">全部</li>
+                    <li class="list cate" data-filter="tour">揪團心得</li>
+                    <li class="list cate" data-filter="garden">茶園討論</li>
+                    <li class="list cate" data-filter="leaf">茶葉知識</li>
                 </ul>
 
-                <div class="article">
-                    <div id="author">董董 發表於2005</div>
-                    <div id="content">
-                        <img src="https://picsum.photos/400/300/?gravity=east" alt="">
-                        <div class="contenttext">
-                            <h3>【揪團心得】今天去當採茶婦好快樂啊</h3>
-                            <span>今天去參加揪團哈哈哈加揪團哈哈哈加揪團哈哈哈加揪團哈哈哈...</span>
-                            <p>more</p>
-                            <div>
+                <div id="all_articles">
+                    <div class="article tour">
+                        <div id="content">
+                            <img src="https://picsum.photos/400/300/?gravity=east" alt="">
+                            <div class="contenttext">
+                                <h3>【揪團心得】今天去當採茶婦好快樂啊</h3>
                                 <img class="heart" src="./images/common/heart.png" alt="">
                                 <img class="heart" src="./images/common/shareBlack.png" alt="">
                                 <img class="heart" src="./images/common/messenger.png" alt="">
                                 <span>50</span>
+                                <div id="author">董董 發表於2005-12-05</div><br>
+                                <span>今天去參加揪團哈哈哈加揪團哈哈加揪團哈加揪團哈加揪團哈團哈加揪團哈加揪團哈加揪團哈加揪團哈加揪團哈加揪加揪團哈加揪團哈加揪團哈加揪團哈加揪團哈加揪團哈哈加揪團哈哈哈加揪團哈哈哈...</span>
+                                <div>
+                                    <button class="btn">
+                                        <a href="03_discuss_article.html">More</a>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="article">
-                    <div id="author">董董 發表於2005</div>
-                    <div id="content">
-                        <img src="https://picsum.photos/400/300/?gravity=east" alt="">
-                        <div class="contenttext">
-                            <h3>【揪團心得】今天去當採茶婦好快樂啊</h3>
-                            <span>今天去參加揪團哈哈哈加揪團哈哈哈加揪團哈哈哈加揪團哈哈哈...</span>
-                            <p>more</p>
-                            <div>
+                    <div class="article garden">
+                        <div id="content">
+                            <img src="https://picsum.photos/400/300/?gravity=east" alt="">
+                            <div class="contenttext">
+                                <h3>【茶園討論】春陽茶園如何?</h3>
                                 <img class="heart" src="./images/common/heart.png" alt="">
                                 <img class="heart" src="./images/common/shareBlack.png" alt="">
                                 <img class="heart" src="./images/common/messenger.png" alt="">
                                 <span>50</span>
+                                <div id="author">董董 發表於2005-12-05</div><br>
+                                <span>今天去參加揪團哈哈哈加揪團哈哈加揪團哈加揪團哈加揪團哈團哈加揪團哈加揪團哈加揪團哈加揪團哈加揪團哈加揪加揪團哈加揪團哈加揪團哈加揪團哈加揪團哈加揪團哈哈加揪團哈哈哈加揪團哈哈哈...</span>
+                                <div>
+                                    <button class="btn">
+                                        <a href="03_discuss_article.html">More</a>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="article">
-                    <div id="author">董董 發表於2005</div>
-                    <div id="content">
-                        <img src="https://picsum.photos/400/300/?gravity=east" alt="">
-                        <div class="contenttext">
-                            <h3>【揪團心得】今天去當採茶婦好快樂啊</h3>
-                            <span>今天去參加揪團哈哈哈加揪團哈哈哈加揪團哈哈哈加揪團哈哈哈...</span>
-                            <p>more</p>
-                            <div>
+                    <div class="article garden">
+                        <div id="content">
+                            <img src="https://picsum.photos/400/300/?gravity=east" alt="">
+                            <div class="contenttext">
+                                <h3>【茶園討論】春陽茶園如何?</h3>
                                 <img class="heart" src="./images/common/heart.png" alt="">
                                 <img class="heart" src="./images/common/shareBlack.png" alt="">
                                 <img class="heart" src="./images/common/messenger.png" alt="">
                                 <span>50</span>
+                                <div id="author">董董 發表於2005-12-05</div><br>
+                                <span>今天去參加揪團哈哈哈加揪團哈哈加揪團哈加揪團哈加揪團哈團哈加揪團哈加揪團哈加揪團哈加揪團哈加揪團哈加揪加揪團哈加揪團哈加揪團哈加揪團哈加揪團哈加揪團哈哈加揪團哈哈哈加揪團哈哈哈...</span>
+                                <div>
+                                    <button class="btn">
+                                        <a href="03_discuss_article.html">More</a>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="article">
-                    <div id="author">董董 發表於2005</div>
-                    <div id="content">
-                        <img src="https://picsum.photos/400/300/?gravity=east" alt="">
-                        <div class="contenttext">
-                            <h3>【揪團心得】今天去當採茶婦好快樂啊</h3>
-                            <span>今天去參加揪團哈哈哈加揪團哈哈哈加揪團哈哈哈加揪團哈哈哈...</span>
-                            <p>more</p>
-                            <div>
+                    <div class="article garden">
+                        <div id="content">
+                            <img src="https://picsum.photos/400/300/?gravity=east" alt="">
+                            <div class="contenttext">
+                                <h3>【茶園討論】春陽茶園如何?</h3>
                                 <img class="heart" src="./images/common/heart.png" alt="">
                                 <img class="heart" src="./images/common/shareBlack.png" alt="">
                                 <img class="heart" src="./images/common/messenger.png" alt="">
                                 <span>50</span>
+                                <div id="author">董董 發表於2005-12-05</div><br>
+                                <span>今天去參加揪團哈哈哈加揪團哈哈加揪團哈加揪團哈加揪團哈團哈加揪團哈加揪團哈加揪團哈加揪團哈加揪團哈加揪加揪團哈加揪團哈加揪團哈加揪團哈加揪團哈加揪團哈哈加揪團哈哈哈加揪團哈哈哈...</span>
+                                <div>
+                                    <button class="btn">
+                                        <a href="03_discuss_article.html">More</a>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="article">
-                    <div id="author">董董 發表於2005</div>
-                    <div id="content">
-                        <img src="https://picsum.photos/400/300/?gravity=east" alt="">
-                        <div class="contenttext">
-                            <h3>【揪團心得】今天去當採茶婦好快樂啊</h3>
-                            <span>今天去參加揪團哈哈哈加揪團哈哈哈加揪團哈哈哈加揪團哈哈哈...</span>
-                            <p>more</p>
-                            <div>
-                                <img class="heart" src="./images/common/heart.png" alt="">
-                                <img class="heart" src="./images/common/shareBlack.png" alt="">
-                                <img class="heart" src="./images/common/messenger.png" alt="">
-                                <span>50</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="article">
-                    <div id="author">董董 發表於2005</div>
-                    <div id="content">
-                        <img src="https://picsum.photos/400/300/?gravity=east" alt="">
-                        <div class="contenttext">
-                            <h3>【揪團心得】今天去當採茶婦好快樂啊</h3>
-                            <span>今天去參加揪團哈哈哈加揪團哈哈哈加揪團哈哈哈加揪團哈哈哈...</span>
-                            <p>more</p>
-                            <div>
-                                <img class="heart" src="./images/common/heart.png" alt="">
-                                <img class="heart" src="./images/common/shareBlack.png" alt="">
-                                <img class="heart" src="./images/common/messenger.png" alt="">
-                                <span>50</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <section id="hot_groups">
-                <h2>熱門揪團</h2>
-                <div class="hot_group">
-                    <img src="https://picsum.photos/250/200/?gravity=east" alt="">
-                    <h4>一定打斷你鼻樑</h4>
-                    <img id="loco" src="./images/common/location.png" alt="">
-                    <h5>台北市</h5>
-                    <div>截止日期2020-11-27</div>
-                </div>
-                <div class="hot_group">
-                    <img src="https://picsum.photos/250/200/?gravity=east" alt="">
-                    <h4>一定打斷你鼻樑</h4>
-                    <img id="loco" src="./images/common/location.png" alt="">
-                    <h5>台北市</h5>
-                    <div>截止日期2020-11-27</div>
-                </div>
-                <div class="hot_group">
-                    <img src="https://picsum.photos/250/200/?gravity=east" alt="">
-                    <h4>一定打斷你鼻樑</h4>
-                    <img id="loco" src="./images/common/location.png" alt="">
-                    <h5>台北市</h5>
-                    <div>截止日期2020-11-27</div>
-                </div>
-                <div class="hot_group">
-                    <img src="https://picsum.photos/250/200/?gravity=east" alt="">
-                    <h4>一定打斷你鼻樑</h4>
-                    <img id="loco" src="./images/common/location.png" alt="">
-                    <h5>台北市</h5>
-                    <div>截止日期2020-11-27</div>
                 </div>
             </section>
         </div>
     </main>
     <footer></footer>
+
+    <script>
+        $(function () {
+            $('.list').click(function () {
+                let value = $(this).attr('data-filter');
+                if (value == 'all') {
+                    $('.article').show('1000');
+                }
+                else {
+                    $('.article').not('.' + value).hide('1000');
+                    $('.article').filter('.' + value).show('1000');
+                }
+            });
+
+            // ======filter change 
+            $('.list').click(function () {
+                $(this).addClass('fit');
+                $('.list').not(this).removeClass('fit');
+            });
+        });
+    </script>
 </body>
 
 </html>

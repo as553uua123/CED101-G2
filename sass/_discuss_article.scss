@@ -8,6 +8,7 @@
 
     width: 10%;
     text-align: center;
+    margin: 5px 30px;
 
     .man {
         width: 100px;
@@ -21,13 +22,6 @@
     }
 
 }
-
-
-
-.heart {
-    width: 20px;
-}
-
 
 
 main {
@@ -48,16 +42,40 @@ main {
     }
 }
 
+#commandall {
+    .command {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
 
+        .command_text {
+            border: 2px solid black;
+            border-radius: 20px;
+            width: 70%;
+            padding: 10px;
 
-.command {
-    display: flex;
-
-    .command_text {
-        border: 2px solid black;
-        border-radius: 20px;
-        width: 70%;
-        padding: 10px;
+            .pub_time {
+                text-align: right;
+            }
+        }
     }
+}
 
+
+
+#article_text {
+    padding: 30px 50px 50px;
+    border-bottom: 1px solid gray;
+}
+
+.excl {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px
+}
+
+#pub_title {
+    margin: 20px 0 0 20px;
 }

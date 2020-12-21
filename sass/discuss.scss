@@ -1,47 +1,90 @@
 @import "./default/common";
 @import "_discuss_article";
+@import "_discuss_pub";
+
+// ==========共用=========
 
 * {
     box-sizing: box-sizing;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-color: #F7EBCF;
+    background-color: #EFF2C7;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+// =========以上是共用========
+
+#big_title {
+    text-align: center;
+    font-size: 60px;
+    margin: 30px 0;
+
+}
+
+.list {
+    cursor: pointer;
 }
 
 .allthing {
     display: flex;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
+    justify-content: center;
 
     #articles {
-        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         h2 {
             text-align: center;
             font-size: $h2;
+            margin: 0 auto;
         }
 
-        #cates {
+        #filter {
             display: flex;
 
             .cate {
-                border: green solid 5px;
                 margin-right: 30px;
+                padding: 20px;
+                font-weight: bolder;
+                border-radius: 50%;
+                transition: all 0.5s ease;
+
+                &:hover {
+                    background-color: $secondary-typo-color;
+                    color: white;
+                    border-radius: 50%;
+                }
             }
         }
     }
+}
 
-    #hot_groups {
-        border: solid black 5px;
-        width: 30%;
-    }
-
+.fit {
+    background-color: $secondary-typo-color;
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
 }
 
 .article {
-    border: solid rgb(26, 129, 34) 3px;
-    margin-top: 10px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 30px;
+    overflow: hidden;
 }
 
 #content {
@@ -50,15 +93,11 @@ body {
 
 
 .contenttext {
-    padding: 50px;
-
-    h3 {
-        // background-color: $secondary-typo-color;
-        color: white;
-    }
+    padding: 50px 80px;
 
     img {
-        width: 20px;
+        width: 30px;
+        margin: 20px 0 0 10px;
     }
 
     p {
@@ -66,38 +105,21 @@ body {
     }
 
     div {
+        margin-top: 25px;
+        display: flex;
+
         img {
             margin-left: 15px;
+        }
+
+        .btn {
+            margin-left: auto;
         }
     }
 }
 
 
 
-#hot_groups {
-    h2 {
-        text-align: center;
-    }
-}
-
-
-.hot_group {
-    text-align: center;
-    margin-bottom: 50px;
-
-    h4 {
-        background-color: green;
-        padding: 5px;
-        width: 240px;
-        margin: 0 auto;
-        color: white;
-    }
-
-    h5 {
-        display: inline-block;
-        margin: 5px;
-    }
-}
 
 #loco {
     width: 40px;
@@ -121,4 +143,8 @@ main {
         font-size: $h5;
         outline: none;
     }
+}
+
+.btn {
+    @include btn;
 }
