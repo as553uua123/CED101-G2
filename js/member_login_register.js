@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    $(".forget").click(function () {
+        $("#login").css("display", "none");
+        $("#forget_pw").css("display", "flex");
+        $("#signup").css("display", "none");
+    });
     $(".form")
         .find("input, textarea")
         .on("keyup blur focus", function (e) {

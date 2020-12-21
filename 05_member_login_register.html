@@ -13,86 +13,79 @@
 <body>
     <div class="form">
         <ul class="tab-group">
-          <li class="tab"><a href="#login">登入</a></li>
-          <li class="tab active"><a href="#signup">註冊</a></li>
+          <li class="tab active"><a href="#login">登入</a></li>
+          <li class="tab"><a href="#signup">註冊</a></li>
         </ul>
         
         <div class="tab-content">
-          <div id="login">   
-            <h1>歡迎回來！</h1>
-            
-            <form action="/" method="post">
-            
-              <div class="field-wrap">
-              <label>
-                帳號<span class="req">*</span>
-              </label>
-              <input type="email"required autocomplete="off"/>
+            <div id="login">   
+                <h1>歡迎回來！</h1>
+                <form action="/" method="post">
+                    <div class="field-wrap">
+                        <label>
+                            帳號<span class="req">*</span>
+                        </label>
+                        <input type="email"required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>
+                            密碼<span class="req">*</span>
+                        </label>
+                        <input type="password"required autocomplete="off"/>
+                    </div>
+                    <p class="forgot"><a href="#">忘記密碼？</a></p>
+                    <button class="button button-block"/>登入</button>
+                </form>
             </div>
-            
-            <div class="field-wrap">
-              <label>
-                密碼<span class="req">*</span>
-              </label>
-              <input type="password"required autocomplete="off"/>
-            </div>
-            
-            <p class="forgot"><a href="#">忘記密碼？</a></p>
-            
-            <button class="button button-block"/>登入</button>
-            
-            </form>
-  
-          </div>
-          <div id="signup">   
-            <h1>註冊會員</h1>
-            
-            <form action="/" method="post">
-            
-              <div class="top-row">
-                <div class="field-wrap">
-                  <label>
-                    姓<span class="req">*</span>
-                  </label>
-                  <input type="text" required autocomplete="off" />
-                </div>
-            
-                <div class="field-wrap">
-                  <label>
-                    名<span class="req">*</span>
-                  </label>
-                  <input type="text"required autocomplete="off"/>
-                </div>
-              </div>
-  
-              <div class="field-wrap">
-                <label>
-                  信箱<span class="req">*</span>
-                </label>
-                <input type="email"required autocomplete="off"/>
-              </div>
-            
-              <div class="field-wrap">
-                <label>
-                  密碼<span class="req">*</span>
-                </label>
-                <input type="password"required autocomplete="off"/>
-              </div>
-
-              <div class="field-wrap">
-                <label>
-                  重複輸入密碼<span class="req">*</span>
-                </label>
-                <input type="password"required autocomplete="off"/>
-              </div>
-            
-              <button type="submit" class="button button-block"/>註冊</button>
-            
-            </form>
-  
-          </div>          
-        </div><!-- tab-content -->
-        
+            <div id="forget_pw">
+                <h1>找回密碼</h1>
+                <form action="/" method="post">
+                    <div class="field-wrap">
+                        <label>
+                            信箱<span class="req">*</span>
+                        </label>
+                        <input type="email"required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>
+                            密碼<span class="req">*</span>
+                        </label>
+                        <input type="password"required autocomplete="off"/>
+                    </div>
+                    <button class="button button-block"/>取回密碼</button>
+                </form>
+            </div>        
+            <div id="signup">   
+                <h1>註冊會員</h1>
+                <form action="/" method="post">
+                    <div class="field-wrap">
+                        <label>
+                        信箱<span class="req">*</span>
+                        </label>
+                    <input type="email"required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>
+                        帳號<span class="req">*</span>
+                        </label>
+                        <input type="email"required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>
+                        密碼<span class="req">*</span>
+                        </label>
+                        <input type="password"required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>
+                        重複輸入密碼<span class="req">*</span>
+                        </label>
+                        <input type="password"required autocomplete="off"/>
+                    </div>
+                    <button type="submit" class="button button-block"/>註冊</button>
+                </form>
+            </div>  
+        </div><!-- tab-content -->  
   </div> <!-- /form -->
 </body>
 </html>

@@ -128,6 +128,10 @@ main {
                             width: 20%;
                             display: flex;
                             justify-content: space-between;
+                            .tour_join,
+                            .tour_check {
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
@@ -324,14 +328,15 @@ main {
                     font-weight: bold;
                     text-transform: uppercase;
                     letter-spacing: 0.1em;
-                    background: $main;
+                    background: $primary-typo-color;
                     color: $btn-color;
                     transition: all.5s ease;
                     -webkit-appearance: none;
                     width: 300px;
+                    cursor: pointer;
                     &:hover,
                     &:focus {
-                        background: $primary-typo-color;
+                        background: darken($primary-typo-color, 5%);
                         padding: 5px 10px;
                     }
                 }

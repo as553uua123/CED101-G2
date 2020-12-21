@@ -70,12 +70,12 @@ a {
         transition: 0.5s ease;
         &:hover {
             background: $main-dark;
-            color: $filter-bar-bgColor;
+            color: $search-bar-bgColor;
         }
     }
     .active a {
         background: $main;
-        color: $filter-bar-bgColor;
+        color: $search-bar-bgColor;
     }
 }
 
@@ -85,7 +85,7 @@ a {
 
 h1 {
     text-align: center;
-    color: $filter-bar-bgColor;
+    color: $search-bar-bgColor;
     font-weight: $thin;
     margin: 0 0 40px;
 }
@@ -94,7 +94,7 @@ label {
     position: absolute;
     transform: translateY(2px);
     left: 13px;
-    color: rgba($filter-bar-bgColor, 0.5);
+    color: rgba($search-bar-bgColor, 0.5);
     transition: all 0.25s ease;
     -webkit-backface-visibility: hidden;
     pointer-events: none;
@@ -115,7 +115,7 @@ label.active {
 }
 
 label.highlight {
-    color: $filter-bar-bgColor;
+    color: $search-bar-bgColor;
 }
 
 input,
@@ -128,7 +128,7 @@ textarea {
     background: none;
     background-image: none;
     border: 1px solid $gray-light;
-    color: $filter-bar-bgColor;
+    color: $search-bar-bgColor;
     border-radius: 0;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
     &:focus {
@@ -164,6 +164,9 @@ textarea {
     }
 }
 
+#forget_pw{
+    display: none;
+}
 .button {
     border: 0;
     outline: none;
@@ -174,7 +177,7 @@ textarea {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     background: $main;
-    color: $filter-bar-bgColor;
+    color: $search-bar-bgColor;
     transition: all.5s ease;
     -webkit-appearance: none;
     &:hover,
