@@ -2,7 +2,12 @@
 @import "./default/variables";
 
 body {
-    background-color: $bg-color;
+    // background-color: $bg-color;
+    background: url(http://subtlepatterns.com/patterns/wood_pattern.png);
+}
+
+img {
+    width: 100%;
 }
 
 h1 {
@@ -15,23 +20,31 @@ h1 {
 .tourCreate_header {
     display: flex;
     justify-content: space-evenly;
-    width: 1200px;
+    width: 900px;
     margin: 50px auto;
-    border: 1px solid black;
+
 
 
     .step_block {
-        border: 1px solid black;
 
-        .step {
-            font-size: $h2;
+
+        .step1,
+        .step2,
+        .step3 {
+
             width: 100px;
             height: 100px;
-            border: 1px solid black;
-            border-radius: 50%;
+            // border: 2px solid black;
+            // border-radius: 50%;
             text-align: center;
             line-height: 100px;
             margin: 0 auto;
+
+
+        }
+
+        .step1 {
+            // background-color: $success-sign;
         }
 
         p {
@@ -42,98 +55,205 @@ h1 {
     }
 
     .right {
-        border: 1px solid black;
         margin: auto;
     }
 }
 
 .tourCreate_main {
-    display: flex;
     width: 1200px;
     margin: 0 auto;
+    position: relative;
+    // border: 1px solid black;
 
     .tourCreate_leftside {
-        border: 1px solid black;
-        padding: 30px;
+        display: inline-block;
+        width: 350px;
+        vertical-align: top;
 
         .tourCreate_choice {
-            margin-bottom: 30px;
-
             button {
-                background-color: $btn-color;
-                width: 100px;
-                margin-right: 20px;
-                padding: 10px;
-
+                width: 80px;
+                margin: 2px;
+                cursor: pointer;
             }
         }
 
-        .tourCreate_item_block {
-            display: flex;
-            flex-wrap: wrap;
+        .tourCreate_item,
+        .tourCreate_active_one {
+            margin: 20px auto;
+            display: block;
+            width: 300px;
+            padding: 20px;
+            background-color: #F0F0F0;
+            /*box-shadow*/
 
-            .tourCreate_hotel {
-                padding: 5px;
+            box-shadow: 0 2px 5px hsla(0, 0%, 0%, .4), inset 0 1px 0 #ccc, inset 1px 0 0 #aaa, inset 0 -1px 0 #ccc, inset -1px 0 0 #aaa, inset 0 2px 0 #c6c6c6, inset 2px 0 0 #a6a6a6, inset 0 -2px 0 #c6c6c6, inset -2px 0 0 #a6a6a6, inset 0 3px 0 #c0c0c0, inset 3px 0 0 #a0a0a0, inset 0 -3px 0 #c0c0c0, inset -3px 0 0 #a0a0a0, inset 0 4px 0 #b9b9b9, inset 4px 0 0 #999, inset 0 -4px 0 #b9b9b9, inset -4px 0 0 #999, inset 0 5px 0 #b6b6b6, inset 5px 0 0 #969696, inset 0 -5px 0 #b6b6b6, inset -5px 0 0 #969696, inset 0 6px 0 #b0b0b0, inset 6px 0 0 #909090, inset 0 -6px 0 #b0b0b0, inset -6px 0 0 #909090, inset 0 7px 0 #a9a9a9, inset 7px 0 0 #898989, inset 0 -7px 0 #a9a9a9, inset -7px 0 0 #898989, inset 0 8px 0 #a6a6a6, inset 8px 0 0 #868686, inset 0 -8px 0 #a6a6a6, inset -8px 0 0 #868686, inset 0 9px 0 #a0a0a0, inset 9px 0 0 #808080, inset 0 -9px 0 #a0a0a0, inset -9px 0 0 #808080, inset 0 10px 0 #888, inset 10px 0 0 #666, inset 0 -10px 0 #888, inset -10px 0 0 #666, inset 0 0 10px 10px hsla(0, 0%, 0%, .5), inset 0 0 50px hsla(0, 0%, 0%, .5);
+            border: 1px solid #eee;
 
-                .tourCreate_item_img {
-                    width: 600px;
+            /*border-radius*/
 
-                    img {
-                        width: 100%;
-                    }
-                }
-
-                p {
-                    text-align: center;
-
-                    padding: 10px;
-                }
-            }
-
-            .tourCreate_item {
-                padding: 5px;
-
-                .tourCreate_item_img {
-                    width: 200px;
-
-                    img {
-                        width: 100%;
-                    }
-                }
-
-                p {
-                    text-align: center;
-
-                    padding: 10px;
-                }
-            }
-        }
-
-
-
-        .page {
-            text-align: center;
-            margin-top: 50px;
-
-            span {
-                padding: 10px;
-                font-size: $h4;
-            }
+            border-radius: 3px;
+            cursor: pointer;
         }
 
 
     }
 
-    .tourCreate_rightside {
-        border: 1px solid black;
-        padding: 50px;
+    .tourCreate_rightside_block {
+        display: inline-block;
+        width: 820px;
+        // border: 1px solid black;
+        position: sticky;
+        top: 0px;
+        padding: 10px;
+        text-align: center;
 
-        .tourCreate_rightside_img {
-            width: 400px;
+    }
 
-            img {
-                width: 100%;
-            }
+
+
+    .local_rightside_img,
+    .hotel_rightside_img,
+    .rest_rightside_img,
+    .active_rightside_img {
+        display: inline-block;
+        vertical-align: top;
+
+        .local_block,
+        .active_block,
+        .hotel_block,
+        .rest_block,
+            {
+            width: 300px;
+            padding: 10px;
+            margin: 40px;
+            position: relative;
+            background: -webkit-gradient(linear, 100% 100%, 50% 10%, from(#fff), to(#f3f3f3), color-stop(.1, #fff));
+            border: 1px solid #ccc;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+            border-bottom-right-radius: 60px 5px;
+            display: inline-block;
+            cursor: pointer;
         }
+    }
+
+    h2 {
+        font-size: $h2;
+        padding: 10px;
+        font-weight: bold;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+        text-align: center;
+        font-size: $h5;
+        padding: 10px;
+    }
+
+    .nextBtn {
+        text-align: right;
+
+        button {
+            width: 100px;
+            background: 1px solid blue;
+
+        }
+    }
+
+}
+
+
+.tourCreate_item {
+    padding: 10px;
+
+    p {
+        text-align: center;
+        font-size: $h3;
+    }
+}
+
+.tourCreate_active_one {
+    padding: 10px;
+}
+
+.local_block::before,
+.active_block::before,
+.hotel_block::before,
+.rest_block::before,
+    {
+    content: '';
+    width: 98%;
+    z-index: -1;
+    height: 100%;
+    padding: 0 0 1px 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f9f9f9), color-stop(.1, #fff));
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius: 60px 5px;
+    transform: skew(2deg, 2deg) translate(3px, 8px)
+}
+
+.local_block::after,
+.active_block::after,
+.hotel_block::after,
+.rest_block::after,
+    {
+    content: '';
+    width: 98%;
+    z-index: -1;
+    height: 98%;
+    padding: 0 0 1px 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: -webkit-gradient(linear, 0% 20%, 0% 100%, from(#f3f3f3), to(#f6f6f6), color-stop(.1, #fff));
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    transform: skew(2deg, 2deg) translate(-1px, 2px)
+}
+
+.block_ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 40px;
+    background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1, rgba(0, 0, 0, 0.2)));
+    border-left: 1px dashed rgba(0, 0, 0, 0.1);
+    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    transform: rotate(-30deg) skew(0, 0) translate(-30px, -20px);
+}
+
+// =======================rwd============================
+@media screen and (max-width: 1199px) {
+    div.BG2 {
+        min-width: 960px;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    div.BG2 {
+        min-width: 720px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    div.BG2 {
+        min-width: 540px;
+    }
+}
+
+
+
+@media screen and (max-width: 575px) {
+    div.BG2 {
+        min-width: 100%;
+
     }
 }

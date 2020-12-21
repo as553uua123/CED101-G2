@@ -11,55 +11,62 @@
 </head>
 
 <body>
-    <h1>創造屬於你的專屬</h1>
-    <div class="tourCreate_header">
-        <div class="step_block">
-            <div class="step">1</div>
-            <p>選擇搭配地點</p>
-        </div>
-        <div class="right"><i class="fas fa-chevron-right fa-3x"></i></div>
-        <div class="step_block">
-            <div class="step">2</div>
-            <p>輸入揪團資訊</p>
-        </div>
-        <div class="right"><i class="fas fa-chevron-right fa-3x"></i></div>
-        <div class="step_block">
-            <div class="step">3</div>
-            <p>預覽建立揪團</p>
+    <div class="header_block">
+        <h1>創造屬於你的專屬</h1>
+        <div class="tourCreate_header">
+            <div class="step_block">
+                <div class="step1">
+                    <img src="./images/tour/LOGO.png" alt="">
+                </div>
+                <p>選擇搭配行程</p>
+            </div>
+            <div class="right"><i class="fas fa-chevron-right fa-3x"></i></div>
+            <div class="step_block">
+                <div class="step2">
+                    <img src="./images/tour/LOGO1.png" alt="">
+                </div>
+                <p>輸入揪團資訊</p>
+            </div>
+            <div class="right"><i class="fas fa-chevron-right fa-3x"></i></div>
+            <div class="step_block">
+                <div class="step3">
+                    <img src="./images/tour/LOGO1.png" alt="">
+                </div>
+                <p>預覽建立揪團</p>
+            </div>
         </div>
     </div>
     <div class="tourCreate_main">
+        <h1>選擇搭配行程</h1>
 
         <div class="tourCreate_leftside">
             <div class="tourCreate_choice">
                 <button id="local">地點</button>
                 <button id="hotel">住宿</button>
                 <button id="restaurant">餐廳</button>
-                <button id="other">其他</button>
+                <button id="active">活動</button>
+
             </div>
             <div class="tourCreate_item_block">
 
             </div>
-            <div class="page">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-            </div>
-        </div>
-        <div class="tourCreate_rightside">
-            <div class="tourCreate_rightside_img"> <img src="./images/vote/tea.jpg" alt=""></div>
-            <div></div>
-            <div></div>
 
+        </div>
+        <div class="tourCreate_rightside_block">
+            <div class="nextBtn"><button>下一步</button></div>
+            <div class="tourCreate_rightside">
+                <div class="local_rightside_img"></div>
+                <div class="hotel_rightside_img"></div>
+                <div class="active_rightside_img"></div>
+                <div class="rest_rightside_img"></div>
+            </div>
         </div>
     </div>
 
 
     <script>
         let tourBlock = document.getElementsByClassName("tourCreate_item_block")[0];
-        let page = document.getElementsByClassName('page')[0];
+
         window.addEventListener("load", function () {
             let localNum = 9;
             for (let i = 0; i < localNum; i++) {
@@ -67,21 +74,42 @@
                 tourBlock.appendChild(newitem);
                 newitem.setAttribute('class', 'tourCreate_item');
                 newitem.innerHTML = `
-                <div class="tourCreate_item_img">
+                     <div class="tourCreate_item_img">
                         <img src="./images/vote/tea.jpg" alt="">
-                    </div>
-                    <p>八卦山茶園</p>
-                `;
-
+                     </div>
+                   <p>八卦山茶園</p>
+                `
+                let localChoice = document.getElementsByClassName('tourCreate_item')[i];
+                localChoice.addEventListener('click', addLocal);
             }
         })
+        function addLocal() {
+            let getRightsideLocal = document.getElementsByClassName('local_rightside_img')[0];
+            console.log(getRightsideLocal);
+            console.log(getRightsideLocal.childNodes.length);
+            if (getRightsideLocal.childNodes.length < 1) {
+                let newLocal = document.createElement('div');
+                getRightsideLocal.appendChild(newLocal);
+                newLocal.setAttribute('class', 'local_block');
+                newLocal.innerHTML = `
+                <h2>茶園</h2>
+                    <img src="./images/vote/tea.jpg" alt="">
+                        <p>八卦山</p>
+                        <div class="block_ribbon"></div>
+                    `;
+                newLocal.addEventListener("click", removeNewLocal);
+                function removeNewLocal() {
+                    getRightsideLocal.removeChild(newLocal);
+                };
+            }
+        }
+
         // ==================================localBtn=============================================
         let local = document.getElementById('local');
         local.addEventListener('click', showLocal);
         function showLocal() {
             tourBlock.innerHTML = "";
             let localNum = 8;
-            page.setAttribute('style', 'display:biock');
             for (let i = 0; i < localNum; i++) {
                 let newitem = document.createElement('div');
                 tourBlock.appendChild(newitem);
@@ -91,7 +119,10 @@
                         <img src="./images/vote/tea.jpg" alt="">
                     </div>
                     <p>八卦山茶園</p>
+                    
                 `;
+                let localChoice = document.getElementsByClassName('tourCreate_item')[i];
+                localChoice.addEventListener('click', addLocal);
             }
         };
 
@@ -101,26 +132,50 @@
         function showHotel() {
             tourBlock.innerHTML = "";
             let hotelNum = 2;
-            page.setAttribute('style', 'display:none');
             for (let i = 0; i < hotelNum; i++) {
                 let newitem = document.createElement('div');
                 tourBlock.appendChild(newitem);
-                newitem.setAttribute('class', 'tourCreate_hotel');
+                newitem.setAttribute('class', 'tourCreate_item');
                 newitem.innerHTML = `
                 <div class="tourCreate_item_img">
                         <img src="./images/tour/hotel1.jpg" alt="">
                     </div>
                     <p>伊豆溫泉旅館</p>
                 `;
+                let hotelChoice = document.getElementsByClassName('tourCreate_item')[i];
+                hotelChoice.addEventListener('click', addhotel);
             }
         };
+
+        function addhotel() {
+            let getRightsideHotel = document.getElementsByClassName('hotel_rightside_img')[0];
+            console.log(getRightsideHotel);
+            console.log(getRightsideHotel.childNodes.length);
+            if (getRightsideHotel.childNodes.length < 1) {
+                let newHotel = document.createElement('div');
+                getRightsideHotel.appendChild(newHotel);
+                newHotel.setAttribute('class', 'local_block');
+                newHotel.innerHTML = `
+                <h2>旅館</h2>
+                    <img src="./images/tour/hotel1.jpg" alt="">
+                        <p >伊豆溫泉旅館</p>
+                        <div class="block_ribbon"></div>
+                    `;
+                newHotel.addEventListener("click", removeNewHotel);
+                function removeNewHotel() {
+                    getRightsideHotel.removeChild(newHotel);
+                };
+            }
+        }
+
+
+
         // =================================restaurantBtn========================================
         let rest = document.getElementById('restaurant');
         rest.addEventListener('click', showRest);
         function showRest() {
             tourBlock.innerHTML = "";
             let restNum = 6;
-            page.setAttribute('style', 'display:none');
             for (let i = 0; i < restNum; i++) {
                 let newitem = document.createElement('div');
                 tourBlock.appendChild(newitem);
@@ -131,8 +186,134 @@
                     </div>
                     <p>好吃餐廳</p>
                 `;
+                let restChoice = document.getElementsByClassName('tourCreate_item')[i];
+                restChoice.addEventListener('click', addRest);
             }
         };
+        function addRest() {
+            let getRightsideRest = document.getElementsByClassName('rest_rightside_img')[0];
+            console.log(getRightsideRest);
+            console.log(getRightsideRest.childNodes.length);
+            if (getRightsideRest.childNodes.length < 3) {
+                let newRest = document.createElement('div');
+                getRightsideRest.appendChild(newRest);
+                newRest.setAttribute('class', 'rest_block');
+                newRest.innerHTML = `
+                <h2>餐廳</h2>
+                    <img src="./images/tour/restaurant1.jpg" alt="">
+                        <p >好吃餐廳</p>
+                        <div class="block_ribbon"></div>
+                    `;
+                newRest.addEventListener("click", removeNewRest);
+                function removeNewRest() {
+                    getRightsideRest.removeChild(newRest);
+                };
+            }
+        }
+
+        // ========================active=================================================
+        let active = document.getElementById('active');
+        active.addEventListener('click', showActive);
+        function showActive() {
+            tourBlock.innerHTML = "";
+
+            let newitem = document.createElement('div');
+            tourBlock.appendChild(newitem);
+            newitem.setAttribute('class', 'tourCreate_active');
+            newitem.innerHTML = `
+            <div class= "tourCreate_active_one">
+                <div class="tourCreate_item_img">
+                        <img src="./images/tour/maktea1.jpg" alt="">
+                    </div>
+                    <p>傳統手工採茶</p>
+                    
+            </div>
+            <div class= "tourCreate_active_one">
+                <div class="tourCreate_item_img">
+                        <img src="./images/tour/maktea2.jpg" alt="">
+                    </div>
+                    <p>製茶技法教學</p>
+            </div>
+            <div class= "tourCreate_active_one">
+                <div class="tourCreate_item_img">
+                        <img src="./images/tour/maktea3.jpg" alt="">
+                    </div>
+                    <p>專業品茶體驗</p>
+            </div>
+                `;
+            let activeChoice = document.getElementsByClassName('tourCreate_active_one')[0];
+            let activeChoice1 = document.getElementsByClassName('tourCreate_active_one')[1];
+            let activeChoice2 = document.getElementsByClassName('tourCreate_active_one')[2];
+            activeChoice.addEventListener('click', addActive);
+            activeChoice1.addEventListener('click', addActive1);
+            activeChoice2.addEventListener('click', addActive2);
+
+            function addActive() {
+                let getRightsideActive = document.getElementsByClassName('active_rightside_img')[0];
+                console.log(getRightsideActive);
+                console.log(getRightsideActive.childNodes.length);
+                if (getRightsideActive.childNodes.length < 1) {
+                    let newActive = document.createElement('div');
+                    getRightsideActive.appendChild(newActive);
+                    newActive.setAttribute('class', 'active_block');
+                    newActive.innerHTML = `
+                    <h2>活動</h2>
+                    <img src="./images/tour/maktea1.jpg" alt="">
+                        <p>傳統手工採茶</p>
+                        <div class="block_ribbon"></div>
+                    `;
+                    newActive.addEventListener("click", removeNewActive);
+                    function removeNewActive() {
+                        getRightsideActive.removeChild(newActive);
+                    };
+                }
+            }
+
+            function addActive1() {
+                let getRightsideActive = document.getElementsByClassName('active_rightside_img')[0];
+                console.log(getRightsideActive);
+                console.log(getRightsideActive.childNodes.length);
+                if (getRightsideActive.childNodes.length < 1) {
+                    let newActive = document.createElement('div');
+                    getRightsideActive.appendChild(newActive);
+                    newActive.setAttribute('class', 'active_block');
+                    newActive.innerHTML = `
+                    <h2>活動</h2>
+                    <img src="./images/tour/maktea2.jpg" alt="">
+                        <p>製茶技法教學</p>
+                        <div class="block_ribbon"></div>
+                    `;
+                    newActive.addEventListener("click", removeNewActive);
+                    function removeNewActive() {
+                        getRightsideActive.removeChild(newActive);
+                    };
+                }
+            }
+
+            function addActive2() {
+                let getRightsideActive = document.getElementsByClassName('active_rightside_img')[0];
+                console.log(getRightsideActive);
+                console.log(getRightsideActive.childNodes.length);
+                if (getRightsideActive.childNodes.length < 1) {
+                    let newActive = document.createElement('div');
+                    getRightsideActive.appendChild(newActive);
+                    newActive.setAttribute('class', 'active_block');
+                    newActive.innerHTML = `
+                    <h2>活動</h2>
+                    <img src="./images/tour/maktea3.jpg" alt="">
+                        <p>專業品茶體驗</p>
+                        <div class="block_ribbon"></div>
+                    `;
+                    newActive.addEventListener("click", removeNewActive);
+                    function removeNewActive() {
+                        getRightsideActive.removeChild(newActive);
+                    };
+                }
+            }
+        };
+
+        // ===============================================================
+
 
     </script>
 

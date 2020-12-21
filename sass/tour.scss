@@ -8,13 +8,17 @@ body {
     background-color: $bg-color;
 }
 
+.main_body {
+    background: url(http://subtlepatterns.com/patterns/wood_pattern.png);
+}
+
 img {
     width: 100%;
 }
 
 @keyframes cloud {
     0% {
-        top: 20%;
+        top: 10%;
     }
 
     50% {
@@ -22,18 +26,19 @@ img {
     }
 
     100% {
-        top: 20%;
+        top: 10%;
     }
 }
 
 .choice_block {
     position: relative;
+    padding-bottom: 300px;
     // border: 2px solid blue;
 
     .tour_center_img {
         // border: 1px solid black;
         position: absolute;
-        bottom: -40%;
+        bottom: -2px;
 
     }
 
@@ -88,14 +93,10 @@ img {
 
     .flex {
         display: flex;
-
-
-        width: 1100px;
-        margin: 0 auto;
+        justify-content: center
     }
 
     .choice_nav {
-
         align-self: center;
         width: 700px;
         // border: 1px solid black;
@@ -113,6 +114,8 @@ img {
             li {
                 text-align: center;
                 font-size: $h2;
+                padding: 2px;
+
 
             }
         }
@@ -206,22 +209,26 @@ img {
 
 
 .choice_list {
+    padding: 40px;
     text-align: center;
-    margin: 50px 0;
-    margin-top: 350px;
+
+
 
     ul {
         padding: 0;
 
+        li.mini_choice {
+            display: none;
+        }
+
         li {
             display: inline-block;
             vertical-align: top;
-            text-align: center;
             position: relative;
-
             // border: 1px solid black;
             margin: 0px 30px;
             color: $primary-typo-color;
+            cursor: pointer;
 
             h2 {
                 margin: 0;
@@ -229,34 +236,53 @@ img {
                 padding: 10px;
             }
 
-            ul {
 
+            ul {
+                display: none;
                 padding: 0px;
+                position: absolute;
+                left: 30px;
+                background-color: $search-bar-bgColor;
+
+
 
 
                 li {
                     display: block;
                     font-size: $h4;
                     color: $secondary-typo-color;
-                    text-align: center;
-
-
-
+                    margin: 0;
+                    text-align: left;
+                    padding: 5px;
+                    white-space: nowrap;
+                    border-bottom: 1px solid $btn-color;
+                    cursor: pointer;
                 }
+
+                li:hover {
+                    background-color: $hover-color;
+                }
+            }
+        }
+
+        li:hover {
+            ul {
+                display: block;
             }
         }
     }
 }
 
 .tour_browse {
-    width: 1200px;
+    width: 1140px;
     margin: 0 auto;
     // border: 1px solid black;
 
     h1 {
         text-align: center;
         color: $primary-typo-color;
-        font-size: $h4;
+        font-size: $h1;
+        margin-bottom: 20px;
     }
 }
 
@@ -265,19 +291,23 @@ img {
 
 
     .tour_block {
-        border: 1px solid black;
-        width: 350px;
+        text-align: center;
+        width: 310px;
         display: inline-block;
-        margin: 20px;
+        margin: 40px 20px;
+        padding: 10px;
+        position: relative;
+        background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#f3f3f3), to(#fff), color-stop(.1, #f3f3f3));
+        border-top: 1px solid white;
+        border-right: 1px solid #ccc;
+        -webkit-border-bottom-right-radius: 60px 60px;
+        -webkit-box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
 
 
 
         .tour_img {
 
             padding: 10px;
-
-
-
         }
 
         .love_share {
@@ -332,6 +362,10 @@ img {
             }
         }
     }
+
+
+
+
 }
 
 @keyframes move {
@@ -367,5 +401,247 @@ img {
     img {
         width: 100%;
         cursor: pointer;
+    }
+}
+
+.tour_block::after {
+    content: '';
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    -webkit-box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+    -webkit-transform: rotate(0deg) translate(-45px, -20px) skew(20deg);
+}
+
+.tour_block::before {
+    content: '';
+    width: 25px;
+    height: 20px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: -webkit-gradient(linear, 0% 20%, 50% 40%, from(#fff), to(#eee), color-stop(.1, #fff));
+    -webkit-border-bottom-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transform: rotate(-20deg) skew(-40deg, -3deg) translate(-13px, -13px);
+    transform: rotate(-20deg) skew(-40deg, -3deg) translate(-13px, -13px);
+}
+
+.box11_ribbon {
+    position: absolute;
+    top: -25px;
+    left: 30%;
+    width: 130px;
+    height: 40px;
+    background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1, rgba(0, 0, 0, 0.2)));
+    border-left: 1px dashed rgba(0, 0, 0, 0.1);
+    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+
+// =====================rwd==========================
+@media screen and (min-width: 1570px) {
+    .choice_block {
+        position: relative;
+        padding-bottom: 500px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .choice_block {
+        position: relative;
+        padding-bottom: 250px;
+    }
+
+    .tour_cloud_img,
+    .tour_cloud1_img,
+    .tour_cloud2_img,
+    .tour_cloud3_img,
+    .tour_cloud4_img {
+        transform: scale(.8);
+    }
+
+
+    .tour_cloud4_img .flex {
+        width: 960px;
+    }
+
+    .tour_browse {
+        width: 960px;
+    }
+
+    .tour_browse_block {
+        text-align: center;
+
+        .tour_block {
+            width: 280px;
+            margin: 20px 5px;
+        }
+
+
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 991px) {
+    .choice_block {
+        .choice_nav {
+            align-self: center;
+            width: 400px;
+        }
+
+
+    }
+
+
+    .tour_cloud_img,
+    .tour_cloud1_img,
+    .tour_cloud2_img,
+    .tour_cloud3_img,
+    .tour_cloud4_img {
+        transform: translateX(-40%)scale(.7);
+
+    }
+
+    .choice_block {
+        position: relative;
+        padding-bottom: 200px;
+    }
+
+
+
+    .tour_browse {
+        width: 720px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .tour_cloud_img,
+    .tour_cloud1_img,
+    .tour_cloud2_img,
+    .tour_cloud3_img,
+    .tour_cloud4_img {
+        transform: translateX(-40%)scale(.5);
+
+    }
+
+    .choice_block {
+        position: relative;
+        padding-bottom: 150px;
+
+        .choice_nav {
+            h1 {
+                text-align: center;
+                color: $primary-typo-color;
+                font-size: $h2;
+                padding: 10px;
+            }
+
+            ul {
+                padding: 0;
+
+                li {
+                    text-align: center;
+                    font-size: $h3;
+                    padding: 2px;
+                }
+            }
+
+        }
+
+
+
+    }
+
+
+    .choice_list {
+        ul {
+            li {
+                margin: 0px 5px;
+
+                h2 {
+                    margin: 0;
+                    font-size: $h3;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+
+    .tour_browse {
+        .choice_block {
+            position: relative;
+            padding-bottom: 100px;
+        }
+
+        width: 540px;
+
+        .tour_block {
+            width: 320px;
+            margin: 20px 5px;
+        }
+
+    }
+}
+
+
+
+@media screen and (max-width: 575px) {
+    .choice_block {
+        display: none;
+
+    }
+
+
+    .tour_cloud_img,
+    .tour_cloud1_img,
+    .tour_cloud2_img,
+    .tour_cloud3_img,
+    .tour_cloud4_img {
+        display: none;
+
+    }
+
+    .choice_list {
+        ul {
+            li.mini_choice {
+                display: block;
+            }
+
+            li {
+                display: block;
+
+                ul {
+                    position: relative;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    .tour_browse {
+        width: 100%;
+    }
+
+    .tour_browse_block {
+        .tour_block {
+            width: 90%;
+            margin: 20px 0px;
+        }
     }
 }
