@@ -9,7 +9,10 @@ img {
 }
 
 //==============================//
+<<<<<<< HEAD
 
+=======
+>>>>>>> e8c9bc315506cbb4ac92752ae3b6e0cc24e33d4b
 body {
     background-color: $bg-color;
 }
@@ -20,14 +23,12 @@ h2 {
     margin: 20px;
 }
 
-
 .tourCreate_header {
     display: flex;
     justify-content: space-evenly;
     width: 1200px;
     margin: 50px auto;
     border: 1px solid black;
-
 
     .step_block {
         border: 1px solid black;
@@ -62,10 +63,13 @@ h2 {
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e8c9bc315506cbb4ac92752ae3b6e0cc24e33d4b
 * {
     box-sizing: $box-sizing;
 }
@@ -123,7 +127,6 @@ main {
                 width: calc(100% / 3);
 
                 .step {
-
                     width: 100px;
                     height: 100px;
                     text-align: center;
@@ -322,4 +325,8 @@ main {
     @media only screen and (max-width: 576px) {
         // text-align: center;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e8c9bc315506cbb4ac92752ae3b6e0cc24e33d4b
