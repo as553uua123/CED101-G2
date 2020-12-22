@@ -1,0 +1,120 @@
+@import './default/_variables.scss';
+@import './shop.scss';
+
+body {
+    margin: 0;
+    background-color: $webBclolor;
+}
+
+$mainWidth:90%;
+
+.product_info {
+    $btnWidth: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: $mainWidth;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 5px 15px;
+
+
+    .product_img {
+        overflow: hidden;
+        width: 400px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .info {
+        text-align: center;
+
+        >h2 {
+            margin-top: 0;
+        }
+
+        .info_content {
+            .price {
+                margin: 20px auto;
+                color: rgb(61, 221, 49);
+            }
+
+            .num {
+                width: $btnWidth;
+                display: inline-block;
+                background-color: #fff;
+
+                select {
+                    vertical-align: text-bottom;
+                }
+            }
+
+            input[type=button] {}
+        }
+    }
+}
+
+div.product_detail {
+    ul {
+        list-style: none;
+        padding: 0;
+        width: max-content;
+        margin: 0 auto;
+        font-size: 0;
+
+        li {
+            font-size: medium;
+            display: inline-block;
+            background-color: #FFF;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin: 0 1px;
+        }
+
+        li:hover {
+            background-color: #a7db58;
+        }
+    }
+
+    .content {
+        background-color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        display: none;
+        width: max-content;
+        min-width: 400px;
+        max-width: $mainWidth;
+        margin: 0 auto;
+        padding: 10px;
+
+        img {
+            max-width: 100%;
+        }
+
+        pre {
+            text-align: left;
+            margin: 0 auto;
+            width: max-content;
+        }
+    }
+
+    div.content:first-of-type {
+        display: block;
+    }
+}
+
+
+
+div.back {
+    margin: 15px auto;
+    background-color: #fff;
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    a {
+        text-decoration: none;
+    }
+}
