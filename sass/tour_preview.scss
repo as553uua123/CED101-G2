@@ -9,7 +9,6 @@ img {
 }
 
 //==============================//
-<<<<<<< HEAD
 body {
     background-color: $bg-color;
 }
@@ -20,14 +19,12 @@ h2 {
     margin: 20px;
 }
 
-
 .tourCreate_header {
     display: flex;
     justify-content: space-evenly;
     width: 1200px;
     margin: 50px auto;
     border: 1px solid black;
-
 
     .step_block {
         border: 1px solid black;
@@ -61,7 +58,7 @@ h2 {
     width: 1200px;
     margin: 0 auto;
 }
-=======
+
 * {
     box-sizing: $box-sizing;
 }
@@ -119,7 +116,6 @@ main {
                 width: calc(100% / 3);
 
                 .step {
-
                     width: 100px;
                     height: 100px;
                     text-align: center;
@@ -318,9 +314,4 @@ main {
     @media only screen and (max-width: 576px) {
         // text-align: center;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> dev
->>>>>>> cc47d1dea1779b0831acd814c7de378c985f2388
