@@ -226,8 +226,7 @@ h1 {
         .local_block,
         .active_block,
         .hotel_block,
-        .rest_block,
-            {
+        .rest_block {
             width: 300px;
             padding: 10px;
             margin: 30px;
@@ -289,8 +288,7 @@ h1 {
 .local_block::before,
 .active_block::before,
 .hotel_block::before,
-.rest_block::before,
-    {
+.rest_block::before {
     content: '';
     width: 98%;
     z-index: -1;
@@ -309,8 +307,7 @@ h1 {
 .local_block::after,
 .active_block::after,
 .hotel_block::after,
-.rest_block::after,
-    {
+.rest_block::after {
     content: '';
     width: 98%;
     z-index: -1;
