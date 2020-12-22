@@ -1,9 +1,17 @@
 $(document).ready(function () {
-    $(".forget").click(function () {
-        $("#login").css("display", "none");
-        $("#forget_pw").css("display", "flex");
-        $("#signup").css("display", "none");
+    $("p").on("click", function (e) {
+        e.preventDefault();
+        $(this).parent().remove("active");
+        $(this).parent().siblings().removeClass("active");
+
+        target = $(this).attr("href");
+
+        $(".tab-content > div").not(target).hide();
+        $(".tab-content > div > #forget_pw").css('display', 'flex');
+
+        $(target).fadeIn(600);
     });
+
     $(".form")
         .find("input, textarea")
         .on("keyup blur focus", function (e) {

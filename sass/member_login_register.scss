@@ -1,4 +1,5 @@
-@import "./default/variables";
+@import "./default/reset";
+@import "./default/common";
 
 //============= var ============//
 
@@ -9,11 +10,10 @@ $main-dark: darken($main, 5%);
 $gray-light: #a0b3b0;
 $gray: #ddd;
 
-
 $thin: 300;
 $normal: 400;
 $bold: 600;
-$br: 4px;
+$br: 5px;
 //==============================//
 
 * {
@@ -83,16 +83,17 @@ a {
     display: none;
 }
 
-h1 {
+h2 {
     text-align: center;
     color: $search-bar-bgColor;
+    font-size: $h2;
     font-weight: $thin;
     margin: 0 0 40px;
 }
 
 label {
     position: absolute;
-    transform: translateY(2px);
+    transform: translateY(7px);
     left: 13px;
     color: rgba($search-bar-bgColor, 0.5);
     transition: all 0.25s ease;
@@ -164,8 +165,8 @@ textarea {
     }
 }
 
-#forget_pw{
-    display: none;
+#forget_pw {
+    // display: none;
 }
 .button {
     border: 0;
@@ -193,5 +194,10 @@ textarea {
 
 .forgot {
     margin-top: -20px;
+    margin-bottom: 20px;
     text-align: right;
+}
+
+#forget_pw {
+    border: 1px solid red;
 }
