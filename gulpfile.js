@@ -118,4 +118,4 @@ function includeHTML() {
         .pipe(dest("app/"));
     done();
 }
-exports.html = includeHTML;
+exports.html = series(clearHtml, includeHTML);
