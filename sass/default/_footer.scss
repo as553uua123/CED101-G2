@@ -1,0 +1,44 @@
+footer {
+    padding: 20px 20px 0px;
+    background-color: #fff;
+    color: #70d6bf;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+//有空再加
+// .pagetop.is-hidden {
+//     opacity: 0;
+//     pointer-events: none;
+// }
+
+.pagetop {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    width: 52px;
+    height: 52px;
+    background-color: #fff;
+    border-radius: 26px;
+    z-index: 10;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pagetop:after {
+    content: '∧';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: -1px;
+    color: #70d6bf;
+    font-size: 1.75rem;
+    font-family: 'FontAwesome';
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
