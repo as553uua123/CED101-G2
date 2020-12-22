@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
 @import 'variables';
-@import 'nav';
+@import 'reset.scss';
 @import 'footer';
+@import 'bground_style.scss';
+@import 'btn.scss';
+@import 'input_textarea';
+@import 'header';
 
 img {
     max-width: $img-max-width;
