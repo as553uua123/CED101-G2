@@ -6,6 +6,7 @@ const sass = require("gulp-sass");
 const imagemin = require("gulp-imagemin");
 const clean = require("gulp-clean");
 const babel = require("gulp-babel");
+const fileinclude = require("gulp-file-include");
 
 //合併檔案
 function concatCss() {
@@ -104,3 +105,17 @@ function babels() {
         .pipe(dest("app/js"));
 }
 exports.jsbabel = babels;
+
+//html template 
+function includeHTML() {
+    return src("*.html")
+        .pipe(
+            fileinclude({
+                prefix: "@@",
+                basepath: "@file",
+            })
+        )
+        .pipe(dest("app/"));
+    done();
+}
+exports.html = includeHTML;
