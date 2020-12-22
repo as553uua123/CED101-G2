@@ -77,7 +77,58 @@ main{
             
 
             .p2{
-                margin: 10px 0;
+                margin: 10px 0 2px;
+            }
+
+            .count{
+                position: relative;
+                .stars{
+                    font-size:28px;
+                }
+                .stars:BEFORE {
+                    content:"★★★★★";
+                    position:absolute;
+                    overflow:hidden;
+                    z-index:1;
+                    left:0px;
+                    top:0px;
+                    color: #FC0;
+                }
+                .stars:AFTER {
+                    content:"★★★★★";
+                    position:relative;
+                    color:gray;
+                }
+                .stars.rate:AFTER {
+                    position:absolute;
+                    left:0px;
+                }
+                .stars.rate > A {
+                    color:transparent;
+                    text-decoration:none;
+                    position:relative;
+                    z-index:2;
+                }
+                .stars.rate:HOVER:BEFORE,
+                .stars.rate:HOVER:AFTER {
+                    display:none;
+                }
+                .stars.rate:HOVER > A {
+                    color:#FC0;
+                    text-shadow:0px 1px 0 #000, 0 -1px 0 #fff;
+                }
+                .stars.rate:HOVER > A:HOVER {
+                    color:#FC0;
+                    text-shadow:0px 2px 0 #000, 0 -1px 0 #fff;
+                    top:-1px;
+                }
+                .stars.rate >A:HOVER ~ A {
+                    color:#fff;
+                    text-shadow:none;
+                }
+                .stars[data-percent="10"]:BEFORE {
+                    width:10%;
+                }
             }
 
             .p4{
