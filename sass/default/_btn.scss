@@ -1,0 +1,106 @@
+// 引入範例說明: 
+// 自己的class名 {
+//     @include mixin的名字
+// }
+// 例:
+// <button class="btn">
+//   <a href="03_discuss.html">確認送出按鈕</a>
+// </button> 
+
+// .btn {
+//     @include btn
+// }
+
+
+// @@@@@@@@@@@以下是按鈕樣式與名稱
+
+
+// 用在淺色背景
+// btn         一般綠底白字按鈕 hover是白色(長度200px)
+// smallbtn    一般綠底白字按鈕 hover是白色(長度100px)
+
+
+//用在深色背景
+// btn2        一般白底綠字按鈕  hover是綠色(長度200px)
+// smallbtn2   一般白底綠字按鈕  hover是綠色(長度200px)
+
+
+// @@@@@@@@@@@以上是按鈕樣式與名稱
+
+
+
+// 一般綠底白字按鈕  hover是白色  長度200px
+@mixin btn {
+    width: 200px;
+    border-radius: 20px;
+    font-weight: bolder;
+    border: 2px;
+    transition: all 0.5s ease;
+    font-size: $h6;
+    outline: none;
+    cursor: pointer;
+    margin: 15px;
+    background-color: $secondary-typo-color;
+
+    &:hover {
+        box-shadow: 0 0 0 5px $secondary-typo-color inset, 0 0 0 150px rgb(255, 255, 255) inset;
+    }
+
+    a {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        color: white;
+        padding: 15px 5px;
+
+        &:hover {
+            color: $secondary-typo-color;
+        }
+    }
+
+    @media all and (max-width: 480px) {
+        width: 90px;
+    }
+}
+
+
+// 一般綠底白字按鈕  hover是白色  長度100px
+@mixin smallbtn {
+    @include btn;
+    width: 100px;
+
+    @media all and (max-width: 480px) {
+        width: 60px;
+    }
+}
+
+
+
+// 一般白底綠字按鈕  hover是綠色  長度200px
+@mixin btn2 {
+    @include btn;
+    background-color: white;
+
+    &:hover {
+        box-shadow: 0 0 0 5px #9ACC5F inset, 0 0 0 150px $secondary-typo-color inset;
+    }
+
+    a {
+        color: $secondary-typo-color;
+
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+// 一般白底綠字按鈕  hover是綠色  長度100px
+@mixin smallbtn2 {
+    @include btn;
+    width: 100px;
+
+    @media all and (max-width: 480px) {
+        font-size: 12px;
+        width: 60px;
+    }
+}
