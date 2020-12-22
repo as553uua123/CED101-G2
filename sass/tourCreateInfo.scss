@@ -10,6 +10,10 @@ img {
     width: 100%;
 }
 
+$main-width: 80%;
+
+
+
 h1 {
     text-align: center;
     font-size: $h1;
@@ -20,52 +24,73 @@ h1 {
 .tourCreate_header {
     display: flex;
     justify-content: space-evenly;
-    width: 900px;
+    flex-direction: column;
+    align-content: space-around;
+    width: $main-width;
     margin: 50px auto;
 
 
+    .step_title {
+        display: flex;
 
-    .step_block {
+        .step_block {
+            // border: 1px solid black;
+            width: calc(100% / 3);
 
+            .step {
 
-        .step1,
-        .step2,
-        .step3 {
+                width: 100px;
+                height: 100px;
+                text-align: center;
+                line-height: 100px;
+                margin: 0 auto;
 
-            width: 100px;
-            height: 100px;
-            // border: 2px solid black;
-            // border-radius: 50%;
-            text-align: center;
-            line-height: 100px;
-            margin: 0 auto;
-
-
+                @media only screen and (max-width: 576px) {
+                    width: 50px;
+                    height: 50px;
+                    font-size: $h4;
+                    line-height: 50px;
+                }
+            }
         }
 
-        .step1 {
-            // background-color: $success-sign;
+        .arrow {
+            // border: 1px solid black;
+            margin: auto;
         }
+    }
+
+    .step_content {
+        display: flex;
+        justify-content: space-around;
 
         p {
             font-size: $h3;
             text-align: center;
             padding: 30px;
-        }
-    }
 
-    .right {
-        margin: auto;
+            @media only screen and (max-width: 576px) {
+                font-size: $h4;
+                padding: 20px;
+            }
+        }
     }
 }
 
 .info_main {
-    width: 1200px;
+    width: $main-width;
     margin: 0 auto;
+    overflow: hidden;
+
+
 
     .formBtn {
         text-align: right;
         margin-bottom: 50px;
+
+        @media only screen and (max-width: 991px) {
+            text-align: center;
+        }
 
         button {
             width: 100px;
@@ -75,6 +100,7 @@ h1 {
     form {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .form_leftside {
@@ -92,6 +118,16 @@ h1 {
                 border: 1px solid #eee;
                 /*border-radius*/
                 border-radius: 3px;
+
+                @media only screen and (max-width: 1199px) {
+                    width: 380px;
+                    padding: 10px;
+                }
+
+                @media only screen and (max-width: 991px) {
+                    width: 90%;
+
+                }
             }
         }
     }
@@ -149,30 +185,3 @@ h1 {
 }
 
 // ==============rwd=======================================@media screen and (max-width: 1199px) {
-div.BG2 {
-    min-width: 960px;
-}
-
-}
-
-@media screen and (max-width: 991px) {
-    div.BG2 {
-        min-width: 720px;
-    }
-
-}
-
-@media screen and (max-width: 767px) {
-    div.BG2 {
-        min-width: 540px;
-    }
-}
-
-
-
-@media screen and (max-width: 575px) {
-    div.BG2 {
-        min-width: 100%;
-
-    }
-}
