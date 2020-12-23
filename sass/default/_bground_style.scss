@@ -1,31 +1,32 @@
 //一共分為三種 請參考名稱 要用哪個開哪個，其餘請保持關閉 啾咪
 
 // (下面是給首頁)=============================================================
-// @mixin forIndex {
-//     background-color: #d6d65b;
-//     background-image: url(/images/index/illust2.png);
-//     background-position: center center;
-//     background-size: contain;
-//     background-repeat-y: repeat;
-//     width: 100%;
-//     height: 100%;
-//     z-index: 2;
-// }
+@mixin forIndex {
+    background-color: #d6d65b;
+    background-image: url(/images/index/illust2.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat-y: repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
 // body {
 //     @include forIndex;
 // }
 
 //(下面是給揪團跟商城)=============================================================
 
-// @mixin forTourAndShop {
-//     background-color: #e4f2bf;
-//     background-image: url(/images/common/bg.png);
-//     background-position: center center;
-//     background-size: contain;
-//     background-repeat-y: repeat;
-//     width: 100%;
-//     height: 100%;
-// }
+@mixin forTourAndShop {
+    background-color: #e4f2bf;
+    background-image: url(/images/common/bg.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat-y: repeat;
+    width: 100%;
+    height: 100%;
+}
 
 // body {
 //     @include forTourAndShop;
@@ -33,15 +34,15 @@
 
 //(下面是給討論區跟投票)=============================================================
 
-// @mixin forDiscussAndVote {
-//     background-color: #eff2c7;
-//     background-image: url(/images/discuss/bg.png);
-//     background-position: center center;
-//     background-size: contain;
-//     background-repeat-y: repeat;
-//     width: 100%;
-//     height: 100%;
-// }
+@mixin forDiscussAndVote {
+    background-color: #eff2c7;
+    background-image: url(/images/discuss/bg.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat-y: repeat;
+    width: 100%;
+    height: 100%;
+}
 
 // body {
 //     @include forDiscussAndVote;
