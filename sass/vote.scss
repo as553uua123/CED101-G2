@@ -66,17 +66,10 @@ main{
                 display:flex;
                 justify-content: space-between;
 
-                .fb-share-button{
-                        button._89n_{
-                        background: #1eb514;
-                    }
-
-                    ._89n_:hover{
-                        background: #1eb514;
-                    }
+                .p1{
+                    color: #7baa17;
+                    font-weight: bold;
                 }
-
-               
 
             }
 
@@ -88,6 +81,10 @@ main{
                 
                 .vue-star-rating-rating-text[data-v-34cbeed1]{
                     margin-top: 0;
+                }
+
+                .score{
+                    color:#7baa17;
                 }
             }
 

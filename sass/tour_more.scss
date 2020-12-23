@@ -1,6 +1,9 @@
 @import "default/_common.scss";
 
-
+body{
+    @include forTourAndShop;
+    font-family: 'Noto Serif TC';
+}
 
 main{
     text-align: center;
@@ -39,7 +42,6 @@ main{
             }
             
             .pp2{
-                line-height: 24px;
                 margin: 8px 0;
             }
 

@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>茶園票選</title>
     <link rel="stylesheet" href="css/vote_more.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.js"></script> -->
     <script src="https://unpkg.com/vue-star-rating@1.5.1/dist/star-rating.min.js"></script>
+    <script src="node_modules/vue/dist/vue.js"></script>
     
 </head>
 <body>
@@ -36,9 +37,9 @@
 					</div>
                 </div>
                 
-                <p class="p3">評分次數: 7</p>
+                <p class="p3"><span class="tt">評分次數:</span> 7</p>
                 <p class="p4">
-                    茶園地址: 花蓮縣瑞穗鄉舞鶴村
+                    <span class="tt">茶園地址:</span> 花蓮縣瑞穗鄉舞鶴村
                 </p>
                 <p class="p5">海拔100至300公尺的舞鶴台地，依傍高聳的中央山脈，隨風拂來秀姑巒溪與紅葉溪的濕潤水氣，宜人的氣候適合茶樹生長，是天鶴茶的產地，也是小葉綠蟬生長的天堂，經由小葉綠蟬吸吮而製成的蜜香紅茶，微帶淡淡的果香與蜜香，口感溫潤生津，獨特的風味聞名全臺，成為旅人來訪瑞穗必帶的伴手禮之一。
                 </p>
@@ -51,7 +52,9 @@
         </div>
 
         <h3 class="t1">茶園留言</h2>
+
         <h3>相關揪團</h3>
+        <div class="tour_browse_block" id="tourBrowseBlock"></div>
 
     </main>
 
@@ -89,5 +92,67 @@
 
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v9.0" nonce="WuFFSzIJ"></script>
+    <script>
+        window.addEventListener("load", function () {
+            let tourNum = 3;
+            let tourBlock = document.getElementById("tourBrowseBlock");
+            for (var i = 0; i < tourNum; i++) {
+                let newTour = document.createElement('div');
+                tourBlock.appendChild(newTour);
+                newTour.setAttribute('class', 'tour_block');
+                newTour.innerHTML = `
+                <div class="tour_img">
+                            <img src="./images/tour/tour1.jpg" alt="">
+                    </div>
+                            <div class="love_share">
+                                <div class="love">
+                                    <img class="like" src="./images/common/heart.png" title="加入收藏" alt="">
+                        </div>
+                                    <div class="share">
+                                        <img src="./images/common/shareBlue.png" alt="">
+                        </div>
+                                    </div>
+                                    <div class="tour_text">
+                                        <h3>活動名稱</h3>
+                                        <p>一定打斷你鼻樑</p>
+                                        <h3>活動日期</h3>
+                                        <p>2020/12/30</p>
+                                        <h3>截止揪團日期</h3>
+                                        <p>2020/12/25</p>
+                                        <h3>目前剩餘名額</h3>
+                                        <p>14/16</p>
+                                        <h3>預估費用</h3>
+                                        <p>$7800NT</p>
+                                    </div>
+                                    <div class="tourBtn">
+                                        <button type="button"> 立即報名</button>
+                                    </div>
+                                    <div class="box11_ribbon"></div>  
+                `;
+
+            }
+
+            let like = document.getElementsByClassName('like');
+            for (var i = 0; i < like.length; i++) {
+                like[i].addEventListener("click", changeHeart)
+
+            }
+            function changeHeart() {
+                if (this.title == "加入收藏") {
+                    this.title = "取消收藏";
+                    this.src = "./images/common/like.png";
+                } else {
+                    this.title = "加入收藏";
+                    this.src = "./images/common/heart.png";
+
+                }
+            }
+
+
+        })
+
+
+
+    </script>
 </body>
 </html>
