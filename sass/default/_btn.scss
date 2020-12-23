@@ -109,7 +109,7 @@
 
 // 一般白底綠字按鈕  hover是綠色  長度100px
 @mixin smallbtn2 {
-    @include btn;
+    @include btn2;
     width: 100px;
 
     @media all and (max-width: 480px) {
