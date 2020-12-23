@@ -66,6 +66,7 @@
         display: inline-block;
         color: white;
         padding: 15px 5px;
+        text-decoration: none;
 
         &:hover {
             color: $secondary-typo-color;
@@ -100,6 +101,7 @@
 
     a {
         color: $secondary-typo-color;
+        text-decoration: none;
 
         &:hover {
             color: white;
