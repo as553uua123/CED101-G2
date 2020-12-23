@@ -22,7 +22,11 @@
 
 @mixin forTourAndShop {
     background-color: #e4f2bf;
+<<<<<<< HEAD
+    background-image: url(/images/common/bg.png);
+=======
     background-image: url(../images/common/bg.png);
+>>>>>>> ca2a4428dfda3d5ad72294686118330843928843
     background-position: center center;
     background-size: contain;
     background-repeat-y: repeat;

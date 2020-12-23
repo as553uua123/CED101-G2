@@ -1,6 +1,4 @@
 @import "default/_common.scss";
-@import "default/_reset.scss";
-@import "default/_variables.scss";
 
 
 body{
@@ -42,6 +40,17 @@ main{
                 }
             }
 
+            .allscore{
+                font-size: 18px;
+                margin: 10px 0;
+                display: flex;
+                align-items: center;
+                
+                .vue-star-rating-rating-text[data-v-34cbeed1]{
+                    margin-top: 0;
+                }
+            }
+
             p{
                 line-height: 28px;
             }
@@ -52,11 +61,8 @@ main{
                 margin-bottom: 30px;
             }
 
-            .open{
-                border: none;
-                color:$btn-color;
-                outline: none;
-                cursor: pointer;
+            .bt{
+                @include btn3;
             }
         }
     }
