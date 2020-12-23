@@ -1,3 +1,8 @@
+// 請在自己的檔案內貼上
+// body {
+//     @include 看你是哪個單元;
+// }
+
 // (下面是給首頁)=============================================================
 @mixin forIndex {
     background-color: #d6d65b;
@@ -9,15 +14,15 @@
     height: 100%;
     z-index: 2;
 }
-body {
-    @include forIndex;
-}
+// body {
+//     @include forIndex;
+// }
 
 //(下面是給揪團跟商城)=============================================================
 
 @mixin forTourAndShop {
     background-color: #e4f2bf;
-    background-image: url(/images/common/bg.png);
+    background-image: url(../images/common/bg.png);
     background-position: center center;
     background-size: contain;
     background-repeat-y: repeat;
