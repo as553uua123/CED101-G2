@@ -1,9 +1,15 @@
 footer {
-    padding: 20px 20px 0px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
     background-color: #fff;
-    color: #436536;
-    text-align: center;
-    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h5 {
+        font-size: 0.8rem;
+    }
 }
 
 //回到頂部後按鈕消失  還沒成功 有空再研究
