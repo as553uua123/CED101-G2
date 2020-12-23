@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/index/webIcon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/member_login_register.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">  -->
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./js/member_login_register.js"></script>
     <title>登入／註冊</title>
@@ -34,7 +34,9 @@
                         <input type="password"required autocomplete="off"/>
                     </div>
                     <p class="forgot"><a href="#">忘記密碼？</a></p>
-                    <button class="btn"/>登入</button>
+                    <div class="btn_container">
+                        <button class="btn"/>登入</button>
+                    </div>
                 </form>
             </div>
             <div id="forget_pw">
@@ -46,19 +48,16 @@
                         </label>
                         <input type="email"required autocomplete="off"/>
                     </div>
-                    <div class="field-wrap">
-                        <label>
-                            密碼<span class="req">*</span>
-                        </label>
-                        <input type="password"required autocomplete="off"/>
+                    <div class="btn_container">
+                        <button class="btn"/>取回密碼</button>
                     </div>
-                    <button class="button button-block"/>取回密碼</button>
+                    
                 </form>
             </div>        
             <div id="signup">   
                 <h2>註冊會員</h2>
                 <form action="/" method="post">
-                    <div class="field-wrap">
+                    <div class="field-wrap signup">
                         <label>
                         信箱<span class="req">*</span>
                         </label>
@@ -82,7 +81,9 @@
                         </label>
                         <input type="password"required autocomplete="off"/>
                     </div>
-                    <button type="submit" class="button button-block"/>註冊</button>
+                    <div class="btn_container">
+                        <button type="submit" class="btn"/>註冊</button>
+                    </div>
                 </form>
             </div>  
         </div><!-- tab-content -->  
