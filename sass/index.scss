@@ -1,6 +1,11 @@
 @import './default/common';
+
 * {
     box-sizing: border-box;
+}
+
+body {
+    @include forTourAndShop;
 }
 
 html,
@@ -117,17 +122,19 @@ video {
     height: calc(320px + 100vh * 0.11458333);
     z-index: -1;
 }
+
 .container-main * {
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s;
 }
+
 // 第二屏:揪團  =====================
 
 .hdg-bottom {
     position: relative;
     padding: 70px 0 140px;
     text-align: center;
-    _background-image: url(../images/index/img_bg_yg_pc.jpg);
+    background-image: url(../images/index/img_bg_yg_pc.jpg);
     background-size: 100% auto;
     z-index: 1;
 }
@@ -148,6 +155,7 @@ video {
     font-weight: bold;
     letter-spacing: 0.1rem;
 }
+
 .about-list li .hdg span {
     display: inline-block;
     vertical-align: middle;
@@ -173,6 +181,7 @@ video {
     bottom: -3px;
     right: -1px;
     border-radius: 25px;
+    border: 1px solid;
 }
 
 .common-btn .common-btn__txt {
@@ -198,6 +207,7 @@ video {
     background-color: #fff;
     border-radius: 25px;
 }
+
 .common-btn:after {
     content: '>>';
     position: absolute;
@@ -214,6 +224,7 @@ video {
     -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
 }
+
 .common-btn:hover:after {
     color: #fff;
 }
@@ -276,6 +287,7 @@ video {
 .about-list .list-illust-back {
     top: 25px;
 }
+
 .about-list .list-illust-back,
 .about-list .list-illust-front {
     position: absolute;
@@ -364,6 +376,7 @@ video {
     -webkit-animation: scroll-anim 1.5s linear infinite;
     animation: scroll-anim 1.5s linear infinite;
 }
+
 .about-list li .hdg .small,
 .about-list li .hdg .strong {
     color: #3f7735;
@@ -388,6 +401,7 @@ video {
     top: 46%;
     margin-left: 342px;
 }
+
 .hdg-bottom__splite {
     display: block;
     position: absolute;
@@ -408,11 +422,12 @@ video {
     display: block;
     width: 100%;
     height: 30px;
-    _background-image: url(../images/index/bg-green-bottom.png);
+    background-image: url(../images/index/bg-green-bottom.png);
     background-position: center top;
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
+
 .action {
     position: relative;
     padding: 90px 0 100px;
@@ -438,6 +453,7 @@ video {
     position: relative;
     overflow: hidden;
 }
+
 .hdg-3 {
     margin-bottom: 50px;
     color: #859904;
@@ -463,6 +479,7 @@ video {
     margin-bottom: 20px;
     vertical-align: top;
 }
+
 .action-list li + li {
     margin-left: 30px;
 }
@@ -514,6 +531,7 @@ video {
     text-align: center;
     background-color: #eff2c7;
 }
+
 .action-list li a .txt:after {
     content: '>';
     display: inline-block;
@@ -525,6 +543,7 @@ video {
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
 }
+
 .action-list li a .bg {
     display: block;
     position: absolute;
@@ -584,6 +603,7 @@ video {
     top: -20%;
     right: 0;
 }
+
 .project:before {
     content: '';
     position: absolute;
@@ -592,15 +612,16 @@ video {
     display: block;
     width: 100%;
     height: 30px;
-    _background-image: url(../images/index/bg-green-top.png);
+    background-image: url(../images/index/bg-green-top.png);
     background-position: center bottom;
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
+
 .project {
     position: relative;
     padding: 230px 0 80px;
-    _background-image: url(../images/index/img_bg_yg_pc.jpg);
+    background-image: url(../images/index/img_bg_yg_pc.jpg);
     background-size: 100% auto;
 }
 
@@ -623,6 +644,7 @@ video {
     margin-left: -750px;
     z-index: 1;
 }
+
 .project .illust-pickup-back {
     top: 325px;
 }
@@ -635,11 +657,13 @@ video {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
+
 .project .pickup {
     position: relative;
     display: block;
     text-decoration: none;
 }
+
 .project .pickup.is-category-04:after {
     border: 0 solid #87e0db;
 }
@@ -647,11 +671,13 @@ video {
 .project .pickup.is-category-04:hover:after {
     border: 5px solid #87e0db;
 }
+
 .project .pickup .wrap-txt .project .pickup {
     position: relative;
     display: block;
     text-decoration: none;
 }
+
 .project .pickup:after {
     content: '';
     display: block;
@@ -704,6 +730,7 @@ video {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
+
 .project .pickup .img {
     border-radius: 10px;
     overflow: hidden;
@@ -825,10 +852,11 @@ video {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    _background-image: url(../images/index/ntd.png);
+    background-image: url(../images/index/ntd.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
+
 .project-list li a:after {
     content: '';
     display: block;
@@ -850,6 +878,7 @@ video {
     padding: 35px;
     text-align: left;
 }
+
 .project .label .num .small {
     font-size: 0.625rem;
 }
@@ -878,6 +907,7 @@ video {
     top: 0;
     border-width: 25px 12px 0 0;
 }
+
 .project-list .label .ribon:before,
 .project-list .label .ribon:after {
     content: '';
@@ -888,9 +918,11 @@ video {
     height: 0;
     border-style: solid;
 }
+
 .project-list li.is-category-05 .label .ribon:after {
     border-color: transparent transparent transparent #f69d85;
 }
+
 .project .label .ribon:after {
     bottom: 0;
     border-width: 25px 0 0 12px;
@@ -906,6 +938,7 @@ video {
     height: 0;
     border-style: solid;
 }
+
 .project-list .label .ribon:after {
     bottom: 0;
     border-width: 25px 0 0 12px;
@@ -942,6 +975,7 @@ video {
 .project-list li.is-category-02 .label {
     background-color: #ffb541;
 }
+
 .project-list li .txt-area .company {
     display: inline-block;
     margin-bottom: 7px;
@@ -970,9 +1004,11 @@ video {
     font-weight: bold;
     letter-spacing: 0.05rem;
 }
+
 .project-list li .txt-area .wrap-company {
     margin: 0 -5px 5px;
 }
+
 .project-list li.is-category-05 .company > span {
     background-color: #f69d85;
 }
@@ -992,6 +1028,7 @@ video {
 .project-list li.is-category-01 .label .ribon:after {
     border-color: transparent transparent transparent #3293cb;
 }
+
 .project-list li.is-category-02 .category-name {
     color: #ffb541;
 }
@@ -1005,9 +1042,11 @@ video {
     margin-bottom: 7px;
     padding: 0 5px;
 }
+
 .project-list li.is-category-02 .company > span {
     background-color: #ffb541;
 }
+
 .project-list li.is-category-01 .company > span {
     background-color: #3293cb;
 }
@@ -1077,6 +1116,7 @@ video {
     -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
 }
+
 .common-btn .common-btn__blobs {
     height: 100%;
     -webkit-filter: url(#goo);
@@ -1089,6 +1129,7 @@ video {
     right: -1px;
     border-radius: 25px;
 }
+
 .info .box-info .txt-area .common-btn .common-btn__blobs div {
     background-color: #eff2c8;
 }
@@ -1139,6 +1180,7 @@ video {
 .info .box-info .txt-area .common-btn:after {
     color: #fff;
 }
+
 .info .box-info {
     margin-left: 20px;
 }
@@ -1165,6 +1207,7 @@ video {
     top: -20%;
     left: 0;
 }
+
 // 結束第五屏:討論區 =====================
 
 // 第六屏:小遊戲(待確認) =====================
@@ -1177,7 +1220,7 @@ video {
 //   width: 100%;
 //   max-width: 1000px;
 //   padding: 55px 85px;
-//   _background-image: url(../images/index/bg-info-pdf.jpg);
+//   background-image: url(../images/index/bg-info-pdf.jpg);
 //   background-size: cover;
 //   background-position: center top;
 //   border-radius: 30px;
@@ -1195,7 +1238,7 @@ video {
     background-position: center;
     background-repeat: repeat;
     overflow: hidden;
-    _background-image: url(../images/index/img_bg_yg_pc.jpg);
+    background-image: url(../images/index/img_bg_yg_pc.jpg);
 }
 
 .spinning {
@@ -1210,10 +1253,12 @@ video {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
+
 // 結束第七屏:旋轉 =====================
 // RWD開始  =====================
 @media only screen and (min-width: 769px) {
@@ -1226,6 +1271,7 @@ video {
     .hdg-bottom {
         padding: 70px 0 10px;
     }
+
     .about-list {
         margin-top: 100px;
     }
@@ -1234,6 +1280,7 @@ video {
     .about-list .list-illust-front {
         display: none;
     }
+
     .about-list li {
         padding: 75px 30px 30px;
         display: block;
@@ -1309,6 +1356,7 @@ video {
     .info .box-info .txt-area .txt {
         font-size: 0.875rem;
     }
+
     .illust-discuss-btm {
         width: 20%;
         top: 0%;

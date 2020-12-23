@@ -1,16 +1,19 @@
-//一共分為三種 請參考名稱 要用哪個開哪個，其餘請保持關閉 啾咪
+// 請在自己的檔案內貼上
+// body {
+//     @include 看你是哪個單元;
+// }
 
 // (下面是給首頁)=============================================================
-// @mixin forIndex {
-//     background-color: #d6d65b;
-//     background-image: url(/images/index/illust2.png);
-//     background-position: center center;
-//     background-size: contain;
-//     background-repeat-y: repeat;
-//     width: 100%;
-//     height: 100%;
-//     z-index: 2;
-// }
+@mixin forIndex {
+    background-color: #d6d65b;
+    background-image: url(/images/index/illust2.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat-y: repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
 // body {
 //     @include forIndex;
 // }
@@ -19,7 +22,11 @@
 
 @mixin forTourAndShop {
     background-color: #e4f2bf;
+<<<<<<< HEAD
     background-image: url(/images/common/bg.png);
+=======
+    background-image: url(../images/common/bg.png);
+>>>>>>> ca2a4428dfda3d5ad72294686118330843928843
     background-position: center center;
     background-size: contain;
     background-repeat-y: repeat;

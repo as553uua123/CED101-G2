@@ -1,5 +1,6 @@
 @import './default/_variables.scss';
 @import './shop.scss';
+@import './sass/default/btn';
 
 h2.title {
     width: max-content;
@@ -16,7 +17,7 @@ div.cart_content {
     $itemBR: 5px;
     padding: 20px 30px;
     border-radius: 5px;
-    background-color: rgba(175, 255, 164, 0.555);
+    background-color: #e3ffe6;
 
     .item {
         position: relative;
@@ -78,21 +79,23 @@ div.function {
     }
 
     input[type=submit] {
-        background-color: brown;
-        color: #fff;
-        padding: 10px 20px;
-        margin-left: 20px;
-        font-size: 20px;
-        border-radius: 5px;
-        outline: none;
+        @include btn3;
+        // background-color: brown;
+        // color: #fff;
+        // padding: 10px 20px;
+        // margin-left: 20px;
+        // font-size: 20px;
+        // border-radius: 5px;
+        // outline: none;
     }
 
     #backShop {
-        background-color: #fff;
-        color: black;
-        padding: 5px 10px;
-        display: inline-block;
-        margin-top: 50px;
+        @include smallbtn2;
+        // background-color: #fff;
+        // color: black;
+        // padding: 5px 10px;
+        // display: inline-block;
+        // margin-top: 50px;
     }
 
     input[type=number] {
