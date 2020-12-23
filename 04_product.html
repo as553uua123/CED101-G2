@@ -46,7 +46,7 @@
     </div>
     <div class="product_detail">
         <ul>
-            <li class="displayBtn" value='0'>商品特色</li>
+            <li class="displayBtn selected" value='0'>商品特色</li>
             <li class="displayBtn" value='1'>商品細節</li>
         </ul>
         <div class="content">
@@ -75,7 +75,12 @@
                     for (let j = 0; j < discontent.length; j++) {
                         discontent[j].setAttribute('style', 'display:none');
                     }
+                    let t = document.querySelectorAll('li.displayBtn');
+                    for (let k = 0; k < t.length; k++) {
+                        t[k].setAttribute('class', 'displayBtn');
+                    }
                     discontent[e.target.value].setAttribute('style', 'display:block');
+                    e.target.setAttribute('class', 'displayBtn selected');
                 }
             }
         })
@@ -85,7 +90,9 @@
         <div class="recommend_products">
         </div>
     </div>
-    <div class="back"><a href="./04_shopping.html">回商城</a></div>
+    <div class="back">
+        <button><a href="./04_shopping.html">回商城</a></button>
+    </div>
 </body>
 
 </html>

@@ -1,14 +1,37 @@
 @import './default/_variables.scss';
+@import './default/bground_style';
+@import './default/btn';
 
 
 
 body {
     margin: 0;
-    background-color: $webBclolor;
+    @include forTourAndShop;
+
+    input[type=button] {
+        @include smallbtn3;
+    }
+
+    .addFavorite {
+        width: 30px;
+        height: 30px;
+        margin: 15px;
+    }
+
+    #classifyBtn {
+        margin: 0;
+    }
+
+    div.btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 }
 
 a {
     outline: none;
+    text-decoration: none;
 }
 
 
@@ -63,10 +86,18 @@ div.product {
     overflow: hidden;
     background-color: #CCFF80;
     margin: 5px 5px;
-    // margin-right: 10px;
     transition-duration: .2s;
     text-align: center;
     padding-bottom: 15px;
+    outline: none;
+    padding: 5px;
+
+
+
+    div.img {
+        border-radius: 5px;
+        overflow: hidden;
+    }
 
     a {
         text-decoration: none;
@@ -102,23 +133,34 @@ div.search {
     width: $mainWidth;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .classify {
         display: inline-block;
+        position: relative;
 
         table {
             background-color: #CCFF80;
-            border: 1px solid;
+            border: 5px solid #69994e;
             text-align: center;
             display: none;
             width: max-content;
             position: absolute;
+            padding: 8px;
+            border-radius: 20px;
 
 
 
             td {
                 background-color: #fff;
                 border: 2px solid #CCFF80;
+                padding: 8px;
+                border-radius: 15px;
+
+                a {
+                    color: #69994e;
+                    padding: 15px 5px;
+                }
             }
         }
     }
@@ -151,14 +193,16 @@ div.products {
         @media all and (max-width: $tinny) {
             width: 95%;
         }
+
     }
+
 
 
     div.page {
         width: 100%;
         text-align: center;
         $pageColor: brown;
-        $pageBgColor: #CCFF80;
+        $pageBgColor: #69994e;
         $pageHoverColor: #FFF;
         $pageBgHoverColor: rgb(22, 224, 4);
 
@@ -170,19 +214,18 @@ div.products {
                 display: inline;
 
                 a {
-                    // color: $pageColor;
                     color: #fff;
                     text-decoration: none;
                     padding: 10px 15px;
                     background-color: $pageBgColor;
                     border-radius: 2px;
+                    transition: all 0.5s ease;
                 }
             }
 
             li:hover a {
-                color: $pageHoverColor;
-                transition: .2s;
-                background-color: $pageBgHoverColor;
+                color: #69994e;
+                box-shadow: 0 0 0 5px #69994e inset, 0 0 0 150px white inset;
             }
         }
     }
