@@ -36,6 +36,7 @@
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4",
     "tw-city-selector": "^2.1.1",
-    "vue": "^2.6.12"
+    "vue": "^2.6.12",
+    "vue-star-rating": "^1.7.0"
   }
 }
