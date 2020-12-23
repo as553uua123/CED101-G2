@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+body {
+    @include forIndex;
+}
+
 html,
 body,
 div,
