@@ -32,10 +32,12 @@
     "bootstrap": "^4.5.3",
     "bootstrap-scss": "^4.5.3",
     "gsap": "^3.5.1",
+    "gulp-file-include": "^2.3.0",
     "jquery": "^3.5.1",
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4",
     "tw-city-selector": "^2.1.1",
-    "vue": "^2.6.12"
+    "vue": "^2.6.12",
+    "vue-star-rating": "^1.7.0"
   }
 }
