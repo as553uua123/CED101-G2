@@ -134,8 +134,10 @@
     margin: 15px;
     background-color: $secondary-typo-color;
     padding: 15px 5px;
+    color: white;
 
     &:hover {
+        color: $secondary-typo-color;
         box-shadow: 0 0 0 5px $secondary-typo-color inset, 0 0 0 150px rgb(255, 255, 255) inset;
     }
 
@@ -153,6 +155,7 @@
 @mixin btn4 {
     @include btn3;
     background-color: white;
+    color: $secondary-typo-color;
 }
 
 @mixin smallbtn4 {
