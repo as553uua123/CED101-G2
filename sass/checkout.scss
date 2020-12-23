@@ -1,4 +1,6 @@
 @import './default/_variables.scss';
+@import './default/btn';
+@import './shop.scss';
 
 h2.title {
     width: max-content;
@@ -10,12 +12,11 @@ h2.title {
 
 body {
     margin: 0;
-    background-color: $webBclolor;
 
     form {
         width: $mainWidth*0.7;
         margin: 0 auto;
-        background-color: rgb(144, 180, 107);
+        background-color: #e3ffe6;
         padding: 30px 40px;
         border-radius: 5px;
         margin-bottom: 20px;
@@ -32,13 +33,21 @@ body {
 
                 td.btn {
                     text-align: center;
+
+                    input {
+                        @include btn3;
+                    }
+
+                    input[type=button] {
+                        @include smallbtn4;
+                    }
                 }
             }
 
             ul#items {
                 list-style: none;
                 padding: 20px;
-                background-color: rgb(209, 200, 185);
+                background-color: #fff;
                 border-radius: 5px;
 
                 li {

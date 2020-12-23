@@ -12,13 +12,15 @@ window.addEventListener("load", function () {
                                     </a>
                                 </div>
                                 <div class="content">
-                                    <a href="./product.html">
+                                    <a href="./04_product.html">
                                         <h4>戶外旅行便攜茶具8件組-黑陶款(贈不掉毛雙層吸水抹布4入)</h4>
                                         <div class="price">NT<span>689</span></div>
                                     </a>
-                                    <input type="button" value="加入收藏" class="add_favorite" >
+                                    <div class='btns'>
+                                    <img class='addFavorite' src="./images/common/heart.png" alt="">
                                     <input type="button" value="加入購物車" class="add_cart">
-                                      <input type="hidden" name="" value='s1123${i}|【原藝坊】悠然愜意 青瓷鯉魚茶壺套組精湛工藝，功夫淳厚，手感極佳，品茶必備|550|1' class='productInfo'>
+                                    <input type="hidden" name="" value='s1123${i}|【原藝坊】悠然愜意 青瓷鯉魚茶壺套組精湛工藝，功夫淳厚，手感極佳，品茶必備|550|1' class='productInfo'>
+                                    </div>
                                 </div>
                             `;
     }

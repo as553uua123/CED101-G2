@@ -192,6 +192,10 @@ textarea {
     width: 100%;
 }
 
+.btn {
+    @include btn4;
+}
+
 .forgot {
     margin-top: -20px;
     margin-bottom: 20px;

@@ -1,5 +1,5 @@
-@import "./default/reset";
-@import "./default/variables";
+@import "./default/common";
+
 //============= var ============//
 $bgc: lighten($bg-color, 10%);
 $side: 25%;
@@ -77,6 +77,14 @@ main {
                 height: 150px;
             }
         }
+        .side_content {
+            .mine_profile {
+                @include smallbtn;
+                @media only screen and (min-width: 768px) {
+                    display: none;
+                }
+            }
+        }
     }
     #main_container {
         // border: 1px solid green;
@@ -94,7 +102,7 @@ main {
                 width: 100%;
             }
             .mine_profile {
-                @media only screen and (max-width: 768px) {
+                @media only screen and (min-width: 768px) {
                     display: none;
                 }
             }

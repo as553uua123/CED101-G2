@@ -1,12 +1,8 @@
 @import './default/_variables.scss';
 @import './shop.scss';
+@import './default/btn';
 
-body {
-    margin: 0;
-    background-color: $webBclolor;
-}
-
-$mainWidth:90%;
+$mainWidth: 90%;
 
 .product_info {
     $btnWidth: 150px;
@@ -74,7 +70,11 @@ div.product_detail {
         }
 
         li:hover {
-            background-color: #a7db58;
+            background-color: #69994e;
+        }
+
+        li.selected {
+            background-color: #69994e;
         }
     }
 
@@ -109,12 +109,9 @@ div.product_detail {
 
 div.back {
     margin: 15px auto;
-    background-color: #fff;
     width: max-content;
-    padding: 5px 10px;
-    border-radius: 5px;
 
-    a {
-        text-decoration: none;
+    button {
+        @include btn2;
     }
 }

@@ -14,6 +14,10 @@
     height: 100%;
     z-index: 2;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6ab8b383dec5a487f4e3e5811422f4ebfa61a146
 // body {
 //     @include forIndex;
 // }
@@ -22,7 +26,11 @@
 
 @mixin forTourAndShop {
     background-color: #e4f2bf;
+<<<<<<< HEAD
     background-image: url(../images/common/bg.png);
+=======
+    background-image: url(/images/common/bg.png);
+>>>>>>> 6ab8b383dec5a487f4e3e5811422f4ebfa61a146
     background-position: center center;
     background-size: contain;
     background-repeat-y: repeat;

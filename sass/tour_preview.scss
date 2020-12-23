@@ -1,6 +1,5 @@
 //============ import ===========//
-@import "./default/reset";
-@import "./default/variables";
+@import "./default/common";
 //============= var ============//
 $main-width: 80%;
 
@@ -283,16 +282,18 @@ main {
 
     .btn {
         border: 1px solid black;
-        width: 30%;
+        // width: 30%;
         display: flex;
         justify-content: space-between;
         align-self: center;
 
+
+
         .prev,
         .next {
-            width: 30%;
             margin: 10px 0;
-            padding: 5px 0;
+            @include btn;
+
         }
     }
 }

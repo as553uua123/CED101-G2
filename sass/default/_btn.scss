@@ -15,17 +15,31 @@
 // @@@@@@@@@@@以下是按鈕樣式與名稱
 
 
-// 用在淺色背景
+// 結構內包含a連結，用在淺色背景
 // btn         一般綠底白字按鈕 hover是白色(長度200px)
 // smallbtn    一般綠底白字按鈕 hover是白色(長度100px)
 
 
-//用在深色背景
+// 結構內包含a連結，用在深色背景
 // btn2        一般白底綠字按鈕  hover是綠色(長度200px)
 // smallbtn2   一般白底綠字按鈕  hover是綠色(長度200px)
 
 
+// 純button  裡面沒有a連結，用在淺色背景
+// btn3      一般綠底白字按鈕 hover是白色(長度200px)
+// smallbtn3    一般綠底白字按鈕 hover是白色(長度100px)
+
+
+// 純button  裡面沒有a連結，用在深色背景
+// btn4      一般綠底白字按鈕 hover是白色(長度200px)
+// smallbtn4    一般綠底白字按鈕 hover是白色(長度100px)
+
+
 // @@@@@@@@@@@以上是按鈕樣式與名稱
+
+
+
+
 
 
 
@@ -75,7 +89,6 @@
 }
 
 
-
 // 一般白底綠字按鈕  hover是綠色  長度200px
 @mixin btn2 {
     @include btn;
@@ -96,11 +109,56 @@
 
 // 一般白底綠字按鈕  hover是綠色  長度100px
 @mixin smallbtn2 {
-    @include btn;
+    @include btn2;
     width: 100px;
 
     @media all and (max-width: 480px) {
         font-size: 12px;
         width: 60px;
     }
+}
+
+
+
+
+
+@mixin btn3 {
+    width: 200px;
+    border-radius: 20px;
+    font-weight: bolder;
+    border: 2px;
+    transition: all 0.5s ease;
+    font-size: $h6;
+    outline: none;
+    cursor: pointer;
+    margin: 15px;
+    background-color: $secondary-typo-color;
+    padding: 15px 5px;
+    color: white;
+
+    &:hover {
+        color: $secondary-typo-color;
+        box-shadow: 0 0 0 5px $secondary-typo-color inset, 0 0 0 150px rgb(255, 255, 255) inset;
+    }
+
+    @media all and (max-width: 480px) {
+        width: 90px;
+    }
+}
+
+@mixin smallbtn3 {
+    @include btn3;
+    width: 100px;
+}
+
+
+@mixin btn4 {
+    @include btn3;
+    background-color: white;
+    color: $secondary-typo-color;
+}
+
+@mixin smallbtn4 {
+    @include btn4;
+    width: 100px;
 }
