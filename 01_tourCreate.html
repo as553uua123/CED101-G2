@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>建立揪團-選擇搭配地點</title>
+    <link rel="shortcut icon" href="./images/index/webIcon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/tourCreate.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -76,11 +77,20 @@
             </div>
         </div>
     </div>
-    <div class="cat"></div>
+    <div class="help">
+        <div class="help_text" id="help_text"></div>
+        <div class="help_img"><img src="./images/tour/tea.gif" alt=""></div>
+
+    </div>
 
 
     <script>
         let tourBlock = document.getElementsByClassName("tourCreate_item_block")[0];
+        let helpText = document.getElementById("help_text");
+        let getRightsideLocal = document.getElementsByClassName('local_rightside_img')[0];
+        let getRightsideHotel = document.getElementsByClassName('hotel_rightside_img')[0];
+        let getRightsideRest = document.getElementsByClassName('rest_rightside_img')[0];
+        let getRightsideActive = document.getElementsByClassName('active_rightside_img')[0];
 
         window.addEventListener("load", function () {
             let localNum = 9;
@@ -96,12 +106,18 @@
                 `
                 let localChoice = document.getElementsByClassName('tourCreate_item')[i];
                 localChoice.addEventListener('click', addLocal);
+                // ==================changeBtn==============================
+                local.style.color = "#69994e";
+                local.style.backgroundColor = "#fff";
+                hotel.style.visibility = "hidden";
+                rest.style.visibility = "hidden";
+                active.style.visibility = "hidden";
+                local.setAttribute('disabled', 'daisabled');
+
+                helpText.innerText = "請選擇要去的茶園!!";
             }
         })
         function addLocal() {
-            let getRightsideLocal = document.getElementsByClassName('local_rightside_img')[0];
-            console.log(getRightsideLocal);
-            console.log(getRightsideLocal.childNodes.length);
             if (getRightsideLocal.childNodes.length < 1) {
                 let newLocal = document.createElement('div');
                 getRightsideLocal.appendChild(newLocal);
@@ -114,11 +130,23 @@
                         <div class="block_ribbon"></div>
                     `;
                 newLocal.addEventListener("click", removeNewLocal);
-                function removeNewLocal() {
-                    getRightsideLocal.removeChild(newLocal);
-                };
-            }
+                hotel.style.visibility = "visible";
+                rest.style.visibility = "visible";
+                active.style.visibility = "visible";
+            };
         }
+        function removeNewLocal() {
+            getRightsideLocal.innerHTML = "";
+            getRightsideHotel.innerHTML = "";
+            getRightsideRest.innerHTML = "";
+            getRightsideActive.innerHTML = "";
+            showLocal();
+            hotel.style.visibility = "hidden";
+            rest.style.visibility = "hidden";
+            active.style.visibility = "hidden";
+        };
+
+
 
         // ==================================localBtn=============================================
         let local = document.getElementById('local');
@@ -139,6 +167,19 @@
                 `;
                 let localChoice = document.getElementsByClassName('tourCreate_item')[i];
                 localChoice.addEventListener('click', addLocal);
+                // ==================changeBtn==============================
+                local.style.color = "#69994e";
+                local.style.backgroundColor = "#fff";
+                hotel.removeAttribute('style');
+                active.removeAttribute('style');
+                rest.removeAttribute('style');
+                local.setAttribute('disabled', 'daisabled');
+
+
+
+
+                // ==================change helper text=====================
+                helpText.innerText = "請選擇要去的茶園!!"
             }
         };
 
@@ -160,11 +201,23 @@
                 `;
                 let hotelChoice = document.getElementsByClassName('tourCreate_item')[i];
                 hotelChoice.addEventListener('click', addhotel);
+
+                // ==================changeBtn==============================
+                this.style.color = "#69994e";
+                this.style.backgroundColor = "#fff";
+                local.removeAttribute('style');
+                active.removeAttribute('style');
+                rest.removeAttribute('style');
+                local.removeAttribute('disabled');
+
+                // ==================change helper text=====================
+
+                helpText.innerText = "請選擇要住的旅館!! (限一個)"
             }
         };
 
         function addhotel() {
-            let getRightsideHotel = document.getElementsByClassName('hotel_rightside_img')[0];
+
             console.log(getRightsideHotel);
             console.log(getRightsideHotel.childNodes.length);
             if (getRightsideHotel.childNodes.length < 1) {
@@ -205,10 +258,21 @@
                 `;
                 let restChoice = document.getElementsByClassName('tourCreate_item')[i];
                 restChoice.addEventListener('click', addRest);
+
+                // ==================changeBtn==============================
+                this.style.color = "#69994e";
+                this.style.backgroundColor = "#fff";
+                local.removeAttribute('style');
+                active.removeAttribute('style');
+                hotel.removeAttribute('style');
+                local.removeAttribute('disabled');
+                // ==================change helper text=====================
+
+                helpText.innerText = "請選擇用餐的餐廳!! (最多三個)"
             }
         };
         function addRest() {
-            let getRightsideRest = document.getElementsByClassName('rest_rightside_img')[0];
+
             console.log(getRightsideRest);
             console.log(getRightsideRest.childNodes.length);
             if (getRightsideRest.childNodes.length < 3) {
@@ -266,8 +330,19 @@
             activeChoice1.addEventListener('click', addActive1);
             activeChoice2.addEventListener('click', addActive2);
 
+            // ==================changeBtn==============================
+            this.style.color = "#69994e";
+            this.style.backgroundColor = "#fff";
+            local.removeAttribute('style');
+            hotel.removeAttribute('style');
+            rest.removeAttribute('style');
+            local.removeAttribute('disabled');
+
+            // ==================change helper text=====================
+            helpText.innerText = "請選擇想參加的活動!! (三擇一)"
+
             function addActive() {
-                let getRightsideActive = document.getElementsByClassName('active_rightside_img')[0];
+
                 console.log(getRightsideActive);
                 console.log(getRightsideActive.childNodes.length);
                 if (getRightsideActive.childNodes.length < 1) {
@@ -332,9 +407,6 @@
                 }
             }
         };
-
-        // ===============================================================
-
 
     </script>
 

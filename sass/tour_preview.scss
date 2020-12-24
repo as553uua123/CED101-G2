@@ -9,90 +9,23 @@ img {
 
 //==============================//
 body {
-    background-color: $bg-color;
+    @include forTourAndShop;
+    font-family: 'Noto Serif TC';
 }
 
-h2 {
-    text-align: center;
-    font-size: $h1;
-    margin: 20px;
-}
 
-.tourCreate_header {
-    display: flex;
-    justify-content: space-evenly;
-    width: 1200px;
-    margin: 50px auto;
-    border: 1px solid black;
-
-    .step_block {
-        border: 1px solid black;
-
-        .step {
-            font-size: $h2;
-            width: 100px;
-            height: 100px;
-            border: 1px solid black;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 100px;
-            margin: 0 auto;
-        }
-
-        p {
-            font-size: $h3;
-            text-align: center;
-            padding: 30px;
-        }
-    }
-
-    .right {
-        border: 1px solid black;
-        margin: auto;
-    }
-}
-
-.tourCreate_main {
-    display: flex;
-    width: 1200px;
-    margin: 0 auto;
-}
 
 * {
     box-sizing: $box-sizing;
 }
 
-body {
-    background-color: $bg-color;
-    // color: $primary-typo-color;
-    font-family: $font-family;
-
-    h1 {
-        font-size: $h1;
-    }
-
-    h2 {
-        font-size: $h2;
-    }
-
-    h3 {
-        font-size: $h3;
-    }
-
-    h4 {
-        font-size: $h4;
-    }
-
-    h5 {
-        font-size: $h5;
-    }
-
-    h6 {
-        font-size: $h6;
-    }
-}
-
 main {
+    h1 {
+        text-align: center;
+        font-size: $h1;
+        margin: 20px;
+    }
+
     .preview_title {
         text-align: center;
         padding-top: 10px;
@@ -105,7 +38,7 @@ main {
         align-content: space-around;
         width: $main-width;
         margin: 50px auto;
-        border: 1px solid black;
+        // border: 1px solid black;
 
         .step_title {
             display: flex;
@@ -286,8 +219,6 @@ main {
         display: flex;
         justify-content: space-between;
         align-self: center;
-
-
 
         .prev,
         .next {

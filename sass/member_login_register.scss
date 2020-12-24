@@ -192,16 +192,18 @@ textarea {
     width: 100%;
 }
 
+.btn_container {
+    display: flex;
+    justify-content: center;
+}
+
 .btn {
     @include btn4;
+    display: block;
 }
 
 .forgot {
     margin-top: -20px;
     margin-bottom: 20px;
     text-align: right;
-}
-
-#forget_pw {
-    border: 1px solid red;
 }

@@ -1,9 +1,11 @@
 @import "./default/common";
 
+
 body {
-    // background-color: $bg-color;
-    background: url(http://subtlepatterns.com/patterns/wood_pattern.png);
+    @include forTourAndShop;
+    // font-family: 'Noto Serif TC';
 }
+
 
 img {
     width: 100%;
@@ -93,7 +95,7 @@ h1 {
 
         button {
             @include btn;
-            margin: 0;
+            margin-top: 20px;
         }
     }
 

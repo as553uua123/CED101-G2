@@ -1,6 +1,9 @@
 @import "default/_common.scss";
 
-
+body{
+    @include forTourAndShop;
+    font-family: 'Noto Serif TC';
+}
 
 main{
     text-align: center;
@@ -12,58 +15,66 @@ main{
     .all{
         // border: 1px solid red;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         margin-top: 50px;
+        padding: 20px 10px 10px 10px;
+        border-radius: $border-radius-med;
+        background-color: white;
       
         .tour{
             // display: inline-block;
             font-size: 0;
             .tpic{
                 width: 500px;
+                border-radius: $border-radius-med;
             }
         }
 
         .tinfo{
             text-align: left;
             // border: 1px solid blue;
-            padding-left: 10px;
             width: 50%;
             position: relative;
 
             .t1{
                 display: flex;
                 justify-content:space-between;
+                
                 .pp1{
                     font-size: $h4;
+                    margin-bottom: 10px;
+                    color: #7baa17 ;
+                    font-weight: bold;
+                }
+
+                .social{
+                    display: flex;
+                    .love{
+                        width:30px;
+                        margin-right: 10px;
+                    }
                 }
             }
+
+            .green{
+                color: #7baa17 ;
+            }
             
-            .pp2{
-                line-height: 24px;
-                margin: 8px 0;
-            }
 
-            .pp3{
-                margin-bottom: 8px;
-            }
+           .btwrap{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-            .pp4{
-                margin-bottom: 8px;
-            }
+               .bt{
+                    @include btn3;
+                    margin: 25px 0 15px 0;
+               }
 
-            .date{
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                color: gray;
-            }
-
-            .join{
-                border: none;
-                color:$btn-color;
-                outline: none;
-                cursor: pointer;
-            }
+               .date{
+                   color: gray;
+               }
+           }
         }
     }
 
@@ -74,12 +85,16 @@ main{
     }
 
     .all2{
-        // border: 1px solid green;
+        border: 1px solid green;
         text-align: left;
 
         .ht{
             font-size: $h4;
-            margin: 25px 0 10px;
+            margin: 0 0 10px;
+        }
+
+        .eat{
+            margin-top: 25px;
         }
 
         .hotel_container{
@@ -105,7 +120,15 @@ main{
    
 }
 
-
+@media screen  and (max-width:1200px) and (min-width:769px){
+    main{
+        .all{
+            .tinfo{
+                padding-left:10px;
+            }
+        }
+    }
+}
 
 @media screen  and (max-width:768px){
     main{

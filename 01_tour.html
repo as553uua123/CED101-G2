@@ -4,28 +4,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/index/webIcon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/tour.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <title>Document</title>
+    <title>瀏覽揪團</title>
 </head>
 
 <body>
     <div class="choice_block">
         <div class="flex">
-            <div class="choice_nav">
-                <h1>揪團地區</h1>
-                <ul>
-                    <li>全部地區</li>
-                    <li>北 部</li>
-                    <li>中 部</li>
-                    <li>南 部</li>
-                </ul>
-            </div>
             <div class="twMap">
                 <div class="twMap_img">
                     <img src="./images/tour/twMap.png" alt="">
                 </div>
+                <button id="allLocal">全部地區</button>
+                <button id="nLocal">北部地區</button>
+                <button id="cLocal">中部地區</button>
+                <button id="sLocal">南部地區</button>
                 <div class="location1">
                     <img src="./images/common/location.png" alt="">
                 </div>
@@ -60,23 +56,12 @@
             <!-- <img src="../images/index/notuse/8355.png" alt=""> -->
         </div>
         <div class="tour_center_img">
-            <img src="./images/index/notuse/8355.png" alt="">
+            <img src="./images/tour/bg-project-map-illust.png" alt="">
         </div>
-        <div class="tour_cloud_img">
-            <img src="./images/tour/clouds.png" alt="">
+        <div class="tour_center_img2">
+            <img src="./images/tour/bg-ground-top.png" alt="">
         </div>
-        <div class="tour_cloud1_img">
-            <img src="./images/tour/clouds.png" alt="">
-        </div>
-        <div class="tour_cloud2_img">
-            <img src="./images/tour/clouds.png" alt="">
-        </div>
-        <div class="tour_cloud3_img">
-            <img src="./images/tour/clouds.png" alt="">
-        </div>
-        <div class="tour_cloud4_img">
-            <img src="./images/tour/clouds.png" alt="">
-        </div>
+
     </div>
     <div class="main_body">
         <div class="choice_list">
@@ -122,6 +107,8 @@
         </div>
     </div>
 
+
+
     <div class="createTour">
         <p>我要開團</p>
         <img src="./images/tour/createTourCar.png" alt="">
@@ -153,10 +140,15 @@
                                         <p>2020/12/30</p>
                                         <h3>截止揪團日期</h3>
                                         <p>2020/12/25</p>
-                                        <h3>目前剩餘名額</h3>
-                                        <p>14/16</p>
+                                       
                                         <h3>預估費用</h3>
                                         <p>$7800NT</p>
+                                        <div class="ink">
+                                          <div class="inkText">
+                                             <h3>剩餘名額</h3>
+                                             <p>14/16</p>
+                                             </div>
+                                         </div>
                                     </div>
                                     <div class="tourBtn">
                                         <button type="button"> 立即報名</button>

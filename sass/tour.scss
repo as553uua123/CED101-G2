@@ -3,11 +3,12 @@
 
 
 body {
-    background-color: $bg-color;
+    background-color: #70D6BF;
 }
 
 .main_body {
-    background: url(http://subtlepatterns.com/patterns/wood_pattern.png);
+    @include forTourAndShop;
+    // padding-top: 50px;
 }
 
 img {
@@ -30,107 +31,74 @@ img {
 
 .choice_block {
     position: relative;
-    padding-bottom: 300px;
+    padding: 50px 0;
     // border: 2px solid blue;
 
     .tour_center_img {
         // border: 1px solid black;
         position: absolute;
-        bottom: -2px;
-
-    }
-
-    .tour_cloud_img {
-        position: absolute;
-        top: 10%;
-        left: 5%;
-        width: 200px;
-        animation-name: cloud;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-
-    }
-
-    .tour_cloud1_img {
-        position: absolute;
+        width: 100%;
         top: 20%;
-        left: 15%;
-        width: 300px;
-        animation-name: cloud;
-        animation-duration: 7s;
-        animation-iteration-count: infinite;
+        left: 0%;
+
+
     }
 
-    .tour_cloud2_img {
+    .tour_center_img2 {
+        // border: 1px solid black;
         position: absolute;
-        top: 5%;
-        left: 30%;
-        // animation-name: cloud;
-        // animation-duration: 2s;
-        // animation-iteration-count: infinite;
+        bottom: -10px;
+        left: 0%;
+        z-index: 1;
+
     }
 
-    .tour_cloud3_img {
-        position: absolute;
-        top: 10%;
-        left: 40%;
-        width: 250px;
-        // animation-name: cloud;
-        // animation-duration: 5s;
-        // animation-iteration-count: infinite;
-    }
-
-    .tour_cloud4_img {
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        animation-name: cloud;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-    }
 
     .flex {
         display: flex;
         justify-content: center
     }
 
-    .choice_nav {
-        align-self: center;
-        width: 700px;
-        // border: 1px solid black;
-
-        h1 {
-            text-align: center;
-            color: $primary-typo-color;
-            font-size: $h1;
-            padding: 10px;
-        }
-
-        ul {
-            padding: 0;
-
-            li {
-                text-align: center;
-                font-size: $h2;
-                padding: 2px;
-
-
-            }
-        }
-
-
-
-    }
-
     .twMap {
         display: inline-block;
-        width: 500px;
+        width: 35%;
         position: relative;
-        // border: 1px solid black;
 
-        img {
-            width: 100%;
+
+
+        #allLocal {
+            position: absolute;
+            top: 5%;
+            left: -20%;
+            @include btn3;
+            z-index: 2;
         }
+
+        #nLocal {
+            position: absolute;
+            top: 15%;
+            right: -50%;
+            @include btn3;
+            z-index: 2;
+        }
+
+        #cLocal {
+            position: absolute;
+            top: 40%;
+            left: -50%;
+            @include btn3;
+            z-index: 2;
+        }
+
+        #sLocal {
+            position: absolute;
+            bottom: 25%;
+            right: -25%;
+            @include btn3;
+            z-index: 2;
+        }
+
+
     }
 }
 
@@ -274,6 +242,7 @@ img {
 .tour_browse {
     width: 1140px;
     margin: 0 auto;
+    padding-top: 100px;
     // border: 1px solid black;
 
     h1 {
@@ -285,7 +254,7 @@ img {
 }
 
 .tour_browse_block {
-    // text-align: center;
+    text-align: center;
 
 
     .tour_block {
@@ -346,6 +315,39 @@ img {
                 padding: 5px;
                 width: 130px;
             }
+
+            .ink {
+                border: 5px solid deeppink;
+                border-radius: 50%;
+                position: absolute;
+                right: -10%;
+                top: 60%;
+                padding: 2px;
+                text-align: center;
+                transform: rotate(30deg);
+                z-index: 2;
+
+                .inkText {
+                    padding: 20px;
+                    border: 1px solid red;
+                    border-radius: 50%;
+                    line-height: 40px;
+
+                    h3 {
+                        font-size: $h3;
+                        color: red;
+
+                    }
+
+                    p {
+                        color: red;
+                        font-size: $h4;
+
+
+
+                    }
+                }
+            }
         }
 
         .tourBtn {
@@ -381,6 +383,7 @@ img {
     width: 350px;
     animation-name: move;
     animation-duration: 5s;
+    z-index: 2;
 
     p {
         cursor: pointer;
@@ -590,6 +593,37 @@ img {
         .tour_block {
             width: 320px;
             margin: 20px 5px;
+
+
+            .ink {
+                border: 5px solid red;
+                border-radius: 50%;
+                position: absolute;
+                padding: 2px;
+                text-align: center;
+                transform: rotate(30deg);
+
+                .inkText {
+                    padding: 20px;
+                    border: 1px solid red;
+                    border-radius: 50%;
+                    line-height: 40px;
+
+                    h3 {
+                        font-size: $h3;
+                        color: red;
+
+                    }
+
+                    p {
+                        color: red;
+                        font-size: $h4;
+
+
+
+                    }
+                }
+            }
         }
 
     }
@@ -636,7 +670,7 @@ img {
 
     .tour_browse_block {
         .tour_block {
-            width: 90%;
+            width: 75%;
             margin: 20px 0px;
         }
     }
