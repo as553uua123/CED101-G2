@@ -3,6 +3,7 @@
 
 body {
     @include forTourAndShop;
+    // font-family: 'Noto Serif TC';
 }
 
 
@@ -94,7 +95,7 @@ h1 {
 
         button {
             @include btn;
-            margin: 0;
+            margin-top: 20px;
         }
     }
 
