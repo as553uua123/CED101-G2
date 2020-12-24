@@ -67,7 +67,7 @@
         .caricon {
             width: 50px;
             position: absolute;
-            top: 10px;
+            top: 20px;
         }
 
         .memicon {
@@ -306,14 +306,27 @@
         }
 
         .underline:hover:after {
-            left: 0%;
-            width: 100%;
+            left: 11%;
+            width: 85%;
         }
 
         .gr::after {
             background: $secondary-typo-color;
         }
 
+        /* ========以上文字hover下滑底線 */
+
+
+        // ========導覽列文字旁邊icon
+
+
+
+        // ========以上導覽列文字旁邊icon
+        .navicon {
+            width: 30px;
+            vertical-align: bottom;
+            margin-left: 3px;
+        }
 
         // =================以上是導覽列樣式
 
