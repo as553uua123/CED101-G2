@@ -7,14 +7,14 @@
     <title>訂單明細</title>
     <link rel="stylesheet" href="./css/checkout.css">
     <script src="./js/checkout.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 </head>
 
 <body>
     <h2 class="title">訂單明細</h2>
     <form action="">
-        <h3>訂單編號 : <input type="number" name="" id="" disabled value="123456790"></h3>
-        </tr>
-        <div class="main">
+        <div class="main" id='main'>
+            <h3>訂單編號 : <input type="number" name="" id="" disabled value="123456790"></h3>
             訂單內容:
             <ul id="items">
             </ul>
@@ -77,16 +77,18 @@
                 <tr>
                     <td>&nbsp;</td>
                 </tr>
-                <tr>
-                    <td colspan=" 2" class="btn">
-                        <input type="submit" value="列印訂單明細">
-                        <input type="submit" value="生成PDF"
-                            onClick="if (confirm('是否確認提交？'))location.href= 'orders.html';return false;">
-                        <input type="submit" value="回商城首頁" onClick="location.href= './04_shopping.html';return false;">
-                    </td>
-                </tr>
             </table>
         </div>
+        <table>
+            <tr>
+                <td colspan=" 2" class="btn">
+                    <input type="button" value="列印訂單明細" onclick='window.print()'>
+                    <input type="button" value="生成PDF"
+                        onClick="if (confirm('是否確認提交？'))location.href= 'orders.html';return false;">
+                    <input type="submit" value="回商城首頁" onClick="location.href= './04_shopping.html';return false;">
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 

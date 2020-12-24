@@ -63,3 +63,27 @@ textarea {
     border: 2px solid $gray-light;
     resize: vertical;
 }
+
+.button {
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 15px 0;
+    font-size: 2rem;
+    font-weight: $bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: $main;
+    color: $search-bar-bgColor;
+    transition: all.5s ease;
+    -webkit-appearance: none;
+    &:hover,
+    &:focus {
+        background: $main-dark;
+    }
+}
+
+.button-block {
+    display: block;
+    width: 100%;
+}

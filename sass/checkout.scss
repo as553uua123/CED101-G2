@@ -108,6 +108,14 @@ body {
 
 
         }
+
+        >table {
+            margin: 0 auto;
+
+            input {
+                @include smallbtn3;
+            }
+        }
     }
 
 

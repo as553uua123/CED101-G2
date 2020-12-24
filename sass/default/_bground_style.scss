@@ -17,15 +17,15 @@
 
 //(下面是給揪團跟商城)=============================================================
 
-// @mixin forTourAndShop {
-//     background-color: #e4f2bf;
-//     background-image: url(/images/common/bg.png);
-//     background-position: center center;
-//     background-size: contain;
-//     background-repeat-y: repeat;
-//     width: 100%;
-//     height: 100%;
-// }
+@mixin forTourAndShop {
+    background-color: #e4f2bf;
+    background-image: url(/images/common/bg.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat-y: repeat;
+    width: 100%;
+    height: 100%;
+}
 
 // body {
 //     @include forTourAndShop;

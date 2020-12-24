@@ -58,6 +58,19 @@ div.cart_content {
 
             h3 {
                 margin-top: 0;
+                width: 450px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+            }
+
+            input[type=number] {
+                width: 100px;
+            }
+
+            input[type=number]:first-of-type {
+                width: 30px;
             }
         }
     }
@@ -80,22 +93,10 @@ div.function {
 
     input[type=submit] {
         @include btn3;
-        // background-color: brown;
-        // color: #fff;
-        // padding: 10px 20px;
-        // margin-left: 20px;
-        // font-size: 20px;
-        // border-radius: 5px;
-        // outline: none;
     }
 
     #backShop {
         @include smallbtn2;
-        // background-color: #fff;
-        // color: black;
-        // padding: 5px 10px;
-        // display: inline-block;
-        // margin-top: 50px;
     }
 
     input[type=number] {

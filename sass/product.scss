@@ -14,6 +14,12 @@ $mainWidth: 90%;
     background-color: #fff;
     padding: 5px 15px;
 
+    img.addFavorite {
+        position: absolute;
+        top: -20px;
+        right: 75px;
+    }
+
 
     .product_img {
         overflow: hidden;
@@ -32,6 +38,8 @@ $mainWidth: 90%;
         }
 
         .info_content {
+            position: relative;
+
             .price {
                 margin: 20px auto;
                 color: rgb(61, 221, 49);
