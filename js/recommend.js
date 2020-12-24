@@ -1,4 +1,7 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", doFirst);
+
+function doFirst() {
+    //寫入假的商品物件
     let productsnum = 8;
     let recommend_products = document.getElementsByClassName('recommend_products')[0];
     for (let i = 0; i < productsnum; i++) {
@@ -19,12 +22,12 @@ window.addEventListener("load", function () {
                                     <div class='btns'>
                                     <img class='addFavorite' src="./images/common/heart.png" alt="">
                                     <input type="button" value="加入購物車" class="add_cart">
-                                    <input type="hidden" name="" value='s1123${i}|【原藝坊】悠然愜意 青瓷鯉魚茶壺套組精湛工藝，功夫淳厚，手感極佳，品茶必備|550|1' class='productInfo'>
+                                    <input type="hidden" name="" value='s1123${i}|【原藝坊】悠然愜意 青瓷鯉魚茶壺套組精湛工藝，功夫淳厚，手感極佳，品茶必備|550|1|0' class='productInfo'>
                                     </div>
                                 </div>
                             `;
     }
-    $('.recommend_products').slick({
+    $('.recommend_products').slick({ //啟動slick
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
@@ -46,7 +49,7 @@ window.addEventListener("load", function () {
     });
     let classifyBtn = document.getElementById("classifyBtn");
     let classifyTable = document.getElementById("classifyTable");
-    if (classifyTable) {
+    if (classifyTable) { //啟動classifyBtn事件
         classifyTable.addEventListener('click', (e) => {
             e.stopPropagation();
         });
@@ -58,4 +61,4 @@ window.addEventListener("load", function () {
             classifyTable.setAttribute('style', 'display:none;');
         });
     }
-})
+}
