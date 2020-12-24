@@ -3,11 +3,12 @@
 
 
 body {
-    background-color: $bg-color;
+    background-color: #70D6BF;
 }
 
 .main_body {
-    background: url(http://subtlepatterns.com/patterns/wood_pattern.png);
+    @include forTourAndShop;
+    padding-top: 50px;
 }
 
 img {
@@ -30,64 +31,28 @@ img {
 
 .choice_block {
     position: relative;
-    padding-bottom: 300px;
+    padding: 50px 0;
     // border: 2px solid blue;
 
     .tour_center_img {
         // border: 1px solid black;
         position: absolute;
-        bottom: -2px;
-
-    }
-
-    .tour_cloud_img {
-        position: absolute;
-        top: 10%;
-        left: 5%;
-        width: 200px;
-        animation-name: cloud;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-
-    }
-
-    .tour_cloud1_img {
-        position: absolute;
+        width: 100%;
         top: 20%;
-        left: 15%;
-        width: 300px;
-        animation-name: cloud;
-        animation-duration: 7s;
-        animation-iteration-count: infinite;
+        left: -10%;
+
+
     }
 
-    .tour_cloud2_img {
+    .tour_center_img2 {
+        // border: 1px solid black;
         position: absolute;
-        top: 5%;
-        left: 30%;
-        // animation-name: cloud;
-        // animation-duration: 2s;
-        // animation-iteration-count: infinite;
+        bottom: -10px;
+        left: 0%;
+        z-index: 1;
+
     }
 
-    .tour_cloud3_img {
-        position: absolute;
-        top: 10%;
-        left: 40%;
-        width: 250px;
-        // animation-name: cloud;
-        // animation-duration: 5s;
-        // animation-iteration-count: infinite;
-    }
-
-    .tour_cloud4_img {
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        animation-name: cloud;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-    }
 
     .flex {
         display: flex;
@@ -285,7 +250,7 @@ img {
 }
 
 .tour_browse_block {
-    // text-align: center;
+    text-align: center;
 
 
     .tour_block {
@@ -381,6 +346,7 @@ img {
     width: 350px;
     animation-name: move;
     animation-duration: 5s;
+    z-index: 2;
 
     p {
         cursor: pointer;
