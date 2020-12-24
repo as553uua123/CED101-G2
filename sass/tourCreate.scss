@@ -105,12 +105,18 @@ h1 {
 
 
         .tourCreate_choice {
+
+
+
             button {
                 @include smallbtn3;
                 width: 70px;
                 margin: 2px;
                 cursor: pointer;
+
             }
+
+
         }
 
         .tourCreate_item_block {
@@ -341,15 +347,37 @@ h1 {
     }
 }
 
-.cat {
+.help {
     position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 350px;
-    height: 380px;
-    transform: scale(.7);
-    background: url("../images/tour/cat.png");
-    animation: play .8s steps(9) infinite;
+    right: 20px;
+    bottom: 20px;
+
+    .help_text {
+        background-color: #fff;
+        padding: 40px;
+        white-space: nowrap;
+
+        border-radius: 50%;
+        text-align: center;
+        position: absolute;
+        top: -120px;
+        right: 30px;
+    }
+
+    .help_text::before {
+        content: " ";
+        border: 10px solid #fff;
+        position: absolute;
+        bottom: -10px;
+        left: 45%;
+        transform: rotate(45deg);
+    }
+
+
+    .help_img {
+        width: 200px;
+    }
+
 }
 
 // =======================rwd============================

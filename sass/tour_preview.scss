@@ -9,7 +9,7 @@ img {
 
 //==============================//
 body {
-    background-color: $bg-color;
+    @include forTourAndShop;
 }
 
 h2 {

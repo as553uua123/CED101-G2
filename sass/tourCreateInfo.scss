@@ -1,9 +1,10 @@
 @import "./default/common";
 
+
 body {
-    // background-color: $bg-color;
-    background: url(http://subtlepatterns.com/patterns/wood_pattern.png);
+    @include forTourAndShop;
 }
+
 
 img {
     width: 100%;
