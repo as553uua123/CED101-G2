@@ -8,6 +8,7 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.js"></script> -->
     <script src="https://unpkg.com/vue-star-rating@1.5.1/dist/star-rating.min.js"></script>
     <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="./js/newtour.js"></script>
     
 </head>
 <body>
@@ -92,67 +93,5 @@
 
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v9.0" nonce="WuFFSzIJ"></script>
-    <script>
-        window.addEventListener("load", function () {
-            let tourNum = 3;
-            let tourBlock = document.getElementById("tourBrowseBlock");
-            for (var i = 0; i < tourNum; i++) {
-                let newTour = document.createElement('div');
-                tourBlock.appendChild(newTour);
-                newTour.setAttribute('class', 'tour_block');
-                newTour.innerHTML = `
-                <div class="tour_img">
-                            <img src="./images/tour/tour1.jpg" alt="">
-                    </div>
-                            <div class="love_share">
-                                <div class="love">
-                                    <img class="like" src="./images/common/heart.png" title="加入收藏" alt="">
-                        </div>
-                                    <div class="share">
-                                        <img src="./images/common/shareBlue.png" alt="">
-                        </div>
-                                    </div>
-                                    <div class="tour_text">
-                                        <h3>活動名稱</h3>
-                                        <p>一定打斷你鼻樑</p>
-                                        <h3>活動日期</h3>
-                                        <p>2020/12/30</p>
-                                        <h3>截止揪團日期</h3>
-                                        <p>2020/12/25</p>
-                                        <h3>目前剩餘名額</h3>
-                                        <p>14/16</p>
-                                        <h3>預估費用</h3>
-                                        <p>$7800NT</p>
-                                    </div>
-                                    <div class="tourBtn">
-                                        <button type="button"> 立即報名</button>
-                                    </div>
-                                    <div class="box11_ribbon"></div>  
-                `;
-
-            }
-
-            let like = document.getElementsByClassName('like');
-            for (var i = 0; i < like.length; i++) {
-                like[i].addEventListener("click", changeHeart)
-
-            }
-            function changeHeart() {
-                if (this.title == "加入收藏") {
-                    this.title = "取消收藏";
-                    this.src = "./images/common/like.png";
-                } else {
-                    this.title = "加入收藏";
-                    this.src = "./images/common/heart.png";
-
-                }
-            }
-
-
-        })
-
-
-
-    </script>
 </body>
 </html>
