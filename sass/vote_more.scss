@@ -76,10 +76,14 @@ main{
                 margin-bottom: 30px;
             }
 
-            .bt{
-                @include btn3;
-                margin: 0;
-                margin-top: 10px;
+            .btwrap{
+                   display: flex;
+                   justify-content: flex-end;
+
+                   .bt{
+                        @include btn3;
+                        margin: 15px 0 15px 0;
+                   }
             }
         }
     }
@@ -120,23 +124,20 @@ main{
             }
 
             .love_share {
-                text-align: right;
-                padding-right: 30px;
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 10px;
                 // border: 1px solid black;
 
 
 
                 .love {
-                    display: inline-block;
                     width: 30px;
-
-
+                    margin-right: 10px;
                 }
 
-                .share {
-                    display: inline-block;
-                    width: 30px;
-
+                .fb-share-button {
+  
                 }
             }
 
