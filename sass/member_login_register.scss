@@ -39,11 +39,11 @@ a {
 }
 
 .form {
-    background: rgba($primary-typo-color, 0.9);
+    background: rgba($primary-typo-color, 1);
     padding: 40px;
     max-width: 600px;
     margin: 40px auto;
-    border-radius: $br;
+    border-radius: $border-radius-sml;
     box-shadow: 0 4px 10px 4px rgba($primary-typo-color, 0.3);
 }
 
@@ -192,16 +192,18 @@ textarea {
     width: 100%;
 }
 
+.btn_container {
+    display: flex;
+    justify-content: center;
+}
+
 .btn {
     @include btn4;
+    display: block;
 }
 
 .forgot {
     margin-top: -20px;
     margin-bottom: 20px;
     text-align: right;
-}
-
-#forget_pw {
-    border: 1px solid red;
 }
